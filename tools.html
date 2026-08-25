@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Tools · ಷವುಲ್ SSK</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3030395356696493" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL7KQ1LH6D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL7KQ1LH6D');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Baloo+Tamma+2:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    min-height:100vh;
+    font-family:'Noto Sans Kannada','Segoe UI',system-ui,sans-serif;
+    background:linear-gradient(135deg,#0E2432 0%,#16303F 55%,#274259 100%);
+    color:#F3EFE2;
+    padding:24px 16px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;}
+  header{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;}
+  a.home{color:#F0D9A6;text-decoration:none;font-size:14px;border:1px solid rgba(214,162,58,.4);padding:8px 14px;border-radius:10px;}
+  a.home:hover{background:rgba(214,162,58,.15);}
+  h1{font-size:26px;color:#F0D9A6;text-align:center;}
+  .sub{text-align:center;font-size:13.5px;color:#C9D3D6;margin-top:6px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:24px;}
+  .tool{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(214,162,58,.35);
+    border-radius:16px;padding:22px 20px;
+  }
+  .tool h2{font-size:17px;color:#F0D9A6;margin-bottom:4px;}
+  .tool p.hint{font-size:12px;color:#9FB0B8;margin-bottom:14px;}
+  label{display:block;font-size:13px;color:#C9D3D6;margin:10px 0 5px;}
+  input{
+    width:100%;padding:11px 12px;border-radius:10px;
+    border:1px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.08);color:#F3EFE2;
+    font-size:15px;font-family:inherit;
+  }
+  input:focus{outline:none;border-color:#D6A23A;}
+  button{
+    margin-top:14px;width:100%;padding:12px;border:none;border-radius:10px;
+    background:#D6A23A;color:#16303F;font-weight:700;font-size:15px;
+    font-family:inherit;cursor:pointer;
+  }
+  button:hover{background:#E8B84D;}
+  .res{
+    margin-top:14px;padding:14px;border-radius:10px;
+    background:rgba(214,162,58,.12);border:1px dashed rgba(214,162,58,.45);
+    font-size:15px;line-height:1.7;display:none;
+  }
+  .res b{color:#FFD98A;font-size:19px;}
+  footer{text-align:center;margin-top:30px;font-size:12px;color:#8A9AA3;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><a class="home" href="/">← ಮುಖಪುಟ</a></header>
+  <h1>🧮 ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್</h1>
+  <p class="sub">ಶಿಕ್ಷಕರಿಗಾಗಿ ದೈನಂದಿನ ಲೆಕ್ಕ ಸಾಧನಗಳು · shaulssk.in</p>
+
+  <div class="grid">
+
+    <div class="tool" id="t-pct">
+      <h2>📊 ಶೇಕಡಾಂಶ ಕ್ಯಾಲ್ಕುಲೇಟರ್</h2>
+      <p class="hint">ಪಡೆದ ಅಂಕ ಮತ್ತು ಒಟ್ಟು ಅಂಕ → ಶೇಕಡಾಂಶ + ಗ್ರೇಡ್</p>
+      <label>ಪಡೆದ ಅಂಕ (Obtained)</label>
+      <input type="number" id="p-obt" placeholder="e.g., 356">
+      <label>ಒಟ್ಟು ಅಂಕ (Total)</label>
+      <input type="number" id="p-tot" placeholder="e.g., 500">
+      <button onclick="calcPct()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="res" id="p-res"></div>
+    </div>
+
+    <div class="tool" id="t-att">
+      <h2>🗓️ ಹಾಜರಾತಿ ಕ್ಯಾಲ್ಕುಲೇಟರ್</h2>
+      <p class="hint">75% / 85% ಹಾಜರಾತಿಗೆ ಎಷ್ಟು ದಿನ ಬೇಕು?</p>
+      <label>ಬಂದ ದಿನಗಳು (Present)</label>
+      <input type="number" id="a-pre" placeholder="e.g., 96">
+      <label>ಒಟ್ಟು ಕೆಲಸದ ದಿನಗಳು (Working days)</label>
+      <input type="number" id="a-tot" placeholder="e.g., 130">
+      <button onclick="calcAtt()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="res" id="a-res"></div>
+    </div>
+
+    <div class="tool" id="t-age">
+      <h2>🎂 ವಯಸ್ಸು ಕ್ಯಾಲ್ಕುಲೇಟರ್</h2>
+      <p class="hint">ಹುಟ್ಟಿದ ದಿನಾಂಕ → ವರ್ಷ / ತಿಂಗಳು / ದಿನ (ಇಂದಿನಂತೆ)</p>
+      <label>ಹುಟ್ಟಿದ ದಿನಾಂಕ (Date of Birth)</label>
+      <input type="date" id="g-dob">
+      <label>ಯಾವ ದಿನಾಂಕದಂತೆ? (ಖಾಲಿ ಬಿಟ್ಟರೆ ಇಂದು)</label>
+      <input type="date" id="g-asof">
+      <button onclick="calcAge()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="res" id="g-res"></div>
+    </div>
+
+    <div class="tool" id="t-date">
+      <h2>📅 ದಿನಾಂಕ ವ್ಯತ್ಯಾಸ</h2>
+      <p class="hint">ಎರಡು ದಿನಾಂಕಗಳ ನಡುವೆ ಎಷ್ಟು ದಿನ?</p>
+      <label>ಮೊದಲ ದಿನಾಂಕ (From)</label>
+      <input type="date" id="d-from">
+      <label>ಎರಡನೇ ದಿನಾಂಕ (To)</label>
+      <input type="date" id="d-to">
+      <button onclick="calcDate()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="res" id="d-res"></div>
+    </div>
+
+    <div class="tool" id="t-marks">
+      <h2>🧾 ಅಂಕಗಳ ಒಟ್ಟು &amp; ಸರಾಸರಿ</h2>
+      <p class="hint">ವಿಷಯಗಳ ಅಂಕಗಳನ್ನು ಕಾಮಾ ಅಥವಾ ಸ್ಪೇಸ್‌ನಿಂದ ಬೇರ್ಪಡಿಸಿ ಬರೆಯಿರಿ</p>
+      <label>ವಿಷಯವಾರು ಅಂಕಗಳು (e.g., 78 65 92 81 74)</label>
+      <input type="text" id="m-list" placeholder="78, 65, 92, 81, 74">
+      <label>ಪ್ರತಿ ವಿಷಯದ ಗರಿಷ್ಠ ಅಂಕ (Default 100)</label>
+      <input type="number" id="m-max" value="100">
+      <button onclick="calcMarks()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="res" id="m-res"></div>
+    </div>
+
+    <div class="tool" id="t-info">
+      <h2>💡 ಗಮನಿಸಿ</h2>
+      <p class="hint">ಈ ಎಲ್ಲಾ ಟೂಲ್ಸ್ ನಿಮ್ಮ ಫೋನ್/ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲೇ ಲೆಕ್ಕ ಹಾಕುತ್ತವೆ.</p>
+      <div style="font-size:13.5px;line-height:2;color:#C9D3D6;">
+        ✅ ಯಾವುದೇ ಡೇಟಾ ಸರ್ವರ್‌ಗೆ ಹೋಗುವುದಿಲ್ಲ<br>
+        ✅ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದೆಯೂ ಕೆಲಸ ಮಾಡುತ್ತದೆ<br>
+        ✅ ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳು, ಶಿಕ್ಷಕರು, ಪೋಷಕರಿಗೆ ಉಚಿತ<br>
+        🔜 ಶೀಘ್ರವೇ: ಹೆಚ್ಚಿನ ಟೂಲ್ಸ್ ಬರಲಿದೆ!
+      </div>
+    </div>
+
+  </div>
+
+  <footer>© 2026 shaulssk.in · Online Tools</footer>
+</div>
+
+<script>
+function show(id, html){ var el = document.getElementById(id); el.innerHTML = html; el.style.display = 'block'; }
+
+function calcPct(){
+  var o = parseFloat(document.getElementById('p-obt').value);
+  var t = parseFloat(document.getElementById('p-tot').value);
+  if(!t || isNaN(o) || o < 0 || o > t){ show('p-res', '⚠️ ಸರಿಯಾದ ಅಂಕಗಳನ್ನು ನಮೂದಿಸಿ'); return; }
+  var p = (o / t * 100);
+  var g = p >= 90 ? 'A+' : p >= 80 ? 'A' : p >= 60 ? 'B' : p >= 50 ? 'C' : p >= 35 ? 'D' : 'F';
+  var st = p >= 35 ? '✅ ಉತ್ತೀರ್ಣ' : '❌ ಕೈಗೂಡದ';
+  show('p-res', '<b>' + p.toFixed(2) + '%</b><br>ಗ್ರೇಡ್: ' + g + ' · ' + st);
+}
+
+function calcAtt(){
+  var pr = parseFloat(document.getElementById('a-pre').value);
+  var w = parseFloat(document.getElementById('a-tot').value);
+  if(!w || isNaN(pr) || pr < 0 || pr > w){ show('a-res', '⚠️ ಸರಿಯಾದ ದಿನಗಳನ್ನು ನಮೂದಿಸಿ'); return; }
+  var pct = pr / w * 100;
+  var need75 = pct >= 75 ? 0 : Math.ceil((0.75 * w - pr) / 0.25);
+  var need85 = pct >= 85 ? 0 : Math.ceil((0.85 * w - pr) / 0.15);
+  show('a-res', '<b>' + pct.toFixed(2) + '%</b> ಹಾಜರಾತಿ<br>75%ಗೆ ಬೇಕಾದ ಹೆಚ್ಚುವರಿ ದಿನ: <b>' + need75 + '</b><br>85%ಗೆ ಬೇಕಾದ ಹೆಚ್ಚುವರಿ ದಿನ: <b>' + need85 + '</b>');
+}
+
+function calcAge(){
+  var dv = document.getElementById('g-dob').value;
+  if(!dv){ show('g-res', '⚠️ ಹುಟ್ಟಿದ ದಿನಾಂಕ ನಮೂದಿಸಿ'); return; }
+  var av = document.getElementById('g-asof').value;
+  var b = new Date(dv);
+  var e = av ? new Date(av) : new Date();
+  var y = e.getFullYear() - b.getFullYear();
+  var m = e.getMonth() - b.getMonth();
+  var d = e.getDate() - b.getDate();
+  if(d < 0){ m--; d += new Date(e.getFullYear(), e.getMonth(), 0).getDate(); }
+  if(m < 0){ y--; m += 12; }
+  if(y < 0 || isNaN(y)){ show('g-res', '⚠️ ದಿನಾಂಕ ಪರಿಶೀಲಿಸಿ'); return; }
+  var days = Math.floor((e - b) / 86400000);
+  show('g-res', '<b>' + y + '</b> ವರ್ಷ <b>' + m + '</b> ತಿಂಗಳು <b>' + d + '</b> ದಿನ<br>(ಒಟ್ಟು ' + days.toLocaleString('en-IN') + ' ದಿನ)');
+}
+
+function calcDate(){
+  var f = document.getElementById('d-from').value;
+  var t = document.getElementById('d-to').value;
+  if(!f || !t){ show('d-res', '⚠️ ಎರಡೂ ದಿನಾಂಕ ನಮೂದಿಸಿ'); return; }
+  var ms = Math.abs(new Date(t) - new Date(f));
+  var days = Math.floor(ms / 86400000);
+  var wk = Math.floor(days / 7), rd = days % 7;
+  var mo = Math.round(days / 30.44 * 10) / 10;
+  show('d-res', '<b>' + days.toLocaleString('en-IN') + '</b> ದಿನ<br>' + wk + ' ವಾರ + ' + rd + ' ದಿನ ≈ ' + mo + ' ತಿಂಗಳು');
+}
+
+function calcMarks(){
+  var raw = document.getElementById('m-list').value.trim();
+  var mx = parseFloat(document.getElementById('m-max').value) || 100;
+  if(!raw){ show('m-res', '⚠️ ಅಂಕಗಳನ್ನು ನಮೂದಿಸಿ'); return; }
+  var arr = raw.split(/[,\s]+/).map(Number).filter(function(x){ return !isNaN(x); });
+  if(arr.length === 0){ show('m-res', '⚠️ ಸರಿಯಾದ ಅಂಕಗಳು ನಮೂದಿಸಿ'); return; }
+  var tot = arr.reduce(function(a,b){ return a+b; }, 0);
+  var maxT = mx * arr.length;
+  var pct = tot / maxT * 100;
+  var avg = tot / arr.length;
+  show('m-res', 'ವಿಷಯಗಳು: <b>' + arr.length + '</b><br>ಒಟ್ಟು: <b>' + tot + ' / ' + maxT + '</b><br>ಸರಾಸರಿ: <b>' + avg.toFixed(2) + '</b><br>ಶೇಕಡಾಂಶ: <b>' + pct.toFixed(2) + '%</b>');
+}
+</script>
+</body>
+</html>
