@@ -82,9 +82,12 @@
       <input type="number" id="p-obt" placeholder="e.g., 356">
       <label>ಒಟ್ಟು ಅಂಕ | Total Marks</label>
       <input type="number" id="p-tot" placeholder="e.g., 500">
+      <div style="border-top:1px dashed rgba(214,162,58,.3);margin:14px 0 6px;"></div>
+      <label>ಶೀಘ್ರ ಲೆಕ್ಕ | Quick Formula</label>
+      <input type="text" id="p-form" placeholder="=500/370*100" style="font-family:monospace;">
       <div class="btn-row">
         <button onclick="calcPct()">ಲೆಕ್ಕ ಹಾಕಿ | Calculate</button>
-        <button class="ghost" onclick="resetTool(['p-obt','p-tot'],'p-res')">ರೀಸೆಟ್ | Reset</button>
+        <button class="ghost" onclick="resetTool(['p-obt','p-tot','p-form'],'p-res')">ರೀಸೆಟ್ | Reset</button>
       </div>
       <div class="res" id="p-res"></div>
     </div>
@@ -172,6 +175,14 @@ function resetTool(ids, resId){
 }
 
 function calcPct(){
+  var frm = document.getElementById('p-form').value.trim();
+  if(frm){
+    var expr = frm.startsWith('=') ? frm.slice(1) : frm;
+    if(/^[0-9+\-*/%().\s]+$/.test(expr)){
+      try { var val = Function('"use strict"; return (' + expr + ')')(); show('p-res', frm + ' = <b>' + val.toFixed(4) + '</b>'); return; }
+      catch(e){ show('p-res', '⚠️ Invalid formula | ಸರಿಯಾದ ಸೂತ್ರ ಹಾಕಿ'); return; }
+    } else { show('p-res', '⚠️ Invalid formula | ಸರಿಯಾದ ಸೂತ್ರ ಹಾಕಿ'); return; }
+  }
   var o = parseFloat(document.getElementById('p-obt').value);
   var t = parseFloat(document.getElementById('p-tot').value);
   if(!t || isNaN(o) || o < 0 || o > t){ show('p-res', '⚠️ ಸರಿಯಾದ ಅಂಕ ನಮೂದಿಸಿ | Enter valid marks'); return; }
