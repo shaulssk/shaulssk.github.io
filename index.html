@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shaul SSK — Projects</title>
+<title>Shaul SSK — Projects & Tools</title>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3030395356696493" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL7KQ1LH6D"></script>
 <script>
@@ -19,67 +19,175 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   body{
     min-height:100vh;
-    display:flex; align-items:center; justify-content:center;
     font-family:'Noto Sans Kannada','Segoe UI',system-ui,sans-serif;
-    background:linear-gradient(135deg,#0E2432 0%,#16303F 55%,#274259 100%);
+    background:linear-gradient(135deg,#0A1628 0%,#0F2847 40%,#1A4070 70%,#0A1628 100%);
     color:#F3EFE2;
-    padding:24px;
+    padding:20px 16px;
+    overflow-x:hidden;
   }
-  .card{
-    max-width:560px; width:100%;
+  
+  /* Animated background orbs */
+  .bg-orb{
+    position:fixed;border-radius:50%;filter:blur(80px);opacity:.12;z-index:0;pointer-events:none;
+  }
+  .orb1{width:400px;height:400px;background:#D6A23A;top:-100px;right:-100px;animation:float 20s ease-in-out infinite;}
+  .orb2{width:300px;height:300px;background:#4A90D9;bottom:-80px;left:-80px;animation:float 25s ease-in-out infinite reverse;}
+  .orb3{width:250px;height:250px;background:#E8B84D;top:50%;left:40%;animation:float 18s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-30px) scale(1.05);}}
+  
+  .wrap{max-width:1000px;margin:0 auto;position:relative;z-index:1;}
+  
+  /* Hero */
+  .hero{text-align:center;margin:50px 0 40px;}
+  .hero h1{
+    font-size:42px;font-weight:700;
+    background:linear-gradient(135deg,#F0D9A6 0%,#E8B84D 50%,#D6A23A 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    text-shadow:0 0 60px rgba(214,162,58,.3);
+  }
+  .hero .sub{font-size:16px;color:#8FAAB8;margin-top:8px;letter-spacing:1px;}
+  .hero .tags{margin-top:16px;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+  .hero .tag{
+    font-size:12px;padding:6px 14px;border-radius:20px;
+    background:rgba(214,162,58,.12);border:1px solid rgba(214,162,58,.3);
+    color:#F0D9A6;
+  }
+  
+  /* Links Grid */
+  .links-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:16px;
+    margin-bottom:40px;
+  }
+  
+  .link-card{
+    display:flex;align-items:flex-start;gap:16px;
+    padding:20px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:16px;
+    text-decoration:none;color:#F3EFE2;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+  }
+  .link-card::before{
+    content:'';position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,transparent,#D6A23A,transparent);
+    opacity:0;transition:.3s;
+  }
+  .link-card:hover{
+    border-color:rgba(214,162,58,.4);
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
     background:rgba(255,255,255,.06);
-    border:1px solid rgba(214,162,58,.4);
-    border-radius:18px;
-    padding:40px 32px;
-    text-align:center;
   }
-  h1{font-size:30px; letter-spacing:1px; color:#F0D9A6;}
-  .sub{margin-top:8px; font-size:14px; color:#C9D3D6;}
-  .links{margin-top:28px; display:flex; flex-direction:column; gap:12px;}
-  a.proj{
-    display:block; padding:14px 18px;
-    border-radius:12px; text-decoration:none;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
-    color:#F3EFE2; font-size:15px;
-    transition:.15s;
+  .link-card:hover::before{opacity:1;}
+  
+  .link-icon{
+    width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    font-size:24px;flex-shrink:0;
   }
-  a.proj:hover{border-color:#D6A23A; background:rgba(214,162,58,.15);}
-  a.proj small{display:block; margin-top:3px; color:#9FB0B8; font-size:12px;}
-  footer{margin-top:26px; font-size:12px; color:#8A9AA3;}
+  .icon-dash{background:linear-gradient(135deg,#FF6B6B,#EE5A24);}
+  .icon-guide{background:linear-gradient(135deg,#4ECDC4,#2ECC71);}
+  .icon-sats{background:linear-gradient(135deg,#A29BFE,#6C5CE7);}
+  .icon-tools{background:linear-gradient(135deg,#FDCB6E,#F39C12);}
+  .icon-notice{background:linear-gradient(135deg,#74B9FF,#0984E3);}
+  .icon-privacy{background:linear-gradient(135deg,#DFE6E9,#B2BEC3);}
+  
+  .link-info h3{font-size:15px;color:#F0D9A6;margin-bottom:4px;line-height:1.3;}
+  .link-info p{font-size:12px;color:#7A8A92;line-height:1.4;}
+  
+  /* Footer */
+  footer{
+    text-align:center;padding:24px;
+    border-top:1px solid rgba(255,255,255,.06);
+    font-size:12px;color:#5A6A72;
+  }
+  footer a{color:#D6A23A;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  
+  /* Responsive */
+  @media(max-width:600px){
+    .hero h1{font-size:32px;}
+    .links-grid{grid-template-columns:1fr;}
+    .hero{margin:30px 0 24px;}
+  }
 </style>
 </head>
 <body>
-  <div class="card">
+
+<div class="bg-orb orb1"></div>
+<div class="bg-orb orb2"></div>
+<div class="bg-orb orb3"></div>
+
+<div class="wrap">
+  <div class="hero">
     <h1>Shaul SSK</h1>
-    <p class="sub">Projects &amp; Tools · ಷವುಲ್ SSK</p>
-    <div class="links">
-      <a class="proj" href="/nirantara-dashboard/">
-        ನಿರಂತರ ನೋಂದಣಿ ಸಮನ್ವಯ ವರದಿ — ದೇವದುರ್ಗ
-        <small>SATS vs Nirantara registration dashboard · BEO Devadurga</small>
-      </a>
-      <a class="proj" href="/nirantara-guide.html">
-        📱 ನಿರಂತರ ಆ್ಯಪ್ ಬಳಸುವ ವಿಧಾನ
-        <small>ಹಂತ-ಹಂತದ ಮಾರ್ಗದರ್ಶಿ · ಸಾಮಾನ್ಯ ಸಮಸ್ಯೆಗಳು &amp; ಪರಿಹಾರ</small>
-      </a>
-      <a class="proj" href="/sats-vs-nirantara.html">
-        📊 SATS vs ನಿರಂತರ — ವ್ಯತ್ಯಾಸ ಏಕೆ?
-        <small>8 ಮುಖ್ಯ ಕಾರಣಗಳು · ಪರಿಹಾರ ಕ್ರಮಗಳ ಲೇಖನ</small>
-      </a>
-      <a class="proj" href="/tools.html">
-        🧮 ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್ — ಶೇಕಡಾಂಶ, ಹಾಜರಾತಿ, ವಯಸ್ಸು ಲೆಕ್ಕ
-        <small>Percentage · Attendance · Age · Date · Marks calculators</small>
-      </a>
-      <a class="proj" href="/notice.html">
-        🔔 ಸೂಚನಾ ಫಲಕ — BEO ದೇವದುರ್ಗ ಘೋಷಣೆಗಳು
-        <small>Official announcements · Circulars · Updates</small>
-      </a>
-      <a class="proj" href="/privacy-policy.html">
-        🔒 ಗೋಪ್ಯತಾ ನೀತಿ (Privacy Policy)
-        <small>ಡೇಟಾ ಬಳಕೆ, cookies &amp; AdSense ಮಾಹಿತಿ</small>
-      </a>
+    <p class="sub">Projects & Tools · ಷವುಲ್ SSK</p>
+    <div class="tags">
+      <span class="tag">🏫 BEO Devadurga</span>
+      <span class="tag">📊 334 Schools</span>
+      <span class="tag">📱 100% Free</span>
+      <span class="tag">🌐 shaulssk.in</span>
     </div>
-    <footer>© 2026 shaulssk.in · More projects coming soon</footer>
   </div>
+
+  <div class="links-grid">
+    <a class="link-card" href="/nirantara-dashboard/">
+      <div class="link-icon icon-dash">📊</div>
+      <div class="link-info">
+        <h3>ನಿರಂತರ ನೋಂದಣಿ ಸಮನ್ವಯ ವರದಿ — ದೇವದುರ್ಗ</h3>
+        <p>SATS vs Nirantara registration dashboard · BEO Devadurga</p>
+      </div>
+    </a>
+    
+    <a class="link-card" href="/nirantara-guide.html">
+      <div class="link-icon icon-guide">📱</div>
+      <div class="link-info">
+        <h3>ನಿರಂತರ ಆ್ಯಪ್ ಬಳಸುವ ವಿಧಾನ</h3>
+        <p>ಹಂತ-ಹಂತದ ಮಾರ್ಗದರ್ಶಿ · ಸಾಮಾನ್ಯ ಸಮಸ್ಯೆಗಳು & ಪರಿಹಾರ</p>
+      </div>
+    </a>
+    
+    <a class="link-card" href="/sats-vs-nirantara.html">
+      <div class="link-icon icon-sats">📊</div>
+      <div class="link-info">
+        <h3>SATS vs ನಿರಂತರ — ವ್ಯತ್ಯಾಸ ಏಕೆ?</h3>
+        <p>8 ಮುಖ್ಯ ಕಾರಣಗಳು · ಪರಿಹಾರ ಕ್ರಮಗಳ ಲೇಖನ</p>
+      </div>
+    </a>
+    
+    <a class="link-card" href="/tools.html">
+      <div class="link-icon icon-tools">🧮</div>
+      <div class="link-info">
+        <h3>ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್ — ಶೇಕಡಾಂಶ, ಹಾಜರಾತಿ, ವಯಸ್ಸು</h3>
+        <p>Percentage · Attendance · Age · Date · Marks calculators</p>
+      </div>
+    </a>
+    
+    <a class="link-card" href="/notice.html">
+      <div class="link-icon icon-notice">🔔</div>
+      <div class="link-info">
+        <h3>ಸೂಚನಾ ಫಲಕ — BEO ದೇವದುರ್ಗ ಘೋಷಣೆಗಳು</h3>
+        <p>Official announcements · Circulars · Updates</p>
+      </div>
+    </a>
+    
+    <a class="link-card" href="/privacy-policy.html">
+      <div class="link-icon icon-privacy">🔒</div>
+      <div class="link-info">
+        <h3>ಗೋಪ್ಯತಾ ನೀತಿ (Privacy Policy)</h3>
+        <p>ಡೇಟಾ ಬಳಕೆ, cookies & AdSense ಮಾಹಿತಿ</p>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2026 <a href="https://shaulssk.in">shaulssk.in</a> · More projects coming soon</p>
+  </footer>
+</div>
+
 </body>
 </html>
