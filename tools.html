@@ -46,12 +46,18 @@
     font-size:15px;font-family:inherit;
   }
   input:focus{outline:none;border-color:#D6A23A;}
-  button{
-    margin-top:14px;width:100%;padding:12px;border:none;border-radius:10px;
+  .btn-row{display:flex;gap:10px;margin-top:14px;}
+  .btn-row button{
+    margin-top:0;width:auto;flex:1;padding:12px;border:none;border-radius:10px;
     background:#D6A23A;color:#16303F;font-weight:700;font-size:15px;
     font-family:inherit;cursor:pointer;
   }
-  button:hover{background:#E8B84D;}
+  .btn-row button:hover{background:#E8B84D;}
+  .btn-row button.ghost{
+    flex:0 0 38%;background:transparent;color:#F0D9A6;
+    border:1px solid rgba(214,162,58,.55);font-weight:600;
+  }
+  .btn-row button.ghost:hover{background:rgba(214,162,58,.12);}
   .res{
     margin-top:14px;padding:14px;border-radius:10px;
     background:rgba(214,162,58,.12);border:1px dashed rgba(214,162,58,.45);
@@ -63,75 +69,90 @@
 </head>
 <body>
 <div class="wrap">
-  <header><a class="home" href="/">← ಮುಖಪುಟ</a></header>
-  <h1>🧮 ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್</h1>
-  <p class="sub">ಶಿಕ್ಷಕರಿಗಾಗಿ ದೈನಂದಿನ ಲೆಕ್ಕ ಸಾಧನಗಳು · shaulssk.in</p>
+  <header><a class="home" href="/">← ಮುಖಪುಟ | Home</a></header>
+  <h1>🧮 ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್ | Online Tools</h1>
+  <p class="sub">ಶಿಕ್ಷಕರಿಗಾಗಿ ದೈನಂದಿನ ಲೆಕ್ಕ ಸಾಧನಗಳು · Daily calculators for teachers · shaulssk.in</p>
 
   <div class="grid">
 
     <div class="tool" id="t-pct">
-      <h2>📊 ಶೇಕಡಾಂಶ ಕ್ಯಾಲ್ಕುಲೇಟರ್</h2>
-      <p class="hint">ಪಡೆದ ಅಂಕ ಮತ್ತು ಒಟ್ಟು ಅಂಕ → ಶೇಕಡಾಂಶ + ಗ್ರೇಡ್</p>
-      <label>ಪಡೆದ ಅಂಕ (Obtained)</label>
+      <h2>📊 ಶೇಕಡಾಂಶ | Percentage</h2>
+      <p class="hint">ಪಡೆದ ಅಂಕ ÷ ಒಟ್ಟು → ಶೇಕಡಾಂಶ + ಗ್ರೇಡ್ | Obtained ÷ Total → % &amp; Grade</p>
+      <label>ಪಡೆದ ಅಂಕ | Obtained Marks</label>
       <input type="number" id="p-obt" placeholder="e.g., 356">
-      <label>ಒಟ್ಟು ಅಂಕ (Total)</label>
+      <label>ಒಟ್ಟು ಅಂಕ | Total Marks</label>
       <input type="number" id="p-tot" placeholder="e.g., 500">
-      <button onclick="calcPct()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="btn-row">
+        <button onclick="calcPct()">ಲೆಕ್ಕ ಹಾಕಿ | Calculate</button>
+        <button class="ghost" onclick="resetTool(['p-obt','p-tot'],'p-res')">ರೀಸೆಟ್ | Reset</button>
+      </div>
       <div class="res" id="p-res"></div>
     </div>
 
     <div class="tool" id="t-att">
-      <h2>🗓️ ಹಾಜರಾತಿ ಕ್ಯಾಲ್ಕುಲೇಟರ್</h2>
-      <p class="hint">75% / 85% ಹಾಜರಾತಿಗೆ ಎಷ್ಟು ದಿನ ಬೇಕು?</p>
-      <label>ಬಂದ ದಿನಗಳು (Present)</label>
+      <h2>🗓️ ಹಾಜರಾತಿ | Attendance</h2>
+      <p class="hint">75% / 85% ಹಾಜರಾತಿಗೆ ಎಷ್ಟು ದಿನ ಬೇಕು? | Days needed to reach 75% / 85%</p>
+      <label>ಬಂದ ದಿನಗಳು | Present Days</label>
       <input type="number" id="a-pre" placeholder="e.g., 96">
-      <label>ಒಟ್ಟು ಕೆಲಸದ ದಿನಗಳು (Working days)</label>
+      <label>ಒಟ್ಟು ಕೆಲಸದ ದಿನಗಳು | Working Days</label>
       <input type="number" id="a-tot" placeholder="e.g., 130">
-      <button onclick="calcAtt()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="btn-row">
+        <button onclick="calcAtt()">ಲೆಕ್ಕ ಹಾಕಿ | Calculate</button>
+        <button class="ghost" onclick="resetTool(['a-pre','a-tot'],'a-res')">ರೀಸೆಟ್ | Reset</button>
+      </div>
       <div class="res" id="a-res"></div>
     </div>
 
     <div class="tool" id="t-age">
-      <h2>🎂 ವಯಸ್ಸು ಕ್ಯಾಲ್ಕುಲೇಟರ್</h2>
-      <p class="hint">ಹುಟ್ಟಿದ ದಿನಾಂಕ → ವರ್ಷ / ತಿಂಗಳು / ದಿನ (ಇಂದಿನಂತೆ)</p>
-      <label>ಹುಟ್ಟಿದ ದಿನಾಂಕ (Date of Birth)</label>
+      <h2>🎂 ವಯಸ್ಸು | Age Calculator</h2>
+      <p class="hint">ಹುಟ್ಟಿದ ದಿನಾಂಕ → ವರ್ಷ / ತಿಂಗಳು / ದಿನ | DOB → Years / Months / Days</p>
+      <label>ಹುಟ್ಟಿದ ದಿನಾಂಕ | Date of Birth</label>
       <input type="date" id="g-dob">
-      <label>ಯಾವ ದಿನಾಂಕದಂತೆ? (ಖಾಲಿ ಬಿಟ್ಟರೆ ಇಂದು)</label>
+      <label>ಯಾವ ದಿನಾಂಕದಂತೆ? (ಖಾಲಿ = ಇಂದು) | As on date (blank = today)</label>
       <input type="date" id="g-asof">
-      <button onclick="calcAge()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="btn-row">
+        <button onclick="calcAge()">ಲೆಕ್ಕ ಹಾಕಿ | Calculate</button>
+        <button class="ghost" onclick="resetTool(['g-dob','g-asof'],'g-res')">ರೀಸೆಟ್ | Reset</button>
+      </div>
       <div class="res" id="g-res"></div>
     </div>
 
     <div class="tool" id="t-date">
-      <h2>📅 ದಿನಾಂಕ ವ್ಯತ್ಯಾಸ</h2>
-      <p class="hint">ಎರಡು ದಿನಾಂಕಗಳ ನಡುವೆ ಎಷ್ಟು ದಿನ?</p>
-      <label>ಮೊದಲ ದಿನಾಂಕ (From)</label>
+      <h2>📅 ದಿನಾಂಕ ವ್ಯತ್ಯಾಸ | Date Difference</h2>
+      <p class="hint">ಎರಡು ದಿನಾಂಕಗಳ ನಡುವೆ ಎಷ್ಟು ದಿನ? | Days between two dates</p>
+      <label>ಮೊದಲ ದಿನಾಂಕ | From Date</label>
       <input type="date" id="d-from">
-      <label>ಎರಡನೇ ದಿನಾಂಕ (To)</label>
+      <label>ಎರಡನೇ ದಿನಾಂಕ | To Date</label>
       <input type="date" id="d-to">
-      <button onclick="calcDate()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="btn-row">
+        <button onclick="calcDate()">ಲೆಕ್ಕ ಹಾಕಿ | Calculate</button>
+        <button class="ghost" onclick="resetTool(['d-from','d-to'],'d-res')">ರೀಸೆಟ್ | Reset</button>
+      </div>
       <div class="res" id="d-res"></div>
     </div>
 
     <div class="tool" id="t-marks">
-      <h2>🧾 ಅಂಕಗಳ ಒಟ್ಟು &amp; ಸರಾಸರಿ</h2>
-      <p class="hint">ವಿಷಯಗಳ ಅಂಕಗಳನ್ನು ಕಾಮಾ ಅಥವಾ ಸ್ಪೇಸ್‌ನಿಂದ ಬೇರ್ಪಡಿಸಿ ಬರೆಯಿರಿ</p>
-      <label>ವಿಷಯವಾರು ಅಂಕಗಳು (e.g., 78 65 92 81 74)</label>
+      <h2>🧾 ಅಂಕಗಳ ಒಟ್ಟು | Marks Total &amp; Average</h2>
+      <p class="hint">ಅಂಕಗಳನ್ನು ಕಾಮಾ/ಸ್ಪೇಸ್‌ನಿಂದ ಬೇರ್ಪಡಿಸಿ | Separate marks by comma or space</p>
+      <label>ವಿಷಯವಾರು ಅಂಕಗಳು | Subject Marks</label>
       <input type="text" id="m-list" placeholder="78, 65, 92, 81, 74">
-      <label>ಪ್ರತಿ ವಿಷಯದ ಗರಿಷ್ಠ ಅಂಕ (Default 100)</label>
+      <label>ಪ್ರತಿ ವಿಷಯದ ಗರಿಷ್ಠ (Default 100) | Max per subject</label>
       <input type="number" id="m-max" value="100">
-      <button onclick="calcMarks()">ಲೆಕ್ಕ ಹಾಕಿ</button>
+      <div class="btn-row">
+        <button onclick="calcMarks()">ಲೆಕ್ಕ ಹಾಕಿ | Calculate</button>
+        <button class="ghost" onclick="resetTool(['m-list','m-max'],'m-res')">ರೀಸೆಟ್ | Reset</button>
+      </div>
       <div class="res" id="m-res"></div>
     </div>
 
     <div class="tool" id="t-info">
-      <h2>💡 ಗಮನಿಸಿ</h2>
-      <p class="hint">ಈ ಎಲ್ಲಾ ಟೂಲ್ಸ್ ನಿಮ್ಮ ಫೋನ್/ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲೇ ಲೆಕ್ಕ ಹಾಕುತ್ತವೆ.</p>
+      <h2>💡 ಗಮನಿಸಿ | Note</h2>
+      <p class="hint">ಎಲ್ಲಾ ಲೆಕ್ಕ ನಿಮ್ಮ ಸಾಧನದಲ್ಲೇ | All calculations happen on your device</p>
       <div style="font-size:13.5px;line-height:2;color:#C9D3D6;">
-        ✅ ಯಾವುದೇ ಡೇಟಾ ಸರ್ವರ್‌ಗೆ ಹೋಗುವುದಿಲ್ಲ<br>
-        ✅ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದೆಯೂ ಕೆಲಸ ಮಾಡುತ್ತದೆ<br>
-        ✅ ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳು, ಶಿಕ್ಷಕರು, ಪೋಷಕರಿಗೆ ಉಚಿತ<br>
-        🔜 ಶೀಘ್ರವೇ: ಹೆಚ್ಚಿನ ಟೂಲ್ಸ್ ಬರಲಿದೆ!
+        ✅ ಡೇಟಾ ಸರ್ವರ್‌ಗೆ ಹೋಗುವುದಿಲ್ಲ | No data sent to server<br>
+        ✅ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲದೆಯೂ ಕೆಲಸ | Works offline too<br>
+        ✅ ಉಚಿತ | Free for students, teachers &amp; parents<br>
+        🔜 ಇನ್ನಷ್ಟು ಟೂಲ್ಸ್ ಶೀಘ್ರ | More tools coming soon!
       </div>
     </div>
 
@@ -143,29 +164,36 @@
 <script>
 function show(id, html){ var el = document.getElementById(id); el.innerHTML = html; el.style.display = 'block'; }
 
+function resetTool(ids, resId){
+  ids.forEach(function(i){ document.getElementById(i).value = ''; });
+  var r = document.getElementById(resId);
+  r.innerHTML = '';
+  r.style.display = 'none';
+}
+
 function calcPct(){
   var o = parseFloat(document.getElementById('p-obt').value);
   var t = parseFloat(document.getElementById('p-tot').value);
-  if(!t || isNaN(o) || o < 0 || o > t){ show('p-res', '⚠️ ಸರಿಯಾದ ಅಂಕಗಳನ್ನು ನಮೂದಿಸಿ'); return; }
+  if(!t || isNaN(o) || o < 0 || o > t){ show('p-res', '⚠️ ಸರಿಯಾದ ಅಂಕ ನಮೂದಿಸಿ | Enter valid marks'); return; }
   var p = (o / t * 100);
   var g = p >= 90 ? 'A+' : p >= 80 ? 'A' : p >= 60 ? 'B' : p >= 50 ? 'C' : p >= 35 ? 'D' : 'F';
-  var st = p >= 35 ? '✅ ಉತ್ತೀರ್ಣ' : '❌ ಕೈಗೂಡದ';
-  show('p-res', '<b>' + p.toFixed(2) + '%</b><br>ಗ್ರೇಡ್: ' + g + ' · ' + st);
+  var st = p >= 35 ? '✅ ಉತ್ತೀರ್ಣ | Pass' : '❌ ತೇರ್ಚದ | Fail';
+  show('p-res', '<b>' + p.toFixed(2) + '%</b><br>ಗ್ರೇಡ್ | Grade: ' + g + ' · ' + st);
 }
 
 function calcAtt(){
   var pr = parseFloat(document.getElementById('a-pre').value);
   var w = parseFloat(document.getElementById('a-tot').value);
-  if(!w || isNaN(pr) || pr < 0 || pr > w){ show('a-res', '⚠️ ಸರಿಯಾದ ದಿನಗಳನ್ನು ನಮೂದಿಸಿ'); return; }
+  if(!w || isNaN(pr) || pr < 0 || pr > w){ show('a-res', '⚠️ ಸರಿಯಾದ ದಿನ ನಮೂದಿಸಿ | Enter valid days'); return; }
   var pct = pr / w * 100;
   var need75 = pct >= 75 ? 0 : Math.ceil((0.75 * w - pr) / 0.25);
   var need85 = pct >= 85 ? 0 : Math.ceil((0.85 * w - pr) / 0.15);
-  show('a-res', '<b>' + pct.toFixed(2) + '%</b> ಹಾಜರಾತಿ<br>75%ಗೆ ಬೇಕಾದ ಹೆಚ್ಚುವರಿ ದಿನ: <b>' + need75 + '</b><br>85%ಗೆ ಬೇಕಾದ ಹೆಚ್ಚುವರಿ ದಿನ: <b>' + need85 + '</b>');
+  show('a-res', '<b>' + pct.toFixed(2) + '%</b> ಹಾಜರಾತಿ | Attendance<br>75%ಗೆ ಬೇಕು | Need for 75%: <b>' + need75 + '</b> ದಿನ<br>85%ಗೆ ಬೇಕು | Need for 85%: <b>' + need85 + '</b> ದಿನ');
 }
 
 function calcAge(){
   var dv = document.getElementById('g-dob').value;
-  if(!dv){ show('g-res', '⚠️ ಹುಟ್ಟಿದ ದಿನಾಂಕ ನಮೂದಿಸಿ'); return; }
+  if(!dv){ show('g-res', '⚠️ ಹುಟ್ಟಿದ ದಿನಾಂಕ ನಮೂದಿಸಿ | Enter date of birth'); return; }
   var av = document.getElementById('g-asof').value;
   var b = new Date(dv);
   var e = av ? new Date(av) : new Date();
@@ -174,33 +202,33 @@ function calcAge(){
   var d = e.getDate() - b.getDate();
   if(d < 0){ m--; d += new Date(e.getFullYear(), e.getMonth(), 0).getDate(); }
   if(m < 0){ y--; m += 12; }
-  if(y < 0 || isNaN(y)){ show('g-res', '⚠️ ದಿನಾಂಕ ಪರಿಶೀಲಿಸಿ'); return; }
+  if(y < 0 || isNaN(y)){ show('g-res', '⚠️ ದಿನಾಂಕ ಪರಿಶೀಲಿಸಿ | Check dates'); return; }
   var days = Math.floor((e - b) / 86400000);
-  show('g-res', '<b>' + y + '</b> ವರ್ಷ <b>' + m + '</b> ತಿಂಗಳು <b>' + d + '</b> ದಿನ<br>(ಒಟ್ಟು ' + days.toLocaleString('en-IN') + ' ದಿನ)');
+  show('g-res', '<b>' + y + '</b> ವರ್ಷ/Years <b>' + m + '</b> ತಿಂಗಳು/Months <b>' + d + '</b> ದಿನ/Days<br>(ಒಟ್ಟು | Total: ' + days.toLocaleString('en-IN') + ' ದಿನ)');
 }
 
 function calcDate(){
   var f = document.getElementById('d-from').value;
   var t = document.getElementById('d-to').value;
-  if(!f || !t){ show('d-res', '⚠️ ಎರಡೂ ದಿನಾಂಕ ನಮೂದಿಸಿ'); return; }
+  if(!f || !t){ show('d-res', '⚠️ ಎರಡೂ ದಿನಾಂಕ ನಮೂದಿಸಿ | Enter both dates'); return; }
   var ms = Math.abs(new Date(t) - new Date(f));
   var days = Math.floor(ms / 86400000);
   var wk = Math.floor(days / 7), rd = days % 7;
   var mo = Math.round(days / 30.44 * 10) / 10;
-  show('d-res', '<b>' + days.toLocaleString('en-IN') + '</b> ದಿನ<br>' + wk + ' ವಾರ + ' + rd + ' ದಿನ ≈ ' + mo + ' ತಿಂಗಳು');
+  show('d-res', '<b>' + days.toLocaleString('en-IN') + '</b> ದಿನ | Days<br>' + wk + ' ವಾರ | Weeks + ' + rd + ' ದಿನ ≈ ' + mo + ' ತಿಂಗಳು | Months');
 }
 
 function calcMarks(){
   var raw = document.getElementById('m-list').value.trim();
   var mx = parseFloat(document.getElementById('m-max').value) || 100;
-  if(!raw){ show('m-res', '⚠️ ಅಂಕಗಳನ್ನು ನಮೂದಿಸಿ'); return; }
+  if(!raw){ show('m-res', '⚠️ ಅಂಕ ನಮೂದಿಸಿ | Enter marks'); return; }
   var arr = raw.split(/[,\s]+/).map(Number).filter(function(x){ return !isNaN(x); });
-  if(arr.length === 0){ show('m-res', '⚠️ ಸರಿಯಾದ ಅಂಕಗಳು ನಮೂದಿಸಿ'); return; }
+  if(arr.length === 0){ show('m-res', '⚠️ ಸರಿಯಾದ ಅಂಕ ನಮೂದಿಸಿ | Enter valid marks'); return; }
   var tot = arr.reduce(function(a,b){ return a+b; }, 0);
   var maxT = mx * arr.length;
   var pct = tot / maxT * 100;
   var avg = tot / arr.length;
-  show('m-res', 'ವಿಷಯಗಳು: <b>' + arr.length + '</b><br>ಒಟ್ಟು: <b>' + tot + ' / ' + maxT + '</b><br>ಸರಾಸರಿ: <b>' + avg.toFixed(2) + '</b><br>ಶೇಕಡಾಂಶ: <b>' + pct.toFixed(2) + '%</b>');
+  show('m-res', 'ವಿಷಯಗಳು | Subjects: <b>' + arr.length + '</b><br>ಒಟ್ಟು | Total: <b>' + tot + ' / ' + maxT + '</b><br>ಸರಾಸರಿ | Average: <b>' + avg.toFixed(2) + '</b><br>ಶೇಕಡಾಂಶ | Percentage: <b>' + pct.toFixed(2) + '%</b>');
 }
 </script>
 </body>
