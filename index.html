@@ -85,6 +85,18 @@
   }
   .link-card:hover::before{opacity:1;}
   
+  .link-card.featured{
+    grid-column:1/-1;
+    flex-direction:column;align-items:center;text-align:center;
+    padding:28px 20px;
+    background:linear-gradient(135deg,rgba(214,162,58,.12),rgba(255,255,255,.04));
+    border:1px solid rgba(214,162,58,.35);
+    box-shadow:0 0 30px rgba(214,162,58,.08);
+  }
+  .link-card.featured .link-icon{width:60px;height:60px;font-size:28px;margin-bottom:10px;}
+  .link-card.featured .link-info h3{font-size:17px;}
+  .link-card.featured:hover{transform:translateY(-4px) scale(1.01);}
+
   .link-icon{
     width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;
     font-size:24px;flex-shrink:0;
@@ -143,19 +155,27 @@
       </div>
     </a>
 
-    <a class="link-card" href="/nirantara-guide.html">
+    <a class="link-card" href="/sats-vs-nirantara.html">
+      <div class="link-icon icon-sats">📊</div>
+      <div class="link-info">
+        <h3>SATS vs ನಿರಂತರ — ವ್ಯತ್ಯಾಸ ಏಕೆ?</h3>
+        <p>8 ಮುಖ್ಯ ಕಾರಣಗಳು · ಪರಿಹಾರ ಕ್ರಮಗಳ ಲೇಖನ</p>
+      </div>
+    </a>
+
+    <a class="link-card featured" href="/nirantara-guide.html">
       <div class="link-icon icon-guide">📱</div>
       <div class="link-info">
         <h3>ನಿರಂತರ ಆ್ಯಪ್ ಬಳಸುವ ವಿಧಾನ</h3>
         <p>ಹಂತ-ಹಂತದ ಮಾರ್ಗದರ್ಶಿ · ಸಾಮಾನ್ಯ ಸಮಸ್ಯೆಗಳು & ಪರಿಹಾರ</p>
       </div>
     </a>
-    
-    <a class="link-card" href="/sats-vs-nirantara.html">
-      <div class="link-icon icon-sats">📊</div>
+
+    <a class="link-card" href="/nirantara-dashboard/">
+      <div class="link-icon icon-dash">📈</div>
       <div class="link-info">
-        <h3>SATS vs ನಿರಂತರ — ವ್ಯತ್ಯಾಸ ಏಕೆ?</h3>
-        <p>8 ಮುಖ್ಯ ಕಾರಣಗಳು · ಪರಿಹಾರ ಕ್ರಮಗಳ ಲೇಖನ</p>
+        <h3>ನಿರಂತರ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ — ತುಲನಾತ್ಮಕ ವರದಿ</h3>
+        <p>shaulssk.in/nirantara-dashboard · SATS vs ನಿರಂತರ ದತ್ತಾಂಶ</p>
       </div>
     </a>
     
