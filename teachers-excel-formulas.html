@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta property="og:title" content="ಶಿಕ್ಷಕರಿಗೆ ಉಪಯುಕ್ತ Excel ಫಾರ್ಮುಲಾಗಳು | Shaul SSK">
+  <meta property="og:description" content="ಶಿಕ್ಷಕರಿಗೆ ಹಂತ-ಹಂತ Excel ಟಿಪ್ಸ್: ಅಂಕಗಣಿತ, ಶೇಕಡಾ, ಗ್ರೇಡ್, ಹಾಜರಾತಿ ಲೆಕ್ಕ, VLOOKUP, COUNTIF, ಬ್ಯಾಕಪ್ — ಕನ್ನಡದಲ್ಲಿ.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://shaulssk.in/teachers-excel-formulas.html">
+  <meta property="og:site_name" content="Shaul SSK">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ಶಿಕ್ಷಕರಿಗೆ ಉಪಯುಕ್ತ Excel ಫಾರ್ಮುಲಾಗಳು | Shaul SSK">
+  <meta name="twitter:description" content="ಶಿಕ್ಷಕರಿಗೆ Excel: ಅಂಕ, ಶೇಕಡಾ, ಗ್ರೇಡ್, ಹಾಜರಾತಿ, VLOOKUP, COUNTIF — ಕನ್ನಡದಲ್ಲಿ.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3030395356696493" crossorigin="anonymous"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL7KQ1LH6D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL7KQ1LH6D');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Baloo+Tamma+2:wght@500;600;700&display=swap" rel="stylesheet">
+<title>ಶಿಕ್ಷಕರಿಗೆ ಉಪಯುಕ್ತ Excel ಫಾರ್ಮುಲಾಗಳು | Shaul SSK</title>
+<meta name="description" content="ಶಿಕ್ಷಕರಿಗೆ Excel: ಅಂಕ, ಶೇಕಡಾ, ಗ್ರೇಡ್, ಹಾಜರಾತಿ ಲೆಕ್ಕ, VLOOKUP, COUNTIF — ಕನ್ನಡದಲ್ಲಿ.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    min-height:100vh;
+    font-family:'Noto Sans Kannada','Segoe UI',system-ui,sans-serif;
+    background:linear-gradient(135deg,#0A1628 0%,#0F2847 40%,#1A4070 70%,#0A1628 100%);
+    color:#F3EFE2;
+    padding:24px 16px;
+  }
+  .wrap{max-width:860px;margin:0 auto;}
+  a.back{color:#F0D9A6;text-decoration:none;font-size:14px;border:1px solid rgba(214,162,58,.4);padding:8px 14px;border-radius:10px;display:inline-block;margin-bottom:20px;}
+  a.back:hover{background:rgba(214,162,58,.15);}
+  h1{font-size:28px;color:#F0D9A6;line-height:1.3;margin-bottom:6px;}
+  .meta{font-size:13px;color:#8A9AA3;margin-bottom:22px;}
+  h2{font-size:19px;color:#E8B84D;margin-top:26px;margin-bottom:10px;border-left:4px solid #D6A23A;padding-left:12px;}
+  p{font-size:14.5px;color:#C9D3D6;line-height:1.7;margin-bottom:10px;}
+  li{margin-bottom:7px;color:#C9D3D6;font-size:14.5px;line-height:1.7;}
+  .box{background:rgba(255,255,255,.06);border:1px solid rgba(214,162,58,.35);border-radius:12px;padding:16px 18px;margin:14px 0;}
+  .box.green{border-color:rgba(80,200,120,.4);background:rgba(80,200,120,.06);}
+  .box.red{border-color:rgba(220,60,60,.4);background:rgba(220,60,60,.06);}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;}
+  th,td{border:1px solid rgba(255,255,255,.18);padding:9px 12px;text-align:left;}
+  th{background:rgba(214,162,58,.15);color:#F0D9A6;}
+  .step{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;}
+  .step-num{
+    min-width:30px;height:30px;border-radius:50%;
+    background:linear-gradient(135deg,#D6A23A,#E8B84D);color:#0A1628;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;
+  }
+  .step p{margin:0;}
+  .btn-grp{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0;}
+  .btn{
+    display:inline-block;padding:12px 22px;border-radius:10px;text-decoration:none;
+    font-size:14px;font-weight:600;transition:.2s;
+  }
+  .btn-main{background:linear-gradient(135deg,#D6A23A,#E8B84D);color:#0A1628;}
+  .btn-main:hover{box-shadow:0 4px 15px rgba(214,162,58,.4);}
+  .btn-tut{background:rgba(255,255,255,.08);color:#F0D9A6;border:1px solid rgba(214,162,58,.4);}
+  .btn-tut:hover{background:rgba(214,162,58,.15);}
+  ol,ul{padding-left:22px;margin-bottom:12px;}
+  footer{margin-top:38px;font-size:12.5px;color:#8A9AA3;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;}
+  a{color:#D6A23A;}
+  code{background:rgba(255,255,255,.1);padding:2px 8px;border-radius:6px;font-size:13px;color:#FFD98A;font-family:Consolas,monospace;}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","name":"Teachers Excel formulas guide","url":"https://shaulssk.in/teachers-excel-formulas.html","inLanguage":"kn","author":{"@type":"Organization","name":"Shaul SSK"},"isPartOf":{"@type":"WebSite","name":"Shaul SSK","url":"https://shaulssk.in/"}}
+</script>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/">ಮುಖಪುಟ | Home</a>
+<h1>ಶಿಕ್ಷಕರಿಗೆ ಉಪಯುಕ್ತ Excel ಫಾರ್ಮುಲಾಗಳು</h1>
+<p class="meta">ಅಂಕಪಟ್ಟಿ · ಹಾಜರಾತಿ · ಶೇಕಡಾ · ಗ್ರೇಡ್ · VLOOKUP · ಕೊನೆಯ ನವೀಕರಣ: 06-09-2026</p>
+
+<div class="box">
+<p><b>Excel</b> ಶಾಲಾ ಶಿಕ್ಷಕರ ಪ್ರತಿದಿನದ ಸಾಧನ — ಅಂಕಪಟ್ಟಿ, ಹಾಜರಾತಿ, ಶೇಕಡಾ, ಪ್ರಶಸ್ತಿ ಲೆಕ್ಕ, ವರದಿ. ಚಿಕ್ಕದಾದ ಕೆಲವೇ ಫಾರ್ಮುಲಾಗಳನ್ನು ತಿಳಿದರೆ ನೀವು ಗಂಟೆಗಟ್ಟಲೆ ಖರ್ಚು ಮಾಡುವ ಕೈ-ಲೆಕ್ಕ ಹತ್ತಾರು ಸೆಕೆಂಡ್‌ನಲ್ಲಿ ಆಗುತ್ತದೆ. ಈ ಮಾರ್ಗದರ್ಶಿ ಕನ್ನಡದಲ್ಲಿ, ಹಂತ-ಹಂತದಲ್ಲಿ ನಿಮ್ಮ daily ಕೆಲಸಕ್ಕೆ ನೇರ ಬಳಕೆ ಆಗುವಂತೆ ಸಿದ್ಧಪಡಿಸಿದ್ದೇವೆ.</p>
+</div>
+
+<div class="box green"><p><b>📌 ಹೇಗೆ ಬಳಸುವುದು:</b> ಸೂತ್ರವನ್ನು <code>=</code> ನಿಂದ ಪ್ರಾರಂಭಿಸಿ. ಸೆಲ್ address (ಉದಾ. <code>A1</code>) ಅಥವಾ ಶ್ರೇಣಿ (range, ಉದಾ. <code>B2:B30</code>) ಬಳಕೆಯಾಗುತ್ತದೆ. ನಿಮ್ಮ ಪಟ್ಟಿಯಲ್ಲಿ ಕಾಲಂ ಯಾವ ಅಕ್ಷರದಲ್ಲಿದೆ ಎಂದು ನೋಡಿ ಅದಕ್ಕೆ ತಕ್ಕಂತೆ ಹೊಂದಿಸಿ.</p></div>
+
+<h2>1. ಅಂಕ ಒಟ್ಟು (SUM)</h2>
+<div class="step"><div class="step-num">1</div><p>ಒಬ್ಬ ವಿದ್ಯಾರ್ಥಿಯ ಎಲ್ಲಾ ವಿಷಯದ ಅಂಕ ಸೇರಿಸಲು: <code>=SUM(B2:F2)</code> — ಎಂದರೆ B2 ರಿಂದ F2 ವರೆಗಿನ ಅಂಕ ಸೇರುತ್ತದೆ.</p></div>
+<div class="step"><div class="step-num">2</div><p>ಫಾರ್ಮುಲಾ ಸೆಲ್‌ನ ಕೆಳಗಿನ ಮೂಲೆ (fill handle) ತುಂಬಿದರೆ, ಕೆಳಗಿರುವ ಎಲ್ಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೂ ಅದೇ ಸೂತ್ರ ಅನ್ವಯ ಆಗುತ್ತದೆ.</p></div>
+<div class="step"><div class="step-num">3</div><p>ಒಟ್ಟು ಮೊತ್ತ ಸಹ <code>=SUM(B2:B40)</code> — ಕಾಲಂನ ಒಟ್ಟಿಗೆ.</p></div>
+
+<h2>2. ಶೇಕಡಾ ಲೆಕ್ಕ (Percentage)</h2>
+<div class="step"><div class="step-num">1</div><p>ಶೇಕಡಾ: <code>=(B2/600)*100</code> — ಒಟ್ಟು 600 ಅಂಕ ಇದ್ದರೆ. ಇಲ್ಲಿ B2 ಒಬ್ಬರ ಒಟ್ಟು ಅಂಕ.</p></div>
+<div class="step"><div class="step-num">2</div><p>ಅಥವಾ <code>=B2/600</code> ಮಾಡಿ ಸೆಲ್‌ನ format ಅನ್ನು <b>Percentage</b> ಆಗಿ ಬದಲಿಸಿ — ಹೆಚ್ಚು ಸುಲಭ.</p></div>
+<div class="step"><div class="step-num">3</div><p>ದಶಮಾಂಶ ಒಂದು/ಎರಡು ಅಂಕಿಗೆ ಸುತ್ತಲು: <code>=ROUND((B2/600)*100,1)</code> — ಕೊನೆಯ 1 ಎಂದರೆ ಒಂದು ದಶಮಾಂಶ ಸ್ಥಾನ.</p></div>
+
+<h2>3. ಗ್ರೇಡ್ ಆಟೋಮ್ಯಾಟಿಕ್ (IF)</h2>
+<div class="step"><div class="step-num">1</div><p>ಶೇಕಡಾ ಪಟ್ಟಿ (C ಕಾಲಂ) ಆಧಾರದ ಗ್ರೇಡ್: <code>=IF(C2>=85,"A",IF(C2>=70,"B",IF(C2>=60,"C",IF(C2>=35,"D","F"))))</code></p></div>
+<div class="step"><div class="step-num">2</div><p>ಇದು C2ನ ಶೇಕಡಾ ನೋಡಿ: 85+ = A, 70+ = B, 60+ = C, 35+ = D, ಇಲ್ಲದಿದ್ದರೆ F — ಆಗಿ ತೋರಿಸುತ್ತದೆ.</p></div>
+<div class="step"><div class="step-num">3</div><p>ನಿಮ್ಮ ಶಾಲೆ/ಬೋರ್ಡ್ ನಿಯಮಕ್ಕೆ ತಕ್ಕಂತೆ ಮಿತಿಗಳನ್ನು (85, 70...) ಬದಲಿಸಿ.</p></div>
+
+<h2>4. ಹಾಜರಾತಿ ಲೆಕ್ಕ (COUNTIF)</h2>
+<div class="step"><div class="step-num">1</div><p>ಒಂದು ವಿದ್ಯಾರ್ಥಿ ಎಷ್ಟು ದಿನ <b>ಹಾಜರ್</b> ಇದ್ದರು: <code>=COUNTIF(B2:AE2,"P")</code> — P ಇದ್ದ ಸೆಲ್ಗಳ ಸಂಖ್ಯೆ.</p></div>
+<div class="step"><div class="step-num">2</div><p>ಗೈರು: <code>=COUNTIF(B2:AE2,"A")</code> — A (absent) ಸೆಲ್ ಸಂಖ್ಯೆ.</p></div>
+<div class="step"><div class="step-num">3</div><p>ಶೇಕಡಾ ಹಾಜರಾತಿ: <code>=ROUND((COUNTIF(B2:AE2,"P")/30)*100,1)</code></p></div>
+
+<h2>5. ಹೆಸರಿಗಾಗಿ VLOOKUP</h2>
+<div class="step"><div class="step-num">1</div><p>ಎರಡು ಪಟ್ಟಿ ಇದ್ದಾಗ (ಒಂದರಲ್ಲಿ ಅಂಕ, ಇನ್ನೊಂದರಲ್ಲಿ ಹೆಸರು) ಹೊಂದಿಸಲು: <code>=VLOOKUP(A2,Sheet2!A:B,2,FALSE)</code></p></div>
+<div class="step"><div class="step-num">2</div><p>ಇದು ಶೀಟ್2ರ A ಕಾಲಂನಲ್ಲಿ A2ನ ಹೆಸರನ್ನು ಹುಡುಕಿ, ಹತ್ತಿರದ B ಕಾಲಂನ (2ನೇ ಕಾಲಂ) ಮಾಹಿತಿ ತರುತ್ತದೆ.</p></div>
+<div class="step"><div class="step-num">3</div><p>ಕೊನೆಯ <code>FALSE</code> — ನಿಖರ ಹೊಂದಾಣಿಕೆಗೆ. TRUE ಬಳಕೆ ಎಂದರೆ ಸರಿಸುಮಾರು — ದತ್ತಾಂಶ ಏರಿಕೆ ಇದ್ದರೆ ಮಾತ್ರ.</p></div>
+
+<h2>6. ಹಾಜರಾತಿ/ಅಂಕ ತುಂಬದ ಸೆಲ್‍ಗಳ ಸಂಖ್ಯೆ (COUNTA / COUNTBLANK)</h2>
+<ul>
+<li><code>=COUNTA(A2:A40)</code> — ಅಂಕ ಇರುವ ವಿದ್ಯಾರ್ಥಿಗಳ ಸಂಖ್ಯೆ (ಖಾಲಿ ಇಲ್ಲದವು).</li>
+<li><code>=COUNTBLANK(A2:A40)</code> — ಖಾಲಿ ಸೆಲ್ ಸಂಖ್ಯೆ (ಅಂಕ ನಮೂದಾಗದವರ ಲೆಕ್ಕ).</li>
+<li><code>=COUNTIF(B2:B40,"&gt;=35")</code> — 35+ ಅಂಕ ಪಡೆದವರ ಸಂಖ್ಯೆ (ಉತ್ತೀರ್ಣ).</li>
+</ul>
+
+<h2>7. ಹೆಸರನ್ನು ಒಟ್ಟುಗೂಡಿಸುವುದು (CONCATENATE / &)</h2>
+<div class="step"><div class="step-num">1</div><p>ಮೊದಲ + ಕೊನೆಯ ಹೆಸರು ಒಟ್ಟಿಗೆ: <code>=A2&amp;" "&amp;B2</code></p></div>
+<div class="step"><div class="step-num">2</div><p>ದೊಡ್ಡ ಅಕ್ಷರ: <code>=UPPER(B2)</code>, ಚಿಕ್ಕಕ್ಕೆ <code>=LOWER(B2)</code>.</p></div>
+<div class="step"><div class="step-num">3</div><p>ಹೆಸರಿನಲ್ಲಿ ಅಕಸ್ಮಾತ್ ಜಾಗ ಇದ್ದರೆ ಸರಿಪಡಿಸಲು: <code>=TRIM(C2)</code>.</p></div>
+
+<h2>8. ದಿನಾಂಕ ಲೆಕ್ಕ (DATEDIF)</h2>
+<div class="step"><div class="step-num">1</div><p>ಮಗುವಿನ ವಯಸ್ಸು (ವರ್ಷದಲ್ಲಿ): <code>=DATEDIF(B2,TODAY(),"Y")</code> — B2 ಜನ್ಮ ದಿನಾಂಕ.</p></div>
+<div class="step"><div class="step-num">2</div><p>ವರ್ಷ+ತಿಂಗಳು+ದಿನ: <code>=DATEDIF(B2,TODAY(),"Y")&amp;" ವರ್ಷ "</code></p></div>
+<div class="step"><div class="step-num">3</div><p>ಎರಡು ದಿನಾಂಕಗಳ ವ್ಯತ್ಯಾಸ (ದಿನಗಳಲ್ಲಿ): <code>=C2-B2</code> — ಸಾಮಾನ್ಯ ವ್ಯವಕಲನ.</p></div>
+
+<h2>9. ಶ್ರೇಣಿ/ರ್ಯಾಂಕ್ (RANK)</h2>
+<div class="step"><div class="step-num">1</div><p>ಅಂಕದ ಆಧಾರದ ಶ್ರೇಣಿ: <code>=RANK(B2,$B$2:$B$40)</code></p></div>
+<div class="step"><div class="step-num">2</div><p>ಶ್ರೇಣಿಯನ್ನು ಲಾಕ್ ಮಾಡಲು <code>$</code> ಗುರುತು ಬಳಸಿ — ಇಲ್ಲದಿದ್ದರೆ fill ಮಾಡುವಾಗ ಶ್ರೇಣಿ ಜಾರುತ್ತದೆ.</p></div>
+<div class="step"><div class="step-num">3</div><p>ಅತಿ ಹೆಚ್ಚು/ಕಡಿಮೆ: <code>=MAX(B2:B40)</code>, <code>=MIN(B2:B40)</code> — ಸರಾಸರಿ <code>=AVERAGE(B2:B40)</code>.</p></div>
+
+<h2>10. ತಪ್ಪು ಸೂತ್ರಗಳಿಂದ ಹೇಗೆ ರಕ್ಷಿಸಿಕೊಳ್ಳುವುದು</h2>
+<table>
+<tr><th>ದೋಷ (error)</th><th>ಅರ್ಥ</th><th>ಪರಿಹಾರ</th></tr>
+<tr><td><code>#N/A</code></td><td>VLOOKUP ನಲ್ಲಿ ಹೆಸರು ಸಿಗಲಿಲ್ಲ</td><td>ಕಾಗುಣಿತ/ಜಾಗ check ಮಾಡಿ; Sheet ಹೆಸರು ಸರಿಯೇ?</td></tr>
+<tr><td><code>#VALUE!</code></td><td>ಸೆಲ್‌ನಲ್ಲಿ ಅಕ್ಷರ/ಸಂಖ್ಯೆಯಲ್ಲಿದೆ</td><td>ಎಲ್ಲಾ ಅಂಕ ಸಂಖ್ಯೆ format ನಲ್ಲಿದೆಯೇ ನೋಡಿ</td></tr>
+<tr><td><code>#DIV/0!</code></td><td>ಶೂನ್ಯದಿಂದ ಭಾಗಿಸಲು ಹೋದೆ</td><td>ಛೇದ (denominator) 0 ಆಗಿರುವ ಸಾಧ್ಯತೆ — IFERROR ತೊಡಿಸಿ</td></tr>
+</table>
+<div class="step"><div class="step-num">1</div><p>ಸುತ್ತಮುತ್ತ error ತೋರಿಸದೆ ಇಡಲು: <code>=IFERROR(ನಿಮ್ಮ ಸೂತ್ರ,»,"—")</code></p></div>
+<div class="step"><div class="step-num">2</div><p>ಸೂತ್ರದ ಬದಲು ಬರೆದಿದ್ದೇನೋ ನೋಡಲು: ಕೀಬೋರ್ಡ್‌ನ <b>Ctrl+`</b> (backtick) — ಸೂತ್ರ/ಮೌಲ್ಯ toggle.</p></div>
+
+<h2>11. ದತ್ತಾಂಶ ಬ್ಯಾಕಪ್ &amp; ಶೇರ್</h2>
+<ul>
+<li>ಅಂಕ/ಹಾಜರಾತಿ ಫೈಲಿಗೆ <b>ದಿನಾಂಕ ಹೆಸರು</b> ಇಡಿ: "Class7-Marks-06Sep2026.xlsx".</li>
+<li><b>ಫೈಲ್ → Save As → PDF</b> — ಶಾಲಾ ದಾಖಲೆಗೆ ರೀಡ್-ಕಾಪಿ PDF.</li>
+<li>ಪ್ರಮುಖ ಫೈಲುಗಳ <b>ಬ್ಯಾಕಪ್</b> — ಎರಡು ಸ್ಥಳ (ಉದಾ. pen drive + cloud).</li>
+<li>ಶೇರ್ ಮಾಡುವ ಮೊದಲು confidential ವಿವರ (ಸಂಪೂರ್ಣ ಆಧಾರ) ಇಲ್ಲ ಎಂದು ಖಚಿತಪಡಿಸಿ — ಗೋಪ್ಯತೆ.</li>
+</ul>
+
+<h2>12. ಪ್ರಮುಖ ಅಂಶಗಳು ⭐</h2>
+<ul>
+<li>ಎಲ್ಲಾ ಸೂತ್ರ <code>=</code> ಯಿಂದ — ಸೆಲ್‌ನಲ್ಲಿ ನೇರವಾಗಿ.</li>
+<li><code>SUM</code>, <code>AVERAGE</code>, <code>IF</code>, <code>COUNTIF</code>, <code>VLOOKUP</code> — ಇವೇ daily most used.</li>
+<li>ಶೇಕಡಾ: <code>=(part/total)*100</code> ಅಥವಾ Percentage format.</li>
+<li>ಗ್ರೇಡ್: nested <code>IF</code> — ಮೊದಲು ಅತಿ ಧನ, ಆಮೇಲೆ ಇಳಿಯುತ್ತ.</li>
+<li>ಬ್ಯಾಕಪ್ + PDF — ದಾಖಲೆಗೆ ಕಡ್ಡಾಯ.</li>
+</ul>
+
+<h2>13. FAQ — ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು</h2>
+<details><summary>1. ಸೂತ್ರ ಹಾಕಿದರೆ "formula" ಬರವಣಿಗೆಯೇ ತೋರಿಸುತ್ತದೆ — ಏಕೆ?</summary><p>ಹೆಚ್ಚಾಗಿ ಸೆಲ್ format "Text" ಆಗಿರಬಹುದು. ಸೆಲ್ ಹೈಲೈಟ್ ಮಾಡಿ Home → Number → General ಆಗಿ ಬದಲಿಸಿ, ಅನಂತರ ಸೂತ್ರ ಪುನಃ ಬರೆಯಿರಿ. ಫಾರ್ಮುಲಾ <code>=</code> ನಿಂದ ಪ್ರಾರಂಭ ಆಗಬೇಕು.</p></details>
+<details><summary>2. VLOOKUP ಕೆಲಸ ಮಾಡುತ್ತಿಲ್ಲ — ಏನು check?</summary><p>Lookup column (ಹುಡುಕುವ ಕಾಲಂ) ಶ್ರೇಣಿಯ <b>ಮೊದಲ ಕಾಲಂ</b> ಆಗಿರಬೇಕು. ಕಾಗುಣಿತ/ರಿಟರ್ನ್ ತಪ್ಪು. ಕೊನೆಯ <code>FALSE</code> ಇರಲಿ. Sheet ಹೆಸರು ಬದಲಾದರೆ refrence ಜಾರುತ್ತದೆ.</p></details>
+<details><summary>3. ಇಡೀ class ಗೆ ಒಂದೇ ಸೂತ್ರ ಹೇಗೆ ಅನ್ವಯಿಸುವುದು?</summary><p>ಫಾರ್ಮುಲಾ ಸೆಲ್‌ನ ಕೆಳಗಿನ ಬಲ ಮೂಲೆಯ <b>fill handle</b> (+ ಚಿಹ್ನೆ) ಕಾಣುವವರೆಗೆ ಬಂದು, ಕೆಳಗೆ ಎಳೆಯಿರಿ. ಶ್ರೇಣಿ ಕುಗ್ಗದಂತೆ <code>$</code> ಬಳಸಿ.</p></details>
+<details><summary>4. ಪ್ರಯೋಗ ಮಾಡುವಾಗ ಫೈಲ್ ಹಾಳಾಗಿದರೆ?</summary><p>ಆಗಾಗ <b>Ctrl+S</b> ಉಳಿಸಿ, ಮತ್ತು Copy (ಉದಾ. "backup") ಇಡಿ. Undo (Ctrl+Z) ಸಹ ಸಹಾಯ.</p></details>
+<details><summary>5. ಹಾಜರಾತಿ ದಿನಗಳು ಬೇರೆ ಬೇರೆ ಇದ್ದರೆ ಶೇಕಡಾ ಹೇಗೆ?</summary><p>ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಒಂದು ಸೆಲ್‌ನಲ್ಲಿ (ಉದಾ. H1) ಹಾಕಿ: <code>=(COUNTIF(B2:AE2,"P")/$H$1)*100</code> — ಹೀಗೆ ದಿನಗಳು ಬದಲಾದರೆ ಒಂದೇ ಸೆಲ್ ಬದಲಿಸಿದರೆ ಸಾಕು.</p></details>
+
+<h2>14. ಅಧಿಕೃತ ಲಿಂಕ್‌ಗಳು &amp; ಸಂಬಂಧಿತ</h2>
+<table>
+<tr><th>ಸಂಪನ್ಮೂಲ</th><th>ಲಿಂಕ್</th></tr>
+<tr><td>ಮೊಬೈಲ್/ಡೆಸ್ಕ್‌ಟಾಪ್ ನೇರ ಲೆಕ್ಕ (tools)</td><td><a href="/tools.html">ಸೈಟ್‌ನ Tools ಪುಟ (ಶೇಕಡಾ, ಹಾಜರಾತಿ, ವಯಸ್ಸು)</a></td></tr>
+<tr><td>ಶಿಕ್ಷಕರಿಗೆ AI ಸಹಾಯ</td><td><a href="/ai-school-tools.html">ಶಿಕ್ಷಕರಿಗೆ AI ಟೂಲ್ಸ್ — ಪೂರ್ಣ ಮಾರ್ಗದರ್ಶಿ</a></td></tr>
+<tr><td>ಶಾಲಾ ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ</td><td><a href="/school-data-management.html">ಶಾಲಾ ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ ಮಾರ್ಗದರ್ಶಿ</a></td></tr>
+</table>
+<div class="box green"><p><b>✅ ಸಾರಾಂಶ:</b> <code>SUM</code>, <code>IF</code>, <code>COUNTIF</code>, <code>VLOOKUP</code>, <code>AVERAGE</code> — ಈ ಐದನ್ನು ತಿಳಿದರೆ ನಿಮ್ಮ ಎಲ್ಲಾ daily ಲೆಕ್ಕ (ಅಂಕ, ಶೇಕಡಾ, ಗ್ರೇಡ್, ಹಾಜರಾತಿ, ಶ್ರೇಣಿ) ಸರಾಗ ಆಗುತ್ತದೆ. ಬ್ಯಾಕಪ್ ಇಡಲು ಮರೆಯಬೇಡಿ.</p></div>
+
+<div style="margin:34px 0 6px;padding:18px 20px;border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(255,255,255,.03);font-family:'Noto Sans Kannada',sans-serif;"><div style="font-size:16px;font-weight:700;color:#F0D9A6;margin-bottom:10px;">ಸಂಬಂಧಿತ ಲೇಖನಗಳು / Related Reading</div><div style="display:flex;flex-wrap:wrap;"><a href="/tools.html" style="display:inline-block;padding:6px 14px;border-radius:999px;border:1px solid rgba(214,162,58,.4);color:#F0D9A6;text-decoration:none;font-size:13px;margin:4px 4px 0 0;">ನಮ್ಮ Tools (calculators)</a><a href="/ai-school-tools.html" style="display:inline-block;padding:6px 14px;border-radius:999px;border:1px solid rgba(214,162,58,.4);color:#F0D9A6;text-decoration:none;font-size:13px;margin:4px 4px 0 0;">ಶಿಕ್ಷಕರಿಗೆ AI ಟೂಲ್ಸ್</a><a href="/school-data-management.html" style="display:inline-block;padding:6px 14px;border-radius:999px;border:1px solid rgba(214,162,58,.4);color:#F0D9A6;text-decoration:none;font-size:13px;margin:4px 4px 0 0;">ಶಾಲಾ ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ</a></div></div>
+<footer>
+<a href="/">ಮುಖಪುಟ | Home</a> · <a href="/about.html">ನಮ್ಮ ಬಗ್ಗೆ</a> · <a href="/terms.html">ನಿಯಮಗಳು</a> · <a href="/disclaimer.html">ಹಕ್ಕು ನಿರಾಕರಣೆ</a> · <a href="/privacy-policy.html">ಗೋಪ್ಯತಾ ನೀತಿ</a> · <a href="/contact.html">ಸಂಪರ್ಕ</a><br><span style="color:#84939B;font-size:12px;">ಸ್ವತಂತ್ರ ಮಾಹಿತಿ ವೆಬ್‌ಸೈಟ್ — ಇದು ಸರ್ಕಾರಿ ವೆಬ್‌ಸೈಟ್ ಅಲ್ಲ • Independent information website — not an official government website</span><br>© 2026 shaulssk.in
+</footer>
+</div>
+<!-- AdSense Ad Slot -->
+<div style="text-align:center;font-size:11px;color:#84939B;margin:22px 0 4px;">— ಜಾಹೀರಾತು • Advertisement —</div>
+<div style="text-align:center;margin:24px 0;">
+  <ins class="adsbygoogle"
+       style="display:block;width:100%;min-height:100px;"
+       data-ad-client="ca-pub-3030395356696493"
+       data-ad-slot="REPLACE_WITH_YOUR_AD_SLOT_ID"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+</body>
+</html>
