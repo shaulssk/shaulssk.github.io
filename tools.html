@@ -123,6 +123,8 @@
   .icon-age{background:linear-gradient(135deg,#A29BFE,#6C5CE7);}
   .icon-date{background:linear-gradient(135deg,#FDCB6E,#F39C12);}
   .icon-marks{background:linear-gradient(135deg,#74B9FF,#0984E3);}
+  .icon-grade{background:linear-gradient(135deg,#F8C291,#E55039);}
+  .icon-avg{background:linear-gradient(135deg,#55EFC4,#00B894);}
   .icon-info{background:linear-gradient(135deg,#DFE6E9,#B2BEC3);}
   
   .tool-title h2{font-size:18px;color:#F0D9A6;margin:0;}
@@ -367,6 +369,57 @@
       <div class="result" id="m-res"></div>
     </div>
 
+    <!-- GRADE POINTS -->
+    <div class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-grade">⭐</div>
+        <div class="tool-title">
+          <h2>ಅಂಕ → ಗ್ರೇಡ್ ಪಾಯಿಂಟ್ | Grade Points</h2>
+          <p>A1/A2/B1... + ನಿಖರ ಗ್ರೇಡ್ ಪಾಯಿಂಟ್</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಅಂಕ | Marks</label>
+          <input type="number" id="gp-marks" min="0" max="100" placeholder="e.g., 86">
+        </div>
+        <div class="form-group" style="max-width:120px;">
+          <label>ಗ್ರೇಡಿಂಗ್ | Scheme</label>
+          <select id="gp-scheme" style="width:100%;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#F3EFE2;font-size:14px;font-family:inherit;">
+            <option value="C">CBSE (9-ಪಾಯಿಂಟ್)</option>
+            <option value="S" selected>SSLC/ಜಿಲ್ಲಾ (ಉಭಯ)</option>
+          </select>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcGrade()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['gp-marks'],'gp-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="gp-res"></div>
+    </div>
+
+    <!-- AVERAGE -->
+    <div class="tool-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-avg">📈</div>
+        <div class="tool-title">
+          <h2>ಶೇಕಡ → ಒಟ್ಟು ಸರಾಸರಿ | Average %</h2>
+          <p>ವಿಷಯಗಳ % ಅಂಕಗಳ ಸರಾಸರಿ + grade</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಶೇಕಡಾಂಶಗಳು | Percentages (comma)</label>
+          <input type="text" id="av-list" placeholder="89, 72, 95, 81">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcAvg()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['av-list'],'av-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="av-res"></div>
+    </div>
+
     <!-- INFO -->
     <div class="tool-card">
       <div class="tool-header">
@@ -481,6 +534,38 @@ function calcMarks(){
   var pct = tot / maxT * 100;
   var avg = tot / arr.length;
   show('m-res', 'ವಿಷಯಗಳು | Subjects: <b>' + arr.length + '</b><br>ಒಟ್ಟು | Total: <b>' + tot + ' / ' + maxT + '</b><br>ಸರಾಸರಿ | Average: <b>' + avg.toFixed(2) + '</b><br>ಶೇಕಡಾಂಶ | Percentage: <b>' + pct.toFixed(2) + '%</b>');
+}
+
+function calcGrade(){
+  var mk = parseFloat(document.getElementById('gp-marks').value);
+  var sc = document.getElementById('gp-scheme').value;
+  if(isNaN(mk) || mk < 0 || mk > 100){ show('gp-res', '⚠️ 0–100 ನಡುವೆ ಅಂಕ ನಮೂದಿಸಿ | Enter marks 0–100'); return; }
+  if(sc === 'C'){
+    var g, p;
+    if(mk >= 91){ g='A1'; p=10; } else if(mk >= 81){ g='A2'; p=9; }
+    else if(mk >= 71){ g='B1'; p=8; } else if(mk >= 61){ g='B2'; p=7; }
+    else if(mk >= 51){ g='C1'; p=6; } else if(mk >= 41){ g='C2'; p=5; }
+    else if(mk >= 33){ g='D'; p=4; } else { g='E'; p=0; }
+    show('gp-res', 'ಅಂಕ | Marks: <b>' + mk + '</b><br>ಗ್ರೇಡ್: <b>' + g + '</b> · ಗ್ರೇಡ್ ಪಾಯಿಂಟ್ | GP: <b>' + p + '/10</b>');
+  } else {
+    var g2, p2;
+    if(mk >= 90){ g2='A+'; p2=10; } else if(mk >= 80){ g2='A'; p2=9; }
+    else if(mk >= 70){ g2='B+'; p2=8; } else if(mk >= 60){ g2='B'; p2=7; }
+    else if(mk >= 50){ g2='C+'; p2=6; } else if(mk >= 40){ g2='C'; p2=5; }
+    else if(mk >= 35){ g2='D'; p2=4; } else { g2='F'; p2=0; }
+    var st2 = mk >= 35 ? '✅ ಉತ್ತೀರ್ಣ | Pass' : '❌ ತೇರ್ಚದ | Fail';
+    show('gp-res', 'ಅಂಕ | Marks: <b>' + mk + '</b><br>ಗ್ರೇಡ್: <b>' + g2 + '</b> · ಪಾಯಿಂಟ್ | GP: <b>' + p2 + '/10</b><br>' + st2);
+  }
+}
+
+function calcAvg(){
+  var raw = document.getElementById('av-list').value.trim();
+  if(!raw){ show('av-res', '⚠️ ಶೇಕಡಾಂಶ ನಮೂದಿಸಿ | Enter percentages'); return; }
+  var arr = raw.split(/[,\s]+/).map(Number).filter(function(x){ return !isNaN(x); });
+  if(arr.length === 0 || arr.some(function(x){ return x < 0 || x > 100; })){ show('av-res', '⚠️ 0–100 ಶೇಕಡಾಂಶ ಮಾತ್ರ | Enter % 0–100'); return; }
+  var avg = arr.reduce(function(a,b){ return a+b; }, 0) / arr.length;
+  var g = avg >= 90 ? 'A+' : avg >= 80 ? 'A' : avg >= 60 ? 'B' : avg >= 35 ? 'C' : 'F';
+  show('av-res', 'ವಿಷಯಗಳು | Subjects: <b>' + arr.length + '</b><br>ಒಟ್ಟು ಸರಾಸರಿ | Average: <b>' + avg.toFixed(2) + '%</b><br>ಗ್ರೇಡ್: <b>' + g + '</b>');
 }
 </script>
 <!-- AdSense Ad Slot -->
