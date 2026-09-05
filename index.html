@@ -133,6 +133,28 @@
   .link-info h3{font-size:15px;color:#F0D9A6;margin-bottom:4px;line-height:1.3;}
   .link-info p{font-size:12px;color:#7A8A92;line-height:1.4;}
 
+  /* Teacher's Day (auto shows only on 5 Sept) */
+  .td-banner{
+    display:none;
+    max-width:720px;margin:0 auto 22px;text-align:center;
+    padding:22px 26px;
+    background:linear-gradient(135deg,rgba(214,162,58,.18),rgba(255,217,138,.1));
+    border:1px solid rgba(255,217,138,.5);
+    border-radius:18px;
+    position:relative;overflow:hidden;
+  }
+  .td-banner::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(circle at 20% 0%,rgba(255,255,255,.12),transparent 55%);
+  }
+  .td-banner .td-emoji{font-size:38px;line-height:1;margin-bottom:6px;}
+  .td-banner h2{font-size:20px;color:#FFD98A;margin-bottom:6px;line-height:1.35;}
+  .td-banner p{font-size:13.5px;color:#DCE3E5;line-height:1.7;}
+  .td-banner .td-from{margin-top:8px;font-size:12px;color:#F0D9A6;font-style:italic;}
+  body.td-day .td-banner{display:block;}
+  body.td-day .bg-orb{opacity:.22;}
+  body.td-day .links-grid .link-card{border-color:rgba(255,217,138,.16);}
+
   /* Sections */
   .section{margin-bottom:44px;}
   .section-head{
@@ -196,6 +218,13 @@
       <span>100% ಉಚಿತ</span>
       <span>ಕನ್ನಡದಲ್ಲಿ</span>
     </div>
+  </div>
+
+  <div class="td-banner" id="tdBanner">
+    <div class="td-emoji">🎓🌸🕊️</div>
+    <h2>ಎಲ್ಲಾ ಶಿಕ್ಷಕರಿಗೆ ಶಿಕ್ಷಕ ದಿನಾಚರಣೆಯ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು! 🎉</h2>
+    <p>"ನೀವು ಹಚ್ಚಿದ ದೀಪವೇ ನಾಳಿನ ದೇಶ" — ವಿದ್ಯಾರ್ಥಿಗಳ ಬದುಕನ್ನು ರೂಪಿಸುವ ಪ್ರತಿಯೊಬ್ಬ ಶಿಕ್ಷಕರಿಗೆ ನಮ್ಮ ಕೃತಜ್ಞತೆ. ನಿಮ್ಮ ಶ್ರಮ, ತಾಳ್ಮೆ ಮತ್ತು ಪ್ರೀತಿಗಾಗಿ ವಂದನೆಗಳು.</p>
+    <div class="td-from">— shaulssk.in ತಂಡದಿಂದ 🖤<br>ಡಾ. ಸರ್ವಪಲ್ಲಿ ರಾಧಾಕೃಷ್ಣನ್ ಜನ್ಮದಿನ · ಸೆಪ್ಟೆಂಬರ್ 5</div>
   </div>
 
   <div class="section">
@@ -342,5 +371,15 @@
        data-full-width-responsive="true"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<!-- End Ad Slot --></body>
+<!-- End Ad Slot -->
+<script>
+  // Teachers' Day — auto show banner only on 5 September (IST)
+  (function(){
+    var now = new Date();
+    var ist = new Date(now.getTime() + (330 + now.getTimezoneOffset()) * 60000);
+    if (ist.getMonth() === 8 && ist.getDate() === 5) {
+      document.body.classList.add('td-day');
+    }
+  })();
+</script></body>
 </html>
