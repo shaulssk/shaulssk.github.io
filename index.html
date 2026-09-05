@@ -147,10 +147,21 @@
     content:'';position:absolute;inset:0;
     background:radial-gradient(circle at 20% 0%,rgba(255,255,255,.12),transparent 55%);
   }
-  .td-banner .td-emoji{font-size:38px;line-height:1;margin-bottom:6px;}
-  .td-banner h2{font-size:20px;color:#FFD98A;margin-bottom:6px;line-height:1.35;}
-  .td-banner p{font-size:13.5px;color:#DCE3E5;line-height:1.7;}
-  .td-banner .td-from{margin-top:8px;font-size:12px;color:#F0D9A6;font-style:italic;}
+  .td-banner .td-inner{display:flex;gap:18px;align-items:center;text-align:left;position:relative;}
+  .td-banner .td-photo{
+    width:140px;height:140px;object-fit:cover;
+    border-radius:16px;flex-shrink:0;
+    border:2px solid rgba(255,217,138,.6);
+    box-shadow:0 6px 18px rgba(0,0,0,.35);
+  }
+  .td-banner .td-emoji{font-size:30px;line-height:1;margin-bottom:4px;}
+  .td-banner h2{font-size:18px;color:#FFD98A;margin-bottom:5px;line-height:1.35;}
+  .td-banner p{font-size:13px;color:#DCE3E5;line-height:1.65;}
+  .td-banner .td-from{margin-top:6px;font-size:11.5px;color:#F0D9A6;font-style:italic;}
+  @media(max-width:520px){
+    .td-banner .td-inner{flex-direction:column;text-align:center;}
+    .td-banner .td-photo{width:110px;height:110px;}
+  }
   body.td-day .td-banner{display:block;}
   body.td-day .bg-orb{opacity:.22;}
   body.td-day .links-grid .link-card{border-color:rgba(255,217,138,.16);}
@@ -221,10 +232,15 @@
   </div>
 
   <div class="td-banner" id="tdBanner">
-    <div class="td-emoji">🎓🌸🕊️</div>
-    <h2>ಎಲ್ಲಾ ಶಿಕ್ಷಕರಿಗೆ ಶಿಕ್ಷಕ ದಿನಾಚರಣೆಯ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು! 🎉</h2>
-    <p>"ನೀವು ಹಚ್ಚಿದ ದೀಪವೇ ನಾಳಿನ ದೇಶ" — ವಿದ್ಯಾರ್ಥಿಗಳ ಬದುಕನ್ನು ರೂಪಿಸುವ ಪ್ರತಿಯೊಬ್ಬ ಶಿಕ್ಷಕರಿಗೆ ನಮ್ಮ ಕೃತಜ್ಞತೆ. ನಿಮ್ಮ ಶ್ರಮ, ತಾಳ್ಮೆ ಮತ್ತು ಪ್ರೀತಿಗಾಗಿ ವಂದನೆಗಳು.</p>
-    <div class="td-from">— shaulssk.in ತಂಡದಿಂದ 🖤<br>ಡಾ. ಸರ್ವಪಲ್ಲಿ ರಾಧಾಕೃಷ್ಣನ್ ಜನ್ಮದಿನ · ಸೆಪ್ಟೆಂಬರ್ 5</div>
+    <div class="td-inner">
+      <img class="td-photo" src="/radhakrishnan.jpg" alt="ಡಾ. ಸರ್ವಪಲ್ಲಿ ರಾಧಾಕೃಷ್ಣನ್ — ಶಿಕ್ಷಕ ದಿನ 5 ಸೆಪ್ಟೆಂಬರ್" width="140" height="140">
+      <div class="td-text">
+        <div class="td-emoji">🎓🌸🕊️</div>
+        <h2>ಎಲ್ಲಾ ಶಿಕ್ಷಕರಿಗೆ ಶಿಕ್ಷಕ ದಿನಾಚರಣೆಯ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು! 🎉</h2>
+        <p>"ನೀವು ಹಚ್ಚಿದ ದೀಪವೇ ನಾಳಿನ ದೇಶ" — ವಿದ್ಯಾರ್ಥಿಗಳ ಬದುಕನ್ನು ರೂಪಿಸುವ ಪ್ರತಿಯೊಬ್ಬ ಶಿಕ್ಷಕರಿಗೆ ನಮ್ಮ ಕೃತಜ್ಞತೆ.</p>
+        <div class="td-from">— shaulssk.in ತಂಡದಿಂದ 🖤<br>ಡಾ. ಸರ್ವಪಲ್ಲಿ ರಾಧಾಕೃಷ್ಣನ್ (1888–1975) · ಭಾರತದ ಶಿಕ್ಷಕ ದಿನ | ಫೋಟೋ: PD-US Govt (Wikimedia Commons)</div>
+      </div>
+    </div>
   </div>
 
   <div class="section">
