@@ -78,12 +78,24 @@
 <a class="back" href="/">ಮುಖಪುಟ | Home</a>
 <h1>ಶಿಕ್ಷಕರಿಗೆ ಉಪಯುಕ್ತ Excel ಫಾರ್ಮುಲಾಗಳು</h1>
 <p class="meta">ಅಂಕಪಟ್ಟಿ · ಹಾಜರಾತಿ · ಶೇಕಡಾ · ಗ್ರೇಡ್ · VLOOKUP · ಕೊನೆಯ ನವೀಕರಣ / Last updated: 06-09-2026<br>Last verified / ಕೊನೆಯ ಪರಿಶೀಲನೆ: 06 September 2026</p>
+<p style="margin:2px 0 14px;font-size:13px;color:#9FB0B8;border-left:3px solid rgba(214,162,58,.45);padding:2px 12px;">ℹ️ <b>This is an independent, unofficial Excel guide for teachers.</b><br> ಇದು ಸರ್ಕಾರಿ ಪುಟವಲ್ಲ — ಸ್ವತಂತ್ರ ಮಾರ್ಗದರ್ಶಿ.</p>
 
 <div class="box">
 <p><b>Excel</b> ಶಾಲಾ ಶಿಕ್ಷಕರ ಪ್ರತಿದಿನದ ಸಾಧನ — ಅಂಕಪಟ್ಟಿ, ಹಾಜರಾತಿ, ಶೇಕಡಾ, ಪ್ರಶಸ್ತಿ ಲೆಕ್ಕ, ವರದಿ. ಚಿಕ್ಕದಾದ ಕೆಲವೇ ಫಾರ್ಮುಲಾಗಳನ್ನು ತಿಳಿದರೆ ನೀವು ಗಂಟೆಗಟ್ಟಲೆ ಖರ್ಚು ಮಾಡುವ ಕೈ-ಲೆಕ್ಕ ಹತ್ತಾರು ಸೆಕೆಂಡ್‌ನಲ್ಲಿ ಆಗುತ್ತದೆ. ಈ ಮಾರ್ಗದರ್ಶಿ ಕನ್ನಡದಲ್ಲಿ, ಹಂತ-ಹಂತದಲ್ಲಿ ನಿಮ್ಮ daily ಕೆಲಸಕ್ಕೆ ನೇರ ಬಳಕೆ ಆಗುವಂತೆ ಸಿದ್ಧಪಡಿಸಿದ್ದೇವೆ.</p>
 </div>
 
 <div class="box green"><p><b>📌 ಹೇಗೆ ಬಳಸುವುದು:</b> ಸೂತ್ರವನ್ನು <code>=</code> ನಿಂದ ಪ್ರಾರಂಭಿಸಿ. ಸೆಲ್ address (ಉದಾ. <code>A1</code>) ಅಥವಾ ಶ್ರೇಣಿ (range, ಉದಾ. <code>B2:B30</code>) ಬಳಕೆಯಾಗುತ್ತದೆ. ನಿಮ್ಮ ಪಟ್ಟಿಯಲ್ಲಿ ಕಾಲಂ ಯಾವ ಅಕ್ಷರದಲ್ಲಿದೆ ಎಂದು ನೋಡಿ ಅದಕ್ಕೆ ತಕ್ಕಂತೆ ಹೊಂದಿಸಿ.</p></div>
+
+<div style="background:rgba(162,155,254,.08);border:1px solid rgba(162,155,254,.35);border-radius:14px;padding:16px 18px;margin:16px 0;">
+<div style="font-size:16px;font-weight:700;color:#D4CCFE;margin-bottom:8px;">🧮 Excel ನಲ್ಲಿ 5 ಸಾಮಾನ್ಯ ತಪ್ಪುಗಳು</div>
+<ol style="margin:0;padding-left:22px;font-size:14px;line-height:1.9;">
+<li><b>Number text ಆಗುವುದು:</b> ಮೊಬೈಲ್‌ನಿಂದ copy ಮಾಡಿದ score text format ನಲ್ಲಿರುತ್ತದೆ — SUM ಸಿಗಲ್ಲ. Cell format Number ಮಾಡಿ ಅಥವಾ =VALUE() ಬಳಸಿ.</li>
+<li><b>Space/blank ಅಸಲು:</b> ಹೆಸರು/ಸಂಖ್ಯೆಯಲ್ಲಿ hidden space ಇದ್ದರೆ VLOOKUP mismatch ಆಗುತ್ತದೆ — TRIM() ಉಪಯೋಗ.</li>
+<li><b>Relative reference:</b> ಶೇಕಡಾ/F4 absolute reference ಬೇಕಾದಾಗ $ ಇಡದೆ ಎಳೆದರೆ ತಪ್ಪು — F4 ಒತ್ತಿ.</li>
+<li><b>Date text ಆಗುವುದು:</b> "05-09-2026" text ಆದರೆ sorting/age calculation ಸರಿಯಾಗಲ್ಲ — proper date format ಬಳಸಿ.</li>
+<li><b>ಫಾರ್ಮುಲಾ delete:</b> Result ಸ್ಥಿರ ಇರಬೇಕಾದಾಗ copy → Paste Special → Values — ಫಾರ್ಮುಲಾ ಹೋಗದಂತೆ.</li>
+</ol>
+</div>
 
 <h2>1. ಅಂಕ ಒಟ್ಟು (SUM)</h2>
 <div class="step"><div class="step-num">1</div><p>ಒಬ್ಬ ವಿದ್ಯಾರ್ಥಿಯ ಎಲ್ಲಾ ವಿಷಯದ ಅಂಕ ಸೇರಿಸಲು: <code>=SUM(B2:F2)</code> — ಎಂದರೆ B2 ರಿಂದ F2 ವರೆಗಿನ ಅಂಕ ಸೇರುತ್ತದೆ.</p></div>
