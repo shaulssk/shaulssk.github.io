@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta property="og:title" content="Online Tools — 8 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days) | Shaul SSK">
-  <meta property="og:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass % — formula + example + FAQ ಸಹಿತ.">
+  <meta property="og:title" content="Online Tools — 13 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, % Change) | Shaul SSK">
+  <meta property="og:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks — formula + example + FAQ ಸಹಿತ.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shaulssk.in/tools.html">
   <meta property="og:site_name" content="Shaul SSK">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Online Tools — 8 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days) | Shaul SSK">
-  <meta name="twitter:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass % — formula + example + FAQ ಸಹಿತ.">
-<title>Online Tools — 8 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days) | Shaul SSK</title>
-<meta name="description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass % — formula + example + FAQ ಸಹಿತ.">
+  <meta name="twitter:title" content="Online Tools — 13 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, % Change) | Shaul SSK">
+  <meta name="twitter:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks — formula + example + FAQ ಸಹಿತ.">
+<title>Online Tools — 13 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, % Change) | Shaul SSK</title>
+<meta name="description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks — formula + example + FAQ ಸಹಿತ.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3030395356696493" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL7KQ1LH6D"></script>
 <script>
@@ -254,6 +254,9 @@
     <a href="#w-card">🗓️ Working Days</a>
     <a href="#s-card">👥 Student Strength</a>
     <a href="#pp-card">✅ Pass %</a>
+    <a href="#pc-card">📉 Percent Change</a>
+    <a href="#tm-card">🎯 Target Marks</a>
+    <a href="#cp-card">🧮 Reverse %</a>
   </div>
 
   <div class="tools-grid">
@@ -595,6 +598,102 @@
       </div>
     </div>
 
+    <!-- PERCENTAGE CHANGE -->
+    <div class="tool-card" id="pc-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-calc" style="background:linear-gradient(135deg,#00CEC9,#0984E3);">📉</div>
+        <div class="tool-title">
+          <h2>ಶೇಕಡ ಬದಲಾವಣೆ | Percentage Change</h2>
+          <p>ಹಿಂದೆ vs ಈಚೆ — ಏರಿಳಿತ ಎಷ್ಟು?</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಹಳೆಯ ಮೌಲ್ಯ | Old Value</label>
+          <input type="number" id="pc-old" placeholder="e.g., 180">
+        </div>
+        <div class="form-group">
+          <label>ಹೊಸ ಮೌಲ್ಯ | New Value</label>
+          <input type="number" id="pc-new" placeholder="e.g., 210">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcChange()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['pc-old','pc-new'],'pc-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="pc-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಹಿಂದಿನ ವರ್ಷ vs ಈ ವರ್ಷದ ದಾಖಲಾತಿ, ಹಾಜರಾತಿ, ಉತ್ತೀರ್ಣ ಶೇಕಡ, ಅನುದಾನ ಲೆಕ್ಕ — ಇವುಗಳ ಏರಿಳಿತವನ್ನು ಶೇಕಡದಲ್ಲಿ ತೋರಿಸುತ್ತದೆ. (ಉದಾ. ಹಾಜರಾತಿ 78% → 85% ಬದಲಾವಣೆ = +9%).</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Change % = (New − Old) ÷ Old × 100</code><br>ಧನ (+) = ಹೆಚ್ಚಳ, ಋಣ (−) = ಇಳಿಕೆ.</p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>180 → 210: (210−180)÷180×100 = <b>+16.67%</b> ಹೆಚ್ಚಳ.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಹಳೇ ಮೌಲ್ಯ 0 ಇದ್ದರೆ?</b> 0 ಯಿಂದ ಭಾಗಿಸಲು ಆಗದು — ಹಳೇ ಮೌಲ್ಯ 0 ಆಗಬಾರದು.<br><b>ಋಣ ಫಲಿತ ನೋಡೋದು ಹೇಗೆ?</b> −15% = ಇಳಿಕೆ, +15% = ಹೆಚ್ಚಳ.</p></details>
+      </div>
+    </div>
+
+    <!-- TARGET MARKS -->
+    <div class="tool-card" id="tm-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-marks" style="background:linear-gradient(135deg,#F9CA24,#E58E26);">🎯</div>
+        <div class="tool-title">
+          <h2>ಗುರಿ ಶೇಕಡ | Target Marks</h2>
+          <p>ಗುರಿ % / ಒಟ್ಟು ಅಂಕ → ಬೇಕಾದ ಅಂಕ</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಗುರಿ ಶೇಕಡ | Target %</label>
+          <input type="number" id="tm-tgt" min="0" max="100" placeholder="e.g., 85">
+        </div>
+        <div class="form-group">
+          <label>ಒಟ್ಟು ಅಂಕ | Total Marks</label>
+          <input type="number" id="tm-tot" placeholder="e.g., 100">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcTarget()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['tm-tgt','tm-tot'],'tm-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="tm-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>"ನನಗೆ 85% ಬೇಕು — ಒಟ್ಟು 100ರಲ್ಲಿ ಎಷ್ಟು ಅಂಕ ಬೇಕು?" ಎಂಬಿತ್ಯಾದಿ ಗುರಿ ಲೆಕ್ಕ. ಪರೀಕ್ಷೆ ಮೊದಲು ಗುರಿ ಇಡಲು ಮತ್ತು ಶಾಲಾ ಸಾಧನೆ ಯೋಜನೆಗೆ ಉಪಯುಕ್ತ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Needed marks = (Target % ÷ 100) × Total</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>85% ಗುರಿ, ಒಟ್ಟು 100 → <b>85 ಅಂಕ</b> ಬೇಕು. ಒಟ್ಟು 500 ಆದರೆ → <b>425 ಅಂಕ</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಗುರಿ 100%?</b> ಆಗ ಒಟ್ಟು ಅಂಕವೇ ಬೇಕು — practical ಅಲ್ಲ, ಆದರೆ ಲೆಕ್ಕ ತೋರಿಸುತ್ತದೆ.<br><b>ಈಗಾಗಲೇ ಪಡೆದ ಅಂಕ ಇದ್ದರೆ?</b> ಬಾಕಿ ವಿಷಯದ ಲೆಕ್ಕಕ್ಕೆ ಪಡೆದ ಅಂಕವನ್ನು ಒಟ್ಟಿನಿಂದ ಕಳೆದು ನಮೂದಿಸಿ.</p></details>
+      </div>
+    </div>
+
+    <!-- REVERSE PERCENTAGE -->
+    <div class="tool-card" id="cp-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-avg" style="background:linear-gradient(135deg,#55EFC4,#00B894);">🧮</div>
+        <div class="tool-title">
+          <h2>ವಿರುದ್ಧ ಶೇಕಡ | Reverse %</h2>
+          <p>% ಹಾಗೂ ಮೌಲ್ಯ → ಒಟ್ಟು ಎಷ್ಟು?</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಮೌಲ್ಯ | Value</label>
+          <input type="number" id="cp-val" placeholder="e.g., 60">
+        </div>
+        <div class="form-group">
+          <label>ಶೇಕಡ | Percent</label>
+          <input type="number" id="cp-pct" min="0" max="100" placeholder="e.g., 30">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcRev()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['cp-val','cp-pct'],'cp-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="cp-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>"60 ಅಂಕ = 30% ಆದರೆ ಒಟ್ಟು ಅಂಕ ಎಷ್ಟು?" ಎಂಬಿತ್ಯಾದಿ ವಿರುದ್ಧ ಲೆಕ್ಕ. ಭಾಗಶಃ ಮಾಹಿತಿಯಿಂದ ಪೂರ್ಣ ಮೌಲ್ಯ ಕಂಡುಹಿಡಿಯಲು ಉಪಯುಕ್ತ (ಉದಾ. 30% ಹಾಜರಿ = 54 ದಿನ → ಒಟ್ಟು 180 ದಿನ).</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Total = Value ÷ (Percent ÷ 100)</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>60 = 30% → 60÷0.30 = <b>200</b> ಒಟ್ಟು.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಶೇಕಡ 0 ಇದ್ದರೆ?</b> 0 ಯಿಂದ ಭಾಗಿಸಲು ಆಗದು — ಶೇಕಡ 0 ಆಗಬಾರದು.<br><b>ಇದು ಯಾವಾಗ ಬೇಕು?</b> ಭಾಗಶಃ ದತ್ತಾಂಶದಿಂದ ಪೂರ್ಣ ಅಂದಾಜಿನ ಸಂದರ್ಭ — ವರದಿ ತಯಾರಿಯಲ್ಲಿ ಆಗಾಗ ಬರುತ್ತದೆ.</p></details>
+      </div>
+    </div>
+
     <!-- INFO -->
     <div class="tool-card">
       <div class="tool-header">
@@ -784,6 +883,31 @@ function calcPass(){
   if(pass > app){ show('pp-res', '⚠️ ಉತ್ತೀರ್ಣರು ಹಾಜರಾದವರಿಗಿಂತ ಹೆಚ್ಚು ಆಗಬಾರದು | Passed ≤ Appeared'); return; }
   var pct = pass / app * 100;
   show('pp-res', 'ಹಾಜರಾದವರು | Appeared: <b>' + app + '</b> · ಉತ್ತೀರ್ಣರು | Passed: <b>' + pass + '</b><br>ಉತ್ತೀರ್ಣ ಶೇಕಡ | Pass %: <b>' + pct.toFixed(2) + '%</b><br>ಅನುತ್ತೀರ್ಣ | Failed: <b>' + (app - pass) + '</b>');
+}
+
+function calcChange(){
+  var old = parseFloat(document.getElementById('pc-old').value);
+  var neo = parseFloat(document.getElementById('pc-new').value);
+  if(isNaN(old) || isNaN(neo) || old === 0){ show('pc-res', '⚠️ ಸರಿಯಾದ ಮೌಲ್ಯ ನಮೂದಿಸಿ (ಹಳೇ ಮೌಲ್ಯ 0 ಬೇಡ) | Old value must be non-zero'); return; }
+  var ch = (neo - old) / old * 100;
+  var dir = ch > 0 ? '📈 ಹೆಚ್ಚಳ | Increase' : ch < 0 ? '📉 ಇಳಿಕೆ | Decrease' : '➡️ ಯಾವುದೇ ಬದಲಾವಣೆ ಇಲ್ಲ | No change';
+  show('pc-res', 'ಬದಲಾವಣೆ | Change: <b>' + ch.toFixed(2) + '%</b><br>' + dir + ' — (' + old + ' → ' + neo + ')');
+}
+
+function calcTarget(){
+  var t = parseFloat(document.getElementById('tm-tgt').value);
+  var tot = parseFloat(document.getElementById('tm-tot').value);
+  if(isNaN(t) || isNaN(tot) || t < 0 || t > 100 || tot <= 0){ show('tm-res', '⚠️ ಸರಿಯಾದ ಗುರಿ % (0–100) ಮತ್ತು ಒಟ್ಟು ಅಂಕ ನಮೂದಿಸಿ | Enter valid values'); return; }
+  var need = (t / 100) * tot;
+  show('tm-res', 'ಗುರಿ | Target: <b>' + t + '%</b> · ಒಟ್ಟು | Total: <b>' + tot + '</b><br>ಬೇಕಾದ ಅಂಕ | Marks Needed: <b>' + (need % 1 === 0 ? need : need.toFixed(2)) + '</b>');
+}
+
+function calcRev(){
+  var v = parseFloat(document.getElementById('cp-val').value);
+  var p = parseFloat(document.getElementById('cp-pct').value);
+  if(isNaN(v) || isNaN(p) || p <= 0 || p > 100){ show('cp-res', '⚠️ ಮೌಲ್ಯ ಮತ್ತು ಶೇಕಡ (0–100, 0 ಬೇಡ) ನಮೂದಿಸಿ | Enter valid values'); return; }
+  var total = v / (p / 100);
+  show('cp-res', 'ನೀಡಿದ ಮೌಲ್ಯ | Value: <b>' + v + '</b> = <b>' + p + '%</b><br>ಒಟ್ಟು | Total: <b>' + (total % 1 === 0 ? total : total.toFixed(2)) + '</b>');
 }
 </script>
 <!-- AdSense Ad Slot -->
