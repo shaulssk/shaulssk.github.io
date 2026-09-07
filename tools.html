@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta property="og:title" content="Online Tools — ಶಿಕ್ಷಕರಿಗಾಗಿ ಟೂಲ್ಸ್ | Shaul SSK">
-  <meta property="og:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್ — ಶೇಕಡಾಂಶ, ಹಾಜರಾತಿ, ವಯಸ್ಸು, ದಿನಾಂಕ, ಅಂಕ ಲೆಕ್ಕಾಚಾರ ಉಚಿತ. Free calculators for teachers.">
+  <meta property="og:title" content="Online Tools — 8 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days) | Shaul SSK">
+  <meta property="og:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass % — formula + example + FAQ ಸಹಿತ.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shaulssk.in/tools.html">
   <meta property="og:site_name" content="Shaul SSK">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Online Tools — ಶಿಕ್ಷಕರಿಗಾಗಿ ಟೂಲ್ಸ್ | Shaul SSK">
-  <meta name="twitter:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್ — ಶೇಕಡಾಂಶ, ಹಾಜರಾತಿ, ವಯಸ್ಸು, ದಿನಾಂಕ, ಅಂಕ ಲೆಕ್ಕಾಚಾರ ಉಚಿತ. Free calculators for teachers.">
-<title>Online Tools — ಶಿಕ್ಷಕರಿಗಾಗಿ ಟೂಲ್ಸ್ | Shaul SSK</title>
-<meta name="description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಆನ್‌ಲೈನ್ ಟೂಲ್ಸ್ — ಶೇಕಡಾಂಶ, ಹಾಜರಾತಿ, ವಯಸ್ಸು, ದಿನಾಂಕ, ಅಂಕ ಲೆಕ್ಕಾಚಾರ ಉಚಿತ. Free calculators for teachers.">
+  <meta name="twitter:title" content="Online Tools — 8 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days) | Shaul SSK">
+  <meta name="twitter:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass % — formula + example + FAQ ಸಹಿತ.">
+<title>Online Tools — 8 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days) | Shaul SSK</title>
+<meta name="description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass % — formula + example + FAQ ಸಹಿತ.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3030395356696493" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL7KQ1LH6D"></script>
 <script>
@@ -187,6 +187,19 @@
   .info-item .icon{font-size:28px;margin-bottom:6px;}
   .info-item h4{font-size:13px;color:#F0D9A6;margin-bottom:4px;}
   .info-item p{font-size:11px;color:#7A8A92;line-height:1.4;}
+
+  /* Tool nav pills */
+  .tool-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:-10px 0 32px;}
+  .tool-nav a{font-size:12px;padding:6px 14px;border-radius:999px;background:rgba(214,162,58,.1);border:1px solid rgba(214,162,58,.3);color:#F0D9A6;text-decoration:none;transition:.2s;scroll-margin-top:16px;}
+  .tool-nav a:hover{background:rgba(214,162,58,.25);}
+
+  /* Info panels inside each tool */
+  .tool-info{margin-top:14px;border-top:1px dashed rgba(214,162,58,.25);padding-top:10px;}
+  .tool-info details{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px 12px;margin-top:8px;}
+  .tool-info summary{cursor:pointer;font-size:13px;color:#F0D9A6;font-weight:600;outline:none;}
+  .tool-info details p{font-size:12.5px;color:#B9C4CA;line-height:1.85;margin:8px 0 2px;}
+  .tool-info details b{color:#FFD98A;}
+  .tool-info code{background:rgba(214,162,58,.15);padding:2px 8px;border-radius:6px;color:#FFD98A;font-size:12px;font-family:monospace;}
   
   /* Footer */
   footer{
@@ -230,10 +243,23 @@
     </div>
   </div>
 
+  <div class="tool-nav">
+    <a href="#p-card">📊 Percentage</a>
+    <a href="#a-card">🗓️ Attendance</a>
+    <a href="#g-card">🎂 Age</a>
+    <a href="#d-card">📅 Date Diff</a>
+    <a href="#m-card">🧾 Marks</a>
+    <a href="#gp-card">⭐ Grade</a>
+    <a href="#av-card">📈 Average</a>
+    <a href="#w-card">🗓️ Working Days</a>
+    <a href="#s-card">👥 Student Strength</a>
+    <a href="#pp-card">✅ Pass %</a>
+  </div>
+
   <div class="tools-grid">
 
     <!-- PERCENTAGE -->
-    <div class="tool-card">
+    <div class="tool-card" id="p-card">
       <div class="tool-header">
         <div class="tool-icon icon-calc">📊</div>
         <div class="tool-title">
@@ -263,10 +289,16 @@
         </div>
       </div>
       <div class="result" id="p-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಶಾಲಾ ವರದಿಗಳಲ್ಲಿ ಬಹುಶಃ ಸಾಮಾನ್ಯ: ಒಟ್ಟು ಅಂಕಗಳಲ್ಲಿ ಪಡೆದ ಅಂಕ ಎಷ್ಟು ಶೇಕಡ. ಪಾಸ್/ಫೇಲ್ ಗಡಿ (ಸಾಮಾನ್ಯವಾಗಿ 35%) ಮತ್ತು grade letter ಜೊತೆ ನೀಡಲಾಗಿದೆ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Percentage = (Obtained ÷ Total) × 100</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>500 ರಲ್ಲಿ 356 → <b>71.2%</b> · Grade B · ✅ Pass. (356 ÷ 500 × 100 = 71.2)</p></details>
+        <details><summary>❓ FAQ</summary><p><b>35 ಸಾಕಾ?</b> ಕರ್ನಾಟಕದಲ್ಲಿ general pass ಗಡಿ ಸಾಮಾನ್ಯವಾಗಿ 35%; ತರಗತಿ/ಬೋರ್ಡ್ ನಿಯಮದಂತೆ ಬದಲಾಗಬಹುದು.<br><b>Formula box ಏನು ಬಳಸುವುದು?</b> ಉದಾ. =500/370*100 ಹಾಕಿ — ತಕ್ಷಣ answer ಬರುತ್ತದೆ.</p></details>
+      </div>
     </div>
 
     <!-- ATTENDANCE -->
-    <div class="tool-card">
+    <div class="tool-card" id="a-card">
       <div class="tool-header">
         <div class="tool-icon icon-att">🗓️</div>
         <div class="tool-title">
@@ -289,10 +321,16 @@
         </div>
       </div>
       <div class="result" id="a-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಹಾಜರಾತಿ ಶೇಕಡಾಂಶ = ಒಟ್ಟು ಕೆಲಸದ ದಿನಗಳಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿ ಎಷ್ಟು ದಿನ ಹಾಜರಿದ್ದ. ಇಲಾಖಾ ನಿಯಮಗಳಲ್ಲಿ ಸಾಮಾನ್ಯವಾಗಿ <b>75%</b> ಕಡ್ಡಾಯ; ಕೆಲವು ಯೋಜನೆ/ಪ್ರಯಾಣ/ಕ್ರೀಡೆಗೆ <b>85%</b> ಬೇಕು.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Attendance % = (Present ÷ Working Days) × 100</code><br>75% ಪಡೆಯಲು ಬೇಕಾದ ದಿನ <code>= ceil((0.75 × Total − Present) ÷ 0.25)</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>130 ಕೆಲಸದ ದಿನದಲ್ಲಿ 96 ಹಾಜರಿ → <b>73.85%</b>; 75% ಗೆ <b>6 ದಿನ</b>, 85% ಗೆ <b>97 ದಿನ</b> (ಮುಂದಿನ ದಿನಗಳೆಲ್ಲವೂ ಹಾಜರಿ ಇದ್ದರೆ).</p></details>
+        <details><summary>❓ FAQ</summary><p><b>75% ಗಿಂತ ಕಡಿಮೆ ಇದ್ದರೆ?</b> ಪರೀಕ್ಷೆ/ಯೋಜನಾ ಅನರ್ಹತೆ ಜಿಲ್ಲಾ ನಿಯಮದಂತೆ; ಆದಷ್ಟು ಬೇಗ ಸರಿಪಡಿಸಿ.<br><b>ಯಾವ ದಿನಗಳ ಮೇಲೆ ಲೆಕ್ಕ?</b> ಸಾಮಾನ್ಯವಾಗಿ ತರಗತಿಯ ಕೆಲಸದ ದಿನಗಳ (working days) ಮೇಲೆ.</p></details>
+      </div>
     </div>
 
     <!-- AGE -->
-    <div class="tool-card">
+    <div class="tool-card" id="g-card">
       <div class="tool-header">
         <div class="tool-icon icon-age">🎂</div>
         <div class="tool-title">
@@ -315,10 +353,16 @@
         </div>
       </div>
       <div class="result" id="g-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಹುಟ್ಟಿದ ದಿನಾಂಕ (DOB) ನಿಂದ ನಿರ್ದಿಷ್ಟ ದಿನ (ಖಾಲಿ = ಇಂದು) ವರೆಗೆ ವಯಸ್ಸು — ವರ್ಷ/ತಿಂಗಳು/ದಿನ ರೂಪದಲ್ಲಿ. SATS/ನಿರಂತರ ನೋಂದಣಿ, ಪ್ರವೇಶ, ಪಾಸ್‌ಪೋರ್ಟ್, ಪರೀಕ್ಷಾ ಅರ್ಹತಾ ಪರಿಶೀಲನೆಗೆ ಉಪಯೋಗ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Age = On-date − DOB</code> (ವರ್ಷ/ತಿಂಗಳು/ದಿನ; ದಿನವೇ ತಿಂಗಳಿಲ್ಲದೆ ಹೋದರೆ ಹಿಂದಿನ ತಿಂಗಳಿನಿಂದ borrow — ತಿಂಗಳು 12 ಒಳಗೆ borrow)</p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>DOB 1-ಜೂನ್-2014, ಇಂದು 8-ಸೆ.2026 → <b>12 ವರ್ಷ 3 ತಿಂಗಳು 7 ದಿನ</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>SATS ನಲ್ಲಿ age ಹೇಗೆ check?</b> DOB ನಮೂದಿಸಿದಾಗ age auto ಬರುತ್ತದೆ — ಇಲ್ಲಿನ ಲೆಕ್ಕ ಹೋಲಿಕೆಗೆ.<br><b>ಫೆಬ್ರವರಿ/ಅಧಿಕ ವರ್ಷ?</b> ದಿನ ಲೆಕ್ಕದಲ್ಲಿ ಒಂದರಿಂದ ಎರಡು ದಿನದ ವ್ಯತ್ಯಾಸ ಬರಬಹುದು — ಸಾಮಾನ್ಯವಾಗಿ ಅಂಗೀಕಾರ.</p></details>
+      </div>
     </div>
 
     <!-- DATE DIFF -->
-    <div class="tool-card">
+    <div class="tool-card" id="d-card">
       <div class="tool-header">
         <div class="tool-icon icon-date">📅</div>
         <div class="tool-title">
@@ -341,10 +385,16 @@
         </div>
       </div>
       <div class="result" id="d-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಎರಡು ದಿನಾಂಕಗಳ ನಡುವಿನ ಅಂತರ — ದಿನ, ವಾರ, ತಿಂಗಳು ರೂಪದಲ್ಲಿ. ರಜೆ ಸೂಚನೆ, ವರ್ಗಾವಣೆ ಕಾಲ, ಕೋರ್ಸ್ ಕಾಲಾವಧಿ, ಪೂರ್ಣಗೊಳಿಸಿದ ದಿನ ಲೆಕ್ಕಕ್ಕೆ ಬಳಕೆ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Days = To − From (+1 inclusive)</code><br><code>Weeks = floor(Days ÷ 7)</code> · <code>Months ≈ Days ÷ 30.44</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>1-ಸೆ.2026 → 30-ಸೆ.2026 = <b>30 ದಿನ</b> = 4 ವಾರ + 2 ದಿನ ≈ 1.0 ತಿಂಗಳು.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಎರಡೂ ದಿನ ಸೇರ್ಪಡೆಯೇ?</b> ಹೌದು, inclusive ಎಂದು ಲೆಕ್ಕ (ಅಗತ್ಯವಿದ್ದರೆ +1/−1 ಹೊಂದಿಸಿ).<br><b>ತಿಂಗಳ ಲೆಕ್ಕ ಏನು?</b> 30.44 ದಿನ ಆಧಾರದ ಸರಾಸರಿ — ನಿಗದಿ ತಿಂಗಳು ಬೇಕಿದ್ದರೆ calendar ಲೆಕ್ಕ ಬಳಸಿ.</p></details>
+      </div>
     </div>
 
     <!-- MARKS -->
-    <div class="tool-card">
+    <div class="tool-card" id="m-card">
       <div class="tool-header">
         <div class="tool-icon icon-marks">🧾</div>
         <div class="tool-title">
@@ -367,10 +417,16 @@
         </div>
       </div>
       <div class="result" id="m-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ವಿಷಯವಾರು ಅಂಕಗಳ ಒಟ್ಟು, ಸರಾಸರಿ ಮತ್ತು ಶೇಕಡಾಂಶ — internal ಮೌಲ್ಯಮಾಪನ ದಾಖಲೆ, merit list, ವರದಿ ಕಾರ್ಡ್ ಪೂರ್ವಭಾವಿ ಲೆಕ್ಕಕ್ಕೆ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Total = Σ marks</code> · <code>Average = Total ÷ n</code><br><code>% = Total ÷ (Max × n) × 100</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>78, 65, 92, 81, 74 (5 ವಿಷಯ, ಪ್ರತಿ 100): ಒಟ್ಟು <b>390</b>, ಸರಾಸರಿ <b>78.0</b>, ಶೇಕಡ <b>78%</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಎಲ್ಲಾ ವಿಷಯಕ್ಕೂ max ಒಂದೇ?</b> ಇಲ್ಲಿ ಒಂದೇ max ಆಧಾರದ %; ಬೇರೆ ಬೇರೆ max ಇದ್ದರೆ ಪ್ರತಿ ವಿಷಯ % ಆಗಿ Average calculator ಬಳಸಿ.<br><b>Marks list ನಲ್ಲಿ ತಪ್ಪಿದರೆ?</b> ಸಂಖ್ಯೆ ಮಾತ್ರ (ಅಕ್ಷರ ಬೇಡ), comma/space ಬೇಧ್ಯ.</p></details>
+      </div>
     </div>
 
     <!-- GRADE POINTS -->
-    <div class="tool-card">
+    <div class="tool-card" id="gp-card">
       <div class="tool-header">
         <div class="tool-icon icon-grade">⭐</div>
         <div class="tool-title">
@@ -396,10 +452,16 @@
         </div>
       </div>
       <div class="result" id="gp-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಅಂಕ → ಗ್ರೇಡ್ ಮತ್ತು ಗ್ರೇಡ್ ಪಾಯಿಂಟ್. ಕರ್ನಾಟಕ ಸರ್ಕಾರಿ ಶಾಲೆಗಳಲ್ಲಿ (SSLC/ಜಿಲ್ಲಾ ಮಾದರಿ) A+ ನಿಂದ F ವರೆಗೆ; CBSE ಮಾದರಿಯಲ್ಲಿ A1–E (9-ಪಾಯಿಂಟ್). ಎರಡೂ ಈ tool ನಲ್ಲಿ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p>ಕರ್ನಾಟಕ: A+≥90, A≥80, B+≥70, B≥60, C+≥50, C≥40, D≥35 (GP 10→4), F&lt;35 (GP 0)<br>CBSE: A2=81–90 (GP 9), B1=71–80 (GP 8), B2=61–70 (GP 7)… D=33–40 (GP 4)</p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>86 ಅಂಕ → ಕರ್ನಾಟಕ: <b>A+, GP 10</b> · CBSE: <b>A2, GP 9</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಯಾವ scheme ಸರಿ?</b> ಬೋರ್ಡ್/ಶಾಲಾ ಮಾದರಿಯಂತೆ ಆಯ್ಕೆ ಮಾಡಿ — ಸಹಾಯಕ ಲೆಕ್ಕ.<br><b>35 ದಾಟಿದರೆ pass ನೇ?</b> ಉತ್ತೀರ್ಣ ಗಡಿ ಶಾಲಾ/ಬೋರ್ಡ್ ನಿಯಮದಂತೆ — ಇಲ್ಲಿ ಕರ್ನಾಟಕ ಸಾಮಾನ್ಯ ಗಡಿ 35%.</p></details>
+      </div>
     </div>
 
     <!-- AVERAGE -->
-    <div class="tool-card">
+    <div class="tool-card" id="av-card">
       <div class="tool-header">
         <div class="tool-icon icon-avg">📈</div>
         <div class="tool-title">
@@ -418,6 +480,119 @@
         </div>
       </div>
       <div class="result" id="av-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ವಿಷಯವಾರು ಶೇಕಡಾಂಶಗಳ ಸರಾಸರಿ → ಒಟ್ಟಾರೆ ಪ್ರದರ್ಶನ. ವಿವಿಧ ವಿಷಯದ max ಬೇರೆ ಬೇರೆ ಇದ್ದಾಗ ಈ ವಿಧಾನ ಸೂಕ್ತ — ಮೊದಲು ಪ್ರತಿ ವಿಷಯ % ಗೆ ಲೆಕ್ಕ ಮಾಡಿ, ನಂತರ ಸರಾಸರಿ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Average % = Σ (subject %) ÷ number of subjects</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>89, 72, 95, 81 → <b>84.25%</b> (ಸರಾಸರಿ), Grade A.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಎಲ್ಲಾ ವಿಷಯ ಸಮಾನ weight ನೇ?</b> ಹೌದು — weight ಬೇರೆ ಇದ್ದರೆ weighted average ಬೇಕು.<br><b>ಕೆಲವು ವಿಷಯ ಮಿಸ್ ಆಗಿದ್ದರೆ?</b> ನಮೂದಿಸಿದ ವಿಷಯಗಳ ಮೇಲೆ ಮಾತ್ರ ಸರಾಸರಿ.</p></details>
+      </div>
+    </div>
+
+    <!-- WORKING DAYS -->
+    <div class="tool-card" id="w-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-date">🗓️</div>
+        <div class="tool-title">
+          <h2>ಕೆಲಸದ ದಿನ | Working Days</h2>
+          <p>ಭಾನುವಾರ / ಶನಿವಾರ / ರಜೆ ಹೊರತುಪಡಿಸಿ</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಹತ್ತಿರದ ದಿನ | From</label>
+          <input type="date" id="w-from">
+        </div>
+        <div class="form-group">
+          <label>ಕಡೆಯ ದಿನ | To</label>
+          <input type="date" id="w-to">
+        </div>
+        <div class="form-group" style="max-width:110px;">
+          <label>ಹೆಚ್ಚುವರಿ ರಜೆ | Holidays</label>
+          <input type="number" id="w-hol" value="0" min="0">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcWork()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['w-from','w-to','w-hol'],'w-res'); document.getElementById('w-sat').checked=false;">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="form-row">
+        <label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#8FAAB8;cursor:pointer;"><input type="checkbox" id="w-sat"> ಶನಿವಾರವನ್ನೂ ಹೊರತುಪಡಿಸಿ | Exclude Saturdays</label>
+      </div>
+      <div class="result" id="w-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಸೂಚನೆ/circular ಕಾಲ, attendance period ಅಥವಾ ಮಿಡ್-ಡೇ ಮೀಲ್/ಅನ್ನ ದಿನ ಲೆಕ್ಕಕ್ಕೆ "ಕೆಲಸದ ದಿನಗಳು" ಬೇಕಾಗುತ್ತವೆ. ಇದು ಒಟ್ಟು ದಿನಗಳಿಂದ ಭಾನುವಾರ, (ಐಚ್ಛಿಕ) ಶನಿವಾರ ಮತ್ತು ಇಲಾಖಾ ರಜೆಗಳನ್ನು ಕಳೆದರೆ ಉಳಿಯುವ ದಿನ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Working Days = (To − From + 1) − Sundays − Saturdays(if selected) − Holidays</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>1 ಸೆ. → 30 ಸೆ. 2026: ಒಟ್ಟು <b>30 ದಿನ</b>; 4 ಭಾನುವಾರ + 4 ಶನಿವಾರ → <b>22 ಕೆಲಸದ ದಿನ</b> (ಶನಿವಾರ ಹೊರತುಪಡಿಸದಿದ್ದರೆ <b>26</b>).</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ರಜೆ auto ಬರುವುದೇ?</b> ಇಲ್ಲ — ಇಲಾಖಾ ಪ್ರಕಟಣೆಗಳ ಪ್ರಕಾರ ನೀವೇ ಎಣಿಸಿ Holidays ಹಾಕಿ.<br><b>ಮೊದಲ ಮತ್ತು ಕಡೆಯ ದಿನ ಸೇರಿವೆಯೇ?</b> ಹೌದು — ಎರಡೂ inclusive.</p></details>
+      </div>
+    </div>
+
+    <!-- STRENGTH -->
+    <div class="tool-card" id="s-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-avg">👥</div>
+        <div class="tool-title">
+          <h2>ವಿದ್ಯಾರ್ಥಿ ಸಂಖ್ಯೆ | Student Strength</h2>
+          <p>ಬಾಲಕರು + ಬಾಲಕಿಯರು → ಒಟ್ಟು, %, per-section</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಬಾಲಕರು | Boys</label>
+          <input type="number" id="s-b" min="0" placeholder="e.g., 120">
+        </div>
+        <div class="form-group">
+          <label>ಬಾಲಕಿಯರು | Girls</label>
+          <input type="number" id="s-g" min="0" placeholder="e.g., 108">
+        </div>
+        <div class="form-group" style="max-width:120px;">
+          <label>ವಿಭಾಗ | Sections (ಐಚ್ಛಿಕ)</label>
+          <input type="number" id="s-sec" min="1" placeholder="e.g., 5">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcStrength()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['s-b','s-g','s-sec'],'s-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="s-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ತರಗತಿ/ಶಾಲೆಯ ಒಟ್ಟು ವಿದ್ಯಾರ್ಥಿ ಸಂಖ್ಯೆ (strength) = ಬಾಲಕರು + ಬಾಲಕಿಯರು. ಇದರಿಂದ gender-wise ಶೇಕಡ ಮತ್ತು ವಿಭಾಗವಾರು ಸರಾಸರಿ ತಿಳಿಯುತ್ತದೆ — UDISE+/SATS ದತ್ತಾಂಶ ಹೋಲಿಕೆ, ವಿಭಾಗ ವಿಂಗಡಣೆ, ಶಿಕ್ಷಕರ ಅನುಪಾತ ಲೆಕ್ಕಕ್ಕೆ ಉಪಯೋಗ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Total = Boys + Girls</code><br><code>Boys% = (Boys ÷ Total) × 100</code> · <code>Girls% = (Girls ÷ Total) × 100</code><br><code>Per-section = Total ÷ Sections</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>ಬಾಲಕರು 120, ಬಾಲಕಿಯರು 108 → ಒಟ್ಟು <b>228</b>; ಬಾಲಕರು <b>52.6%</b>, ಬಾಲಕಿಯರು <b>47.4%</b>; 5 ವಿಭಾಗವಿದ್ದರೆ ಒಂದಕ್ಕೆ ಸರಾಸರಿ <b>45.6</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>UDISE+ ನಲ್ಲಿ strength ಹೇಗೆ ಬರುತ್ತದೆ?</b> classwise boys/girls counts ನಮೂದಿಸಿದಾಗ auto ಒಟ್ಟು ಸೇರುತ್ತದೆ — ಇಲ್ಲಿನ % ಹೋಲಿಕೆಗೆ use ಮಾಡಿ.<br><b>Per-section ಅಷ್ಟೇ ಅಲ್ಲ, ತರಗತಿ ಸಂಖ್ಯೆಯೂ ಬೇಕೇ?</b> ತರಗತಿ ಸಂಖ್ಯೆ ಬೇರೆ, ಇಲ್ಲಿ sections ಆಧಾರದ ಸರಾಸರಿ.</p></details>
+      </div>
+    </div>
+
+    <!-- PASS PERCENT -->
+    <div class="tool-card" id="pp-card">
+      <div class="tool-header">
+        <div class="tool-icon icon-grade">✅</div>
+        <div class="tool-title">
+          <h2>ಉತ್ತೀರ್ಣ ಶೇಕಡ | Pass Percentage</h2>
+          <p>ಹಜಾರಾದವರಲ್ಲಿ ಉತ್ತೀರ್ಣರ ಶೇಕಡ</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಹಾಜರಾದ ವಿದ್ಯಾರ್ಥಿಗಳು | Appeared</label>
+          <input type="number" id="pp-app" min="1" placeholder="e.g., 50">
+        </div>
+        <div class="form-group">
+          <label>ಉತ್ತೀರ್ಣರು | Passed</label>
+          <input type="number" id="pp-pass" min="0" placeholder="e.g., 42">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcPass()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['pp-app','pp-pass'],'pp-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="pp-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶ ವರದಿಗಳಲ್ಲಿ ಶಾಲೆಯ/ತರಗತಿಯ ಉತ್ತೀರ್ಣ ಶೇಕಡಾಂಶ ಬೇಕಾಗುತ್ತದೆ. ಇದು ಪರೀಕ್ಷೆಗೆ ಹಾಜರಾದ ಒಟ್ಟು ಮಕ್ಕಳಲ್ಲಿ ಎಷ್ಟು ಮಂದಿ ಉತ್ತೀರ್ಣರಾದರೆಂದು ತೋರಿಸುತ್ತದೆ. ಅನುತ್ತೀರ್ಣರು = ಹಾಜರಾದ − ಉತ್ತೀರ್ಣರು.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Pass% = (Passed ÷ Appeared) × 100</code><br><code>Failed = Appeared − Passed</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>50 ಹಾಜರಾದರಲ್ಲಿ 42 ಉತ್ತೀರ್ಣ → <b>84%</b>, ಅನುತ್ತೀರ್ಣರಾದವರು <b>8</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಪೂರಕ ಪರೀಕ್ಷೆ (supplementary) ನಂತರ?</b> ಪೂರಕದಲ್ಲಿ ಉತ್ತೀರ್ಣರಾದವರನ್ನು ಸೇರಿಸಿ ಮತ್ತೆ ಲೆಕ್ಕ ಹಾಕಬಹುದು.<br><b>ಅನುತ್ತೀರ್ಣರ but ಅನುಪಸ್ಥಿತ?</b> ಇಲ್ಲಿ appeared (ಹಾಜರಾದ) ಸಂಖ್ಯೆ ಮಾತ್ರ ಒಳಗೆ — ಅನುಪಸ್ಥಿತರನ್ನು ಬೇರೆ ನಮೂದಿಸಬೇಡಿ.</p></details>
+      </div>
     </div>
 
     <!-- INFO -->
@@ -569,6 +744,46 @@ function calcAvg(){
   var avg = arr.reduce(function(a,b){ return a+b; }, 0) / arr.length;
   var g = avg >= 90 ? 'A+' : avg >= 80 ? 'A' : avg >= 60 ? 'B' : avg >= 35 ? 'C' : 'F';
   show('av-res', 'ವಿಷಯಗಳು | Subjects: <b>' + arr.length + '</b><br>ಒಟ್ಟು ಸರಾಸರಿ | Average: <b>' + avg.toFixed(2) + '%</b><br>ಗ್ರೇಡ್: <b>' + g + '</b>');
+}
+
+function calcWork(){
+  var f = document.getElementById('w-from').value;
+  var t = document.getElementById('w-to').value;
+  var hd = parseInt(document.getElementById('w-hol').value || '0', 10);
+  var exSat = document.getElementById('w-sat').checked;
+  if(!f || !t){ show('w-res', '⚠️ ಎರಡೂ ದಿನಾಂಕ ನಮೂದಿಸಿ | Enter both dates'); return; }
+  var s = new Date(f), e = new Date(t);
+  if(s > e){ show('w-res', '⚠️ To ದಿನಾಂಕ From ಗಿಂತ ಬೇಗ ಇರಬಾರದು | Check dates'); return; }
+  var total = Math.floor((e - s) / 86400000) + 1;
+  var sun = 0, sat = 0;
+  var cur = new Date(s);
+  while(cur <= e){ var wd = cur.getDay(); if(wd === 0) sun++; if(exSat && wd === 6) sat++; cur.setDate(cur.getDate() + 1); }
+  var hol = (isNaN(hd) || hd < 0) ? 0 : hd;
+  var work = total - sun - sat - hol;
+  if(work < 0) work = 0;
+  show('w-res', 'ಒಟ್ಟು ದಿನ | Total Days: <b>' + total + '</b><br>ಭಾನುವಾರ | Sundays: <b>' + sun + '</b> · ಶನಿವಾರ | Saturdays: <b>' + sat + '</b> · ರಜೆ | Holidays: <b>' + hol + '</b><br>ಕೆಲಸದ ದಿನ | Working Days: <b>' + work + '</b>');
+}
+
+function calcStrength(){
+  var b = parseFloat(document.getElementById('s-b').value);
+  var g = parseFloat(document.getElementById('s-g').value);
+  if(isNaN(b) || isNaN(g) || b < 0 || g < 0){ show('s-res', '⚠️ ಬಾಲಕರು/ಬಾಲಕಿಯರ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ | Enter counts'); return; }
+  var total = b + g;
+  if(total === 0){ show('s-res', '⚠️ ಒಟ್ಟು ವಿದ್ಯಾರ್ಥಿ 0 ಆಗಬಾರದು | Enter valid counts'); return; }
+  var bp = b / total * 100, gp = g / total * 100;
+  var sec = parseFloat(document.getElementById('s-sec').value);
+  var html = 'ಒಟ್ಟು | Total Strength: <b>' + total + '</b><br>ಬಾಲಕರು | Boys: <b>' + b + '</b> (' + bp.toFixed(1) + '%)<br>ಬಾಲಕಿಯರು | Girls: <b>' + g + '</b> (' + gp.toFixed(1) + '%)';
+  if(!isNaN(sec) && sec > 0){ html += '<br>ಸರಾಸರಿ per-section: <b>' + (total / sec).toFixed(1) + '</b>'; }
+  show('s-res', html);
+}
+
+function calcPass(){
+  var app = parseFloat(document.getElementById('pp-app').value);
+  var pass = parseFloat(document.getElementById('pp-pass').value);
+  if(isNaN(app) || isNaN(pass) || app <= 0 || pass < 0){ show('pp-res', '⚠️ ಸರಿಯಾದ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ | Enter valid numbers'); return; }
+  if(pass > app){ show('pp-res', '⚠️ ಉತ್ತೀರ್ಣರು ಹಾಜರಾದವರಿಗಿಂತ ಹೆಚ್ಚು ಆಗಬಾರದು | Passed ≤ Appeared'); return; }
+  var pct = pass / app * 100;
+  show('pp-res', 'ಹಾಜರಾದವರು | Appeared: <b>' + app + '</b> · ಉತ್ತೀರ್ಣರು | Passed: <b>' + pass + '</b><br>ಉತ್ತೀರ್ಣ ಶೇಕಡ | Pass %: <b>' + pct.toFixed(2) + '%</b><br>ಅನುತ್ತೀರ್ಣ | Failed: <b>' + (app - pass) + '</b>');
 }
 </script>
 <!-- AdSense Ad Slot -->
