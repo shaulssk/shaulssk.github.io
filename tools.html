@@ -5,16 +5,16 @@
 <link rel="canonical" href="https://shaulssk.in/tools.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta property="og:title" content="Online Tools — 13 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, % Change) | Shaul SSK">
-  <meta property="og:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks — formula + example + FAQ ಸಹಿತ.">
+  <meta property="og:title" content="Online Tools — 15 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, 7ನೇ ವೇತನ Salary, ಬಿಸಿಯೂಟ MDM, % Change) | Shaul SSK">
+  <meta property="og:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks + 7ನೇ ವೇತನ ಸಂಬಳ (Salary) + ಅಕ್ಷರ ದಾಸೋಹ (MDM) — formula + example + FAQ ಸಹಿತ.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://shaulssk.in/tools.html">
   <meta property="og:site_name" content="Shaul SSK">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Online Tools — 13 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, % Change) | Shaul SSK">
-  <meta name="twitter:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks — formula + example + FAQ ಸಹಿತ.">
-<title>Online Tools — 13 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, % Change) | Shaul SSK</title>
-<meta name="description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks — formula + example + FAQ ಸಹಿತ.">
+  <meta name="twitter:title" content="Online Tools — 15 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, 7ನೇ ವೇತನ Salary, ಬಿಸಿಯೂಟ MDM, % Change) | Shaul SSK">
+  <meta name="twitter:description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks + 7ನೇ ವೇತನ ಸಂಬಳ (Salary) + ಅಕ್ಷರ ದಾಸೋಹ (MDM) — formula + example + FAQ ಸಹಿತ.">
+<title>Online Tools — 15 ಉಚಿತ Calculator (Attendance, Percentage, Grade, Working Days, 7ನೇ ವೇತನ Salary, ಬಿಸಿಯೂಟ MDM, % Change) | Shaul SSK</title>
+<meta name="description" content="ಶಿಕ್ಷಕರಿಗಾಗಿ ಉಚಿತ calculators: Attendance %, Marks %, Grade, Age, Average, Working Days, Student Strength, Pass %, Percentage Change, Target Marks + 7ನೇ ವೇತನ ಸಂಬಳ (Salary) + ಅಕ್ಷರ ದಾಸೋಹ (MDM) — formula + example + FAQ ಸಹಿತ.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3030395356696493" crossorigin="anonymous"></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL7KQ1LH6D"></script>
 <script>
@@ -258,6 +258,8 @@
     <a href="#pc-card">📉 Percent Change</a>
     <a href="#tm-card">🎯 Target Marks</a>
     <a href="#cp-card">🧮 Reverse %</a>
+    <a href="#sal-card">💰 7ನೇ ವೇತನ ಸಂಬಳ</a>
+    <a href="#mdm-card">🍲 ಬಿಸಿಯೂಟ MDM</a>
   </div>
 
   <div class="tools-grid">
@@ -695,6 +697,88 @@
       </div>
     </div>
 
+    <!-- 7TH PAY SALARY -->
+    <div class="tool-card" id="sal-card">
+      <div class="tool-header">
+        <div class="tool-icon" style="background:linear-gradient(135deg,#F9CA24,#E58E26);">💰</div>
+        <div class="tool-title">
+          <h2>7ನೇ ವೇತನ ಸಂಬಳ | Salary Estimate</h2>
+          <p>Basic + DA(15.75%) + HRA − NPS/PT/KGID → ನಿವ್ವಳ (ಅಂದಾಜು)</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>ಮೂಲ ವೇತನ | Basic Pay (2024 ಪರಿಷ್ಕೃತ)</label>
+          <input type="number" id="sal-basic" min="0" placeholder="ಉದಾ: 43100">
+        </div>
+        <div class="form-group" style="max-width:170px;">
+          <label>HRA ವರ್ಗ | Class</label>
+          <select id="sal-hra" style="width:100%;padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:#F3EFE2;font-size:14px;font-family:inherit;">
+            <option value="24">A · ಬೆಂಗಳೂರು (24%)</option>
+            <option value="16">B · ನಗರ/ಜಿಲ್ಲಾ ಕೇಂದ್ರ (16%)</option>
+            <option value="8" selected>C · ಇತರೆ ಸ್ಥಳ (8%)</option>
+          </select>
+        </div>
+        <div class="form-group" style="max-width:110px;">
+          <label>DA % (ಅಪ್ಡೇಟ್ ಮಾಡಬಹುದು)</label>
+          <input type="number" id="sal-da" min="0" step="0.01" value="15.75">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcSal()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['sal-basic','sal-kgid','sal-oth'],'sal-res'); document.getElementById('sal-da').value='15.75'; document.getElementById('sal-hra').value='8';">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group" style="max-width:180px;">
+          <label>KGID ಚಂದಾ (ಐಚ್ಛಿಕ)</label>
+          <input type="number" id="sal-kgid" min="0" value="0" placeholder="0">
+        </div>
+        <div class="form-group" style="max-width:180px;">
+          <label>ಇತರೆ ಕಡಿತ (ಐಚ್ಛಿಕ)</label>
+          <input type="number" id="sal-oth" min="0" value="0" placeholder="0">
+        </div>
+      </div>
+      <div class="result" id="sal-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>2024ರ ಪರಿಷ್ಕೃತ ವೇತನ ಶ್ರೇಣಿ ಆಧಾರದ <b>ಅಂದಾಜು</b>. ಗಳಿಕೆ = Basic + DA + HRA; ಕಡಿತ = NPS (Basic+DAಯ 10%) + ವೃತ್ತಿ ತೆರಿಗೆ + KGID/ಇತರೆ. <b>TA, ವೈದ್ಯಕೀಯ, GPF, ಸಂಘ ಕಡಿತ ಇತ್ಯಾದಿ ಸೇರಿಲ್ಲ</b> — ನಿಖರ ಲೆಕ್ಕ HRMS ಪೇಸ್ಲಿಪ್ ಪರಿಶೀಲಿಸಿ.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>DA = Basic × 15.75%</code> · <code>HRA = Basic × (24/16/8)%</code><br><code>Gross = Basic + DA + HRA</code><br><code>NPS = (Basic + DA) × 10%</code> · <code>PT ≈ ₹200/ತಿಂಗಳು</code><br><code>Net = Gross − NPS − PT − KGID − other</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>Basic ₹43,100, HRA 16%: DA <b>₹6,788</b> · HRA <b>₹6,896</b> · Gross <b>₹56,784</b> · NPS <b>₹4,989</b> · PT ₹200 → Net ≈ <b>₹51,595</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>DA 15.75% ಯಾವಾಗಿನದು?</b> 1-1-2026ರಿಂದ (ಹಣಕಾಸು ಇಲಾಖೆ ಆದೇಶ, ಮೇ 2026). ಮುಂದಿನ ಪರಿಷ್ಕರಣೆಯಲ್ಲಿ DA % ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಬದಲಿಸಿ.<br><b>HRA ವರ್ಗ?</b> A=ಬೆಂಗಳೂರು 24% · B=ಮೈಸೂರು/ಮಂಗಳೂರು/ಹುಬ್ಬಳ್ಳಿ 16% · C=ಇತರೆ 8%.<br><b>ವೃತ್ತಿ ತೆರಿಗೆ?</b> ₹200/ತಿಂಗಳು; ₹25,000+ ವೇತನದವರಿಗೆ <b>ಫೆಬ್ರವರಿಯಲ್ಲಿ ₹300</b> (2025 ತಿದ್ದುಪಡಿ).<br><b>ಇದು ನಿಖರವೇ?</b> ಇಲ್ಲ — ಅಂದಾಜು; ಪೇಸ್ಲಿಪ್/ಇಲಾಖಾ ಲೆಕ್ಕ ಅಂತಿಮ.</p></details>
+      </div>
+    </div>
+
+    <!-- AKSHTA DASOHA (MDM) -->
+    <div class="tool-card" id="mdm-card">
+      <div class="tool-header">
+        <div class="tool-icon" style="background:linear-gradient(135deg,#2ECC71,#27AE60);">🍲</div>
+        <div class="tool-title">
+          <h2>ಅಕ್ಷರ ದಾಸೋಹ | MDM Calculator</h2>
+          <p>ಹಾಜರಾತಿ → ಅಕ್ಕಿ/ಬೇಳೆ/ತರಕಾರಿ ಪ್ರಮಾಣ (ಕೆಜಿ)</p>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>1–5ನೇ ತರಗತಿ ಹಾಜರಾತಿ | Primary kids</label>
+          <input type="number" id="mdm-p" min="0" value="0" placeholder="0">
+        </div>
+        <div class="form-group">
+          <label>6–10ನೇ ತರಗತಿ ಹಾಜರಾತಿ | Higher kids</label>
+          <input type="number" id="mdm-h" min="0" value="0" placeholder="0">
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary" onclick="calcMdm()">ಲೆಕ್ಕ</button>
+          <button class="btn btn-ghost" onclick="resetTool(['mdm-p','mdm-h'],'mdm-res')">ಸ್ವಚ್ಛ</button>
+        </div>
+      </div>
+      <div class="result" id="mdm-res"></div>
+      <div class="tool-info">
+        <details><summary>📖 ಹೇಗೆ ಲೆಕ್ಕ? | Explanation</summary><p>ಪ್ರಧಾನಮಂತ್ರಿ ಪೋಷಣ್ ಶಕ್ತಿ ನಿರ್ಯಹ (PM-POSHAN) ಅಕ್ಷರ ದಾಸೋಹ ಮಾರ್ಗಸೂಚಿ ದರಗಳ ಆಧಾರದಲ್ಲಿ ದಿನಕ್ಕೆ ಬೇಕಾದ ಸಾಮಗ್ರಿ ಅಂದಾಜು: ಪ್ರಾಥಮಿಕ 1–5 — ಅಕ್ಕಿ 100g, ಬೇಳೆ 20g, ತರಕಾರಿ 50g; ಪ್ರೌಢ 6–10 — ಅಕ್ಕಿ 150g, ಬೇಳೆ 30g, ತರಕಾರಿ 75g. ಸ್ಥಳೀಯ ಮೆನು/ಇಲಾಖಾ ದರ ಬದಲಾಗಬಹುದು.</p></details>
+        <details><summary>🧮 ಸೂತ್ರ | Formula</summary><p><code>Rice kg = (P×100 + H×150) ÷ 1000</code><br><code>Dal  kg = (P×20  + H×30)  ÷ 1000</code><br><code>Veg  kg = (P×50  + H×75)  ÷ 1000</code></p></details>
+        <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>ಪ್ರಾಥಮಿಕ 50 + ಪ್ರೌಢ 40: ಅಕ್ಕಿ (5000+6000)÷1000 = <b>11.0 ಕೆಜಿ</b> · ಬೇಳೆ (1000+1200)÷1000 = <b>2.2 ಕೆಜಿ</b> · ತರಕಾರಿ (2500+3000)÷1000 = <b>5.5 ಕೆಜಿ</b>.</p></details>
+        <details><summary>❓ FAQ</summary><p><b>ಅಡುಗೆ ಖರ್ಚು ಮತ್ತು ಸಿಬ್ಬಂದಿ ವೇತನ?</b> ಇದು ಸಾಮಗ್ರಿ ಅಂದಾಜು ಮಾತ್ರ — ಅಡುಗೆ ಖರ್ಚು (COC) ಮತ್ತು ಸಹಾಯಕ ವೇತನ ಪ್ರತ್ಯೇಕ.<br><b>ಯಾವ ಲೆಕ್ಕದಲ್ಲಿ?</b> ಉಪಹಾರ/ಮಧ್ಯಾಹ್ನದ ದಿನ ಹಾಜರಾದ ಮಕ್ಕಳ ಲೆಕ್ಕದಲ್ಲಿ — ಶಾಲೆಯ ದೈನಂದಿನ ಹಾಜರಾತಿ ದಾಖಲೆಯಿಂದ ತುಂಬಿಸಿ.<br><b>ರಾಜ್ಯ ದರ ಭಿನ್ನವಾದರೆ?</b> ಇಲಾಖಾ ಪರಿಚಲನೆಯ ದರಗಳನ್ನು ನೋಡಿ ಅದಕ್ಕೆ ತಕ್ಕಂತೆ ಲೆಕ್ಕ ಹೊಂದಿಸಿ.</p></details>
+      </div>
+    </div>
+
     <!-- INFO -->
     <div class="tool-card">
       <div class="tool-header">
@@ -909,6 +993,37 @@ function calcRev(){
   if(isNaN(v) || isNaN(p) || p <= 0 || p > 100){ show('cp-res', '⚠️ ಮೌಲ್ಯ ಮತ್ತು ಶೇಕಡ (0–100, 0 ಬೇಡ) ನಮೂದಿಸಿ | Enter valid values'); return; }
   var total = v / (p / 100);
   show('cp-res', 'ನೀಡಿದ ಮೌಲ್ಯ | Value: <b>' + v + '</b> = <b>' + p + '%</b><br>ಒಟ್ಟು | Total: <b>' + (total % 1 === 0 ? total : total.toFixed(2)) + '</b>');
+}
+
+function fmtRs(n){ n = Math.round(n || 0); return '₹' + n.toLocaleString('en-IN'); }
+
+function calcSal(){
+  var basic = parseFloat(document.getElementById('sal-basic').value);
+  var daP = parseFloat(document.getElementById('sal-da').value);
+  var hraP = parseFloat(document.getElementById('sal-hra').value);
+  var kgid = parseFloat(document.getElementById('sal-kgid').value) || 0;
+  var oth = parseFloat(document.getElementById('sal-oth').value) || 0;
+  if(isNaN(basic) || basic <= 0){ show('sal-res', '⚠️ ಮೂಲ ವೇತನ ನಮೂದಿಸಿ | Enter basic pay'); return; }
+  var daR = (!isNaN(daP) && daP >= 0) ? daP : 15.75;
+  var da = Math.round(basic * daR / 100);
+  var hra = Math.round(basic * hraP / 100);
+  var gross = basic + da + hra;
+  var nps = Math.round((basic + da) * 0.10);
+  var pt = 200;
+  var totD = nps + pt + kgid + oth;
+  var net = gross - totD;
+  show('sal-res', 'ಮೂಲ ವೇತನ | Basic: <b>' + fmtRs(basic) + '</b><br>ತುಟ್ಟಿಭತ್ಯೆ | DA (' + daR + '%): <b>' + fmtRs(da) + '</b> · HRA (' + hraP + '%): <b>' + fmtRs(hra) + '</b><br>ಒಟ್ಟು ಗಳಿಕೆ | Gross: <b>' + fmtRs(gross) + '</b><br><br>NPS (10%): <b>' + fmtRs(nps) + '</b> · ವೃತ್ತಿ ತೆರಿಗೆ | PT: <b>' + fmtRs(pt) + '</b> · KGID: <b>' + fmtRs(kgid) + '</b> · ಇತರೆ: <b>' + fmtRs(oth) + '</b><br>ಒಟ್ಟು ಕಡಿತ | Deductions: <b>' + fmtRs(totD) + '</b><br><br>ನಿವ್ವಳ ಸಂಬಳ | Net (ಅಂದಾಜು): <b>' + fmtRs(net) + '</b>');
+}
+
+function calcMdm(){
+  var p = parseFloat(document.getElementById('mdm-p').value) || 0;
+  var h = parseFloat(document.getElementById('mdm-h').value) || 0;
+  if(isNaN(p) || isNaN(h) || p < 0 || h < 0){ show('mdm-res', '⚠️ ಸರಿಯಾದ ಮಕ್ಕಳ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ | Enter valid counts'); return; }
+  if(p === 0 && h === 0){ show('mdm-res', '⚠️ ಕನಿಷ್ಠ ಒಂದು ಸಂಖ್ಯೆ ನಮೂದಿಸಿ | Enter at least one count'); return; }
+  var rk = (p*100 + h*150) / 1000;
+  var dk = (p*20 + h*30) / 1000;
+  var vk = (p*50 + h*75) / 1000;
+  show('mdm-res', 'ಪ್ರಾಥಮಿಕ | Primary: <b>' + p + '</b> · ಪ್ರೌಢ | Higher: <b>' + h + '</b><br>ಅಕ್ಕಿ | Rice: <b>' + rk.toFixed(3) + ' ಕೆಜಿ</b><br>ಬೇಳೆ | Dal: <b>' + dk.toFixed(3) + ' ಕೆಜಿ</b><br>ತರಕಾರಿ | Veg: <b>' + vk.toFixed(3) + ' ಕೆಜಿ</b><br><span style="font-size:12px;color:#8FAAB8;">ಅಂದಾಜು — ಇಲಾಖಾ ದರ/ಮೆನು ಪ್ರಕಾರ ಬದಲಾಗಬಹುದು</span>');
 }
 </script>
 <!-- AdSense Ad Slot -->
