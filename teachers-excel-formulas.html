@@ -150,14 +150,14 @@
 <tr><th>ದೋಷ (error)</th><th>ಅರ್ಥ</th><th>ಪರಿಹಾರ</th></tr>
 <tr><td><code>#N/A</code></td><td>VLOOKUP ನಲ್ಲಿ ಹೆಸರು ಸಿಗಲಿಲ್ಲ</td><td>ಕಾಗುಣಿತ/ಜಾಗ check ಮಾಡಿ; Sheet ಹೆಸರು ಸರಿಯೇ?</td></tr>
 <tr><td><code>#VALUE!</code></td><td>ಸೆಲ್‌ನಲ್ಲಿ ಅಕ್ಷರ/ಸಂಖ್ಯೆಯಲ್ಲಿದೆ</td><td>ಎಲ್ಲಾ ಅಂಕ ಸಂಖ್ಯೆ format ನಲ್ಲಿದೆಯೇ ನೋಡಿ</td></tr>
-<tr><td><code>#DIV/0!</code></td><td>ಶೂನ್ಯದಿಂದ ಭಾಗಿಸಲು ಹೋದೆ</td><td>ಛೇದ (denominator) 0 ಆಗಿರುವ ಸಾಧ್ಯತೆ — IFERROR ತೊಡಿಸಿ</td></tr>
+<tr><td><code>#DIV/0!</code></td><td>ಶೂನ್ಯದಿಂದ ಭಾಗಿಸಲು ಹೋದೆ</td><td>ಛೇದ (denominator) 0 ಆಗಿರುವ ಸಾಧ್ಯತೆ — IFERROR ಹಾಕಿ</td></tr>
 </table>
-<div class="step"><div class="step-num">1</div><p>ಸುತ್ತಮುತ್ತ error ತೋರಿಸದೆ ಇಡಲು: <code>=IFERROR(ನಿಮ್ಮ ಸೂತ್ರ,»,"—")</code></p></div>
+<div class="step"><div class="step-num">1</div><p>ಸುತ್ತಮುತ್ತ error ತೋರಿಸದೆ ಇಡಲು: <code>=IFERROR(ಸೂತ್ರ,"—")</code></p></div>
 <div class="step"><div class="step-num">2</div><p>ಸೂತ್ರದ ಬದಲು ಬರೆದಿದ್ದೇನೋ ನೋಡಲು: ಕೀಬೋರ್ಡ್‌ನ <b>Ctrl+`</b> (backtick) — ಸೂತ್ರ/ಮೌಲ್ಯ toggle.</p></div>
 
 <h2>11. ದತ್ತಾಂಶ ಬ್ಯಾಕಪ್ &amp; ಶೇರ್</h2>
 <ul>
-<li>ಅಂಕ/ಹಾಜರಾತಿ ಫೈಲಿಗೆ <b>ದಿನಾಂಕ ಹೆಸರು</b> ಇಡಿ: "Class7-Marks-06Sep2026.xlsx".</li>
+<li>ಅಂಕ/ಹಾಜರಾತಿ ಫೈಲಿಗೆ <b>ದಿನಾಂಕ ಹೆಸರು</b> ಇಡಿ: "Class7-Marks-09Sep2026.xlsx".</li>
 <li><b>ಫೈಲ್ → Save As → PDF</b> — ಶಾಲಾ ದಾಖಲೆಗೆ ರೀಡ್-ಕಾಪಿ PDF.</li>
 <li>ಪ್ರಮುಖ ಫೈಲುಗಳ <b>ಬ್ಯಾಕಪ್</b> — ಎರಡು ಸ್ಥಳ (ಉದಾ. pen drive + cloud).</li>
 <li>ಶೇರ್ ಮಾಡುವ ಮೊದಲು confidential ವಿವರ (ಸಂಪೂರ್ಣ ಆಧಾರ) ಇಲ್ಲ ಎಂದು ಖಚಿತಪಡಿಸಿ — ಗೋಪ್ಯತೆ.</li>
@@ -174,7 +174,7 @@
 
 <h2>13. FAQ — ಪದೇ ಪದೇ ಕೇಳಲಾಗುವ ಪ್ರಶ್ನೆಗಳು</h2>
 <details><summary>1. ಸೂತ್ರ ಹಾಕಿದರೆ "formula" ಬರವಣಿಗೆಯೇ ತೋರಿಸುತ್ತದೆ — ಏಕೆ?</summary><p>ಹೆಚ್ಚಾಗಿ ಸೆಲ್ format "Text" ಆಗಿರಬಹುದು. ಸೆಲ್ ಹೈಲೈಟ್ ಮಾಡಿ Home → Number → General ಆಗಿ ಬದಲಿಸಿ, ಅನಂತರ ಸೂತ್ರ ಪುನಃ ಬರೆಯಿರಿ. ಫಾರ್ಮುಲಾ <code>=</code> ನಿಂದ ಪ್ರಾರಂಭ ಆಗಬೇಕು.</p></details>
-<details><summary>2. VLOOKUP ಕೆಲಸ ಮಾಡುತ್ತಿಲ್ಲ — ಏನು check?</summary><p>Lookup column (ಹುಡುಕುವ ಕಾಲಂ) ಶ್ರೇಣಿಯ <b>ಮೊದಲ ಕಾಲಂ</b> ಆಗಿರಬೇಕು. ಕಾಗುಣಿತ/ರಿಟರ್ನ್ ತಪ್ಪು. ಕೊನೆಯ <code>FALSE</code> ಇರಲಿ. Sheet ಹೆಸರು ಬದಲಾದರೆ refrence ಜಾರುತ್ತದೆ.</p></details>
+<details><summary>2. VLOOKUP ಕೆಲಸ ಮಾಡುತ್ತಿಲ್ಲ — ಏನು check?</summary><p>Lookup column (ಹುಡುಕುವ ಕಾಲಂ) ಶ್ರೇಣಿಯ <b>ಮೊದಲ ಕಾಲಂ</b> ಆಗಿರಬೇಕು. ಕಾಗುಣಿತ/ರಿಟರ್ನ್ ತಪ್ಪು. ಕೊನೆಯ <code>FALSE</code> ಇರಲಿ. Sheet ಹೆಸರು ಬದಲಾದರೆ reference ಜಾರುತ್ತದೆ.</p></details>
 <details><summary>3. ಇಡೀ class ಗೆ ಒಂದೇ ಸೂತ್ರ ಹೇಗೆ ಅನ್ವಯಿಸುವುದು?</summary><p>ಫಾರ್ಮುಲಾ ಸೆಲ್‌ನ ಕೆಳಗಿನ ಬಲ ಮೂಲೆಯ <b>fill handle</b> (+ ಚಿಹ್ನೆ) ಕಾಣುವವರೆಗೆ ಬಂದು, ಕೆಳಗೆ ಎಳೆಯಿರಿ. ಶ್ರೇಣಿ ಕುಗ್ಗದಂತೆ <code>$</code> ಬಳಸಿ.</p></details>
 <details><summary>4. ಪ್ರಯೋಗ ಮಾಡುವಾಗ ಫೈಲ್ ಹಾಳಾಗಿದರೆ?</summary><p>ಆಗಾಗ <b>Ctrl+S</b> ಉಳಿಸಿ, ಮತ್ತು Copy (ಉದಾ. "backup") ಇಡಿ. Undo (Ctrl+Z) ಸಹ ಸಹಾಯ.</p></details>
 <details><summary>5. ಹಾಜರಾತಿ ದಿನಗಳು ಬೇರೆ ಬೇರೆ ಇದ್ದರೆ ಶೇಕಡಾ ಹೇಗೆ?</summary><p>ದಿನಗಳ ಸಂಖ್ಯೆಯನ್ನು ಒಂದು ಸೆಲ್‌ನಲ್ಲಿ (ಉದಾ. H1) ಹಾಕಿ: <code>=(COUNTIF(B2:AE2,"P")/$H$1)*100</code> — ಹೀಗೆ ದಿನಗಳು ಬದಲಾದರೆ ಒಂದೇ ಸೆಲ್ ಬದಲಿಸಿದರೆ ಸಾಕು.</p></details>
