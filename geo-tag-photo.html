@@ -148,6 +148,7 @@
   var goBtn = document.getElementById('goBtn');
 
   var currentFile = null;
+  var currentDataUrl = null;
   var currentName = 'photo.jpg';
 
   window.onerror = function(msg){
@@ -169,41 +170,43 @@
     if(!f.type && !/\.(jpe?g|png|webp|heic|heif)$/i.test(f.name)){ status.innerHTML = '<b class="no">⚠️ ದಯವಿಟ್ಟು image file ಆಯ್ಕೆ ಮಾಡಿ</b>'; return; }
     currentFile = f;
     currentName = (f.name || 'photo.jpg').replace(/\.[^.]+$/, '') + '.jpg';
-    var img = new Image();
-    img.onload = function(){
-      prev.src = img.src;
-      previewArea.style.display = 'block';
-      readExistingGPS(f);
-      status.innerHTML = '✅ ಫೋಟೋ ಸಿದ್ಧ: <b>' + (f.name||'') + '</b> — ಈಗ ಸ್ಥಳ ಹಾಕಿ Download ಒತ್ತಿ.';
-    };
-    img.onerror = function(){ status.innerHTML = '<b class="no">⚠️ ಈ ಫೋಟೋ ಓದಲು ಆಗುತ್ತಿಲ್ಲ. JPG ಆಗಿ convert ಮಾಡಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</b>'; };
-    img.src = URL.createObjectURL(f);
-  }
-
-  function readExistingGPS(f){
     var r = new FileReader();
-    r.onload = function(){
-      try{
-        var exif = piexif.load(r.result);
-        if(exif.GPS && (exif.GPS[piexif.GPSIFD.GPSLatitude] || exif.GPS[piexif.GPSIFD.GPSLatitudeRef])){
-          var la = exif.GPS[piexif.GPSIFD.GPSLatitude];
-          var lo = exif.GPS[piexif.GPSIFD.GPSLongitude];
-          var lr = exif.GPS[piexif.GPSIFD.GPSLatitudeRef];
-          var loRef = exif.GPS[piexif.GPSIFD.GPSLongitudeRef];
-          if(la && lo){
-            var lat = dmsToDec(la, (lr && String(lr).charAt(0) === 'S') ? -1 : 1);
-            var lon = dmsToDec(lo, (loRef && String(loRef).charAt(0) === 'W') ? -1 : 1);
-            latIn.value = lat.toFixed(6); lonIn.value = lon.toFixed(6);
-            metaStat.innerHTML = '<span class="ok">📍 ಫೋಟೋನಲ್ಲಿ ಈಗಾಗಲೇ GPS ಇದೆ:</span> ' + lat.toFixed(6) + ', ' + lon.toFixed(6) + ' — ನೀವು ಬದಲಾಯಿಸಬಹುದು.';
-          }
-        } else {
-          metaStat.innerHTML = '<span class="no">GPS ಇಲ್ಲ</span> — ಮೇಲೆ ಸ್ಥಳ ಹಾಕಿ.';
-        }
-      }catch(err){
-        metaStat.innerHTML = 'ಫೋಟೋ EXIF ಓದಲಾಗಲಿಲ್ಲ (ಸಾಮಾನ್ಯ). ಮೇಲೆ ಸ್ಥಳ ಹಾಕಿ Download ಮಾಡಿ.';
-      }
+    r.onloadend = function(){
+      if(r.error){ status.innerHTML = '<b class="no">⚠️ ಫೋಟೋ ಓದಲಾಗಲಿಲ್ಲ. ಬೇರೆ ಫೋಟೋ ಪ್ರಯತ್ನಿಸಿ.</b>'; return; }
+      currentDataUrl = r.result;
+      var img = new Image();
+      img.onload = function(){
+        prev.src = currentDataUrl;
+        previewArea.style.display = 'block';
+        readExistingGPS(currentDataUrl);
+        status.innerHTML = '✅ ಫೋಟೋ ಸಿದ್ಧ: <b>' + (f.name||'') + '</b> — ಈಗ ಸ್ಥಳ ಹಾಕಿ Download ಒತ್ತಿ.';
+      };
+      img.onerror = function(){ status.innerHTML = '<b class="no">⚠️ ಈ ಫೋಟೋ ಓದಲು ಆಗುತ್ತಿಲ್ಲ (ಫಾರ್ಮ್ಯಾಟ್ support ಆಗಿಲ್ಲ). JPG ನಲ್ಲಿ convert ಮಾಡಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</b>'; };
+      img.src = currentDataUrl;
     };
     r.readAsDataURL(f);
+  }
+
+  function readExistingGPS(dataUrl){
+    try{
+      var exif = piexif.load(dataUrl);
+      if(exif.GPS && (exif.GPS[piexif.GPSIFD.GPSLatitude] || exif.GPS[piexif.GPSIFD.GPSLatitudeRef])){
+        var la = exif.GPS[piexif.GPSIFD.GPSLatitude];
+        var lo = exif.GPS[piexif.GPSIFD.GPSLongitude];
+        var lr = exif.GPS[piexif.GPSIFD.GPSLatitudeRef];
+        var loRef = exif.GPS[piexif.GPSIFD.GPSLongitudeRef];
+        if(la && lo){
+          var lat = dmsToDec(la, (lr && String(lr).charAt(0) === 'S') ? -1 : 1);
+          var lon = dmsToDec(lo, (loRef && String(loRef).charAt(0) === 'W') ? -1 : 1);
+          latIn.value = lat.toFixed(6); lonIn.value = lon.toFixed(6);
+          metaStat.innerHTML = '<span class="ok">📍 ಫೋಟೋನಲ್ಲಿ ಈಗಾಗಲೇ GPS ಇದೆ:</span> ' + lat.toFixed(6) + ', ' + lon.toFixed(6) + ' — ನೀವು ಬದಲಾಯಿಸಬಹುದು.';
+        }
+      } else {
+        metaStat.innerHTML = '<span class="no">GPS ಇಲ್ಲ</span> — ಮೇಲೆ ಸ್ಥಳ ಹಾಕಿ.';
+      }
+    }catch(err){
+      metaStat.innerHTML = 'ಫೋಟೋ EXIF ಓದಲಾಗಲಿಲ್ಲ (ಸಾಮಾನ್ಯ). ಮೇಲೆ ಸ್ಥಳ ಹಾಕಿ Download ಮಾಡಿ.';
+    }
   }
 
   function dmsToDec(arr, sign){
@@ -244,7 +247,7 @@ function dataURLtoBlob(d){
   }
 
   goBtn.addEventListener('click', function(){
-    if(!currentFile){ status.innerHTML = '<b class="no">ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡಿ</b>'; return; }
+    if(!currentFile || !currentDataUrl){ status.innerHTML = '<b class="no">ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡಿ</b>'; return; }
     var lat = parseFloat(latIn.value);
     var lon = parseFloat(lonIn.value);
     if(isNaN(lat) || isNaN(lon) || lat < -90 || lat > 90 || lon < -180 || lon > 180){
@@ -300,7 +303,7 @@ function dataURLtoBlob(d){
       }
     };
     img.onerror = function(){ status.innerHTML = '<b class="no">ಫೋಟೋ ಓದಲಾಗಲಿಲ್ಲ</b>'; };
-    img.src = URL.createObjectURL(currentFile);
+    img.src = currentDataUrl;
   });
 
   function addFallback(objUrl, dataUrl){
