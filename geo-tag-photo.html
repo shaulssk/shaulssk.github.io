@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-3030395356696493">
+<link rel="canonical" href="https://shaulssk.in/geo-tag-photo.html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="ಫೋಟೋ Geo-Tag Tool – GPS ಅಕ್ಷಾಂಶ-ರೇಖಾಂಶ EXIF ಸೇರಿಸಿ | Shaul SSK">
+<meta property="og:description" content="Eco Club, ಚಟುವಟಿಕೆ ವರದಿ ಮತ್ತು portal upload ಗಾಗಿ ಫೋಟೋಗೆ GPS Location (Latitude/Longitude) ಸೇರಿಸುವ ಉಚಿತ browser tool — ಫೋಟೋ ಎಲ್ಲಿಯೂ upload ಆಗುವುದಿಲ್ಲ, 100% private.">
+<meta property="og:url" content="https://shaulssk.in/geo-tag-photo.html">
+<meta property="og:site_name" content="Shaul SSK">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ಫೋಟೋ Geo-Tag Tool – GPS ಅಕ್ಷಾಂಶ-ರೇಖಾಂಶ EXIF ಸೇರಿಸಿ | Shaul SSK">
+<meta name="twitter:description" content="Eco Club / portal upload ಗಾಗಿ ಫೋಟೋಗೆ GPS Location ಸೇರಿಸುವ ಉಚಿತ browser tool — 100% private.">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL7KQ1LH6D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RL7KQ1LH6D');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&display=swap"></noscript>
+<title>ಫೋಟೋ Geo-Tag Tool – GPS ಅಕ್ಷಾಂಶ-ರೇಖಾಂಶ EXIF ಸೇರಿಸಿ | Eco Club Upload | Shaul SSK</title>
+<meta name="description" content="Eco Club, ಶಾಲಾ ಚಟುವಟಿಕೆ ವರದಿ ಮತ್ತು portal photo upload ಗಾಗಿ ಫೋಟೋಗೆ GPS Location (Latitude/Longitude EXIF) ಸೇರಿಸುವ ಉಚಿತ tool. ಫೋಟೋ ಸರ್ವರ್‌ಗೆ ಹೋಗುವುದಿಲ್ಲ — 100% private.">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Noto Sans Kannada','Segoe UI',system-ui,sans-serif;background:#0E2432;color:#F3EFE2;line-height:1.85;padding:34px 20px;}
+  .wrap{max-width:820px;margin:0 auto;}
+  a.back{display:inline-block;margin-bottom:22px;color:#D6A23A;text-decoration:none;font-size:14px;border:1px solid rgba(214,162,58,.45);padding:6px 16px;border-radius:999px;}
+  a.back:hover{background:rgba(214,162,58,.15);}
+  h1{font-size:27px;color:#F0D9A6;line-height:1.4;margin-bottom:8px;}
+  .meta{color:#9FB0B8;font-size:13px;margin-top:6px;}
+  h2{font-size:21px;color:#D6A23A;margin:30px 0 10px;border-bottom:1px solid rgba(214,162,58,.25);padding-bottom:6px;}
+  h3{font-size:17px;margin:18px 0 6px;color:#F3EFE2;}
+  p,li{font-size:15.5px;color:#DCE3E5;}
+  ul,ol{padding-left:24px;margin:10px 0;}
+  li{margin-bottom:7px;}
+  .box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px 18px;margin:14px 0;}
+  .warn{border-color:rgba(214,120,58,.55);background:rgba(214,120,58,.08);}
+  .green{border-color:rgba(80,200,120,.4);background:rgba(80,200,120,.06);}
+  details{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;margin:8px 0;}
+  details summary{cursor:pointer;font-size:15px;color:#F0D9A6;font-weight:600;}
+  details p{margin:8px 0 0;font-size:14.5px;color:#C9D3D6;}
+  footer{margin-top:38px;font-size:12.5px;color:#8A9AA3;border-top:1px solid rgba(255,255,255,.12);padding-top:16px;}
+  a{color:#D6A23A;}
+  #drop{width:100%;padding:40px 18px;text-align:center;border:2px dashed rgba(214,162,58,.4);border-radius:14px;background:rgba(255,255,255,.04);cursor:pointer;transition:.2s;}
+  #drop:hover,#drop.drag{background:rgba(214,162,58,.12);border-color:#E8B84D;}
+  #dropb{font-size:15px;color:#F0D9A6;font-weight:600;}
+  #dl{display:none;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media(max-width:620px){.grid2{grid-template-columns:1fr;}}
+  label{display:block;font-size:13.5px;color:#9FB0B8;margin:10px 0 4px;}
+  input[type=text],input[type=number]{width:100%;padding:11px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#F3EFE2;font-size:15px;font-family:inherit;}
+  input::placeholder{color:#7A8A92;}
+  button{cursor:pointer;font-family:inherit;}
+  .btn{display:inline-block;padding:12px 20px;border-radius:10px;font-size:14.5px;font-weight:700;text-decoration:none;border:none;}
+  .btn-main{background:linear-gradient(135deg,#D6A23A,#E8B84D);color:#0A1628;}
+  .btn-sec{background:rgba(255,255,255,.1);color:#F0D9A6;border:1px solid rgba(214,162,58,.45);}
+  .btn:hover{filter:brightness(1.1);}
+  #prev{max-width:100%;max-height:320px;border-radius:12px;border:1px solid rgba(255,255,255,.2);margin:10px 0;}
+  .stat{font-size:14px;line-height:1.7;color:#C9D3D6;}
+  .ok{color:#7BE09A;font-weight:600;}
+  .no{color:#FF9B9B;font-weight:600;}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;}
+  th,td{border:1px solid rgba(255,255,255,.18);padding:9px 12px;text-align:left;}
+  th{background:rgba(214,162,58,.15);color:#F0D9A6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="back" href="/">ಮುಖಪುಟ | Home</a>
+<h1>📷 ಫೋಟೋ Geo-Tag Tool — GPS ಸೇರಿಸಿ</h1>
+<p class="meta">Eco Club, ಶಾಲಾ ಚಟುವಟಿಕೆ ವರದಿ, portal photo upload ಗಾಗಿ ಫೋಟೋಗೆ Latitude/Longitude (EXIF GPS) ಸೇರಿಸಲು ಉಚಿತ tool.<br>🔒 ಫೋಟೋ ನಿಮ್ಮ device ನಲ್ಲಿಯೇ process ಆಗುತ್ತದೆ — <b>ಸರ್ವರ್‌ಗೆ upload ಆಗುವುದಿಲ್ಲ</b>.</p>
+
+<div class="box warn">
+<p><b>ℹ️ ಏನು ಮಾಡುತ್ತದೆ?</b> ಫೋಟೋ ಆಯ್ಕೆ → ನೀವು ಸ್ಥಳ (Lat/Lon) ನೀಡಿ → "GPS ಸೇರಿಸಿ" ಒತ್ತಿ → ಫೋಟೋನಲ್ಲಿ GPS ಮಾಹಿತಿ (EXIF) embedded ಆಗಿರುವ JPG download ಆಗುತ್ತದೆ.</p>
+<p style="font-size:13.5px;color:#c8b18a;margin-top:6px;">ಇದು ಸರ್ಕಾರಿ website ಅಲ್ಲ — ಸ್ವತಂತ್ರ ಸಹಾಯಕ tool. Portal upload ನಲ್ಲಿನ ಜರೂರು: ಅಧಿಕೃತ portal ನ ನಿಯಮಗಳೇ ಅಂತಿಮ.</p>
+</div>
+
+<h2>1. ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡಿ</h2>
+<div id="drop">
+  <div id="dropb">📂 Click / ಫೋಟೋ ಎಳೆದು/ಆಯ್ಕೆ ಮಾಡಿ (JPG ಬೆಸ್ಟ್)</div>
+  <div style="font-size:12.5px;color:#8A9AA3;margin-top:8px;">HEIC/PNG ಆದರೆ automatically JPG ಆಗಿ convert ಆಗುತ್ತದೆ</div>
+</div>
+<input type="file" id="file" accept="image/*" style="display:none;">
+<div id="previewArea" style="display:none;">
+  <img id="prev" alt="preview">
+  <div class="stat" id="metaStat"></div>
+</div>
+
+<h2>2. ಸ್ಥಳ (Location)</h2>
+<div class="grid2">
+  <div>
+    <label for="lat">Latitude (ಅಕ್ಷಾಂಶ) — ಉದಾ: 15.9782</label>
+    <input type="text" id="lat" inputmode="decimal" placeholder="15.9782">
+  </div>
+  <div>
+    <label for="lon">Longitude (ರೇಖಾಂಶ) — ಉದಾ: 75.2587</label>
+    <input type="text" id="lon" inputmode="decimal" placeholder="75.2587">
+  </div>
+</div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin:12px 0;">
+  <button class="btn btn-sec" id="locBtn">📍 ನನ್ನ Current ಸ್ಥಳ ಬಳಸಿ</button>
+  <a class="btn btn-sec" href="https://www.google.com/maps" target="_blank" rel="noopener">🗺️ Google Maps ಇಂದ coordinates ತೆಗೆಯಲು</a>
+</div>
+<div class="box" style="font-size:14px;color:#C9D3D6;">
+<b>Google Maps ನಿಂದ ಹೇಗೆ?</b> ಫೋನಿನ Google Maps ನಲ್ಲಿ ನಿಮ್ಮ ಸ್ಥಳವನ್ನು ಲಾಂಗ್-ಪ್ರೆಸ್ ಮಾಡಿ → ಕೆಳಗೆ ಬರುವ ಅಕ್ಷಾಂಶ,ರೇಖಾಂಶ (ಉದಾ "15.9782, 75.2587") ನಕಲಿಸಿ → ಮೇಲಿನ box ನಲ್ಲಿ <b>Lat</b> ಮತ್ತು <b>Lon</b> ಬೇರೆ ಬೇರೆ ಹಾಕಿ.
+</div>
+
+<h2>3. GPS ಸೇರಿಸಿ &amp; Download</h2>
+<div style="color:#C9D3D6;font-size:14px;margin-bottom:10px;" id="status">ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡುವವರೆಗೂ ಕಾಯಿ...</div>
+<button class="btn btn-main" id="goBtn">📥 GPS ಸೇರಿಸಿ &amp; Download JPG</button>
+
+<h2>4. ಫೋಟೋಗೆ GPS ಸೇರಿದೆಯೇ — ಹೇಗೆ sure ಮಾಡುವುದು?</h2>
+<ul>
+<li><b>Windows:</b> ಫೋಟೋ ಮೇಲೆ right-click → <b>Properties</b> → <b>Details</b> tab → "GPS Latitude / GPS Longitude" ಕಾಣುತ್ತದೆ.</li>
+<li><b>Android/iPhone Photos app:</b> ಫೋಟೋ ತೆರೆದು "Details" / "i" ನೋಡಿ — ಹೆಚ್ಚಾಗಿ location ತೋರಿಸುತ್ತದೆ.</li>
+<li><b>Online check:</b> ಇನ್ನೊಂದು browser tab ನಲ್ಲಿ tool.geoimgr.com ಕ್ಕೆ ಫೋಟೋ ಹಾಕಿ — Lat/Lon ಕಾಣಿಸಿದರೆ GPS embed ಆಗಿದೆ.</li>
+</ul>
+
+<h2>5. FAQ — ಪದೇ ಪದೇ ಪ್ರಶ್ನೆ</h2>
+<details><summary>1. ಇದನ್ನು Eco Club / portal upload ಗೆ ಬಳಸಬಹುದೇ?</summary><p>ನಿಮ್ಮ portal ಯಾವ ರೀತಿಯ GPS ಬಯಸುತ್ತದೆ ಎಂಬುದನ್ನು ಮೊದಲು ನೋಡಿ. ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗೆ <a href="/eco-club-guide.html">Eco Club Guide</a> ಓದಿ. GPS (EXIF) embedded JPG ಸಾಮಾನ್ಯವಾಗಿ Geo-Tagged ಫೋಟೋ ಆಗಿ ಒಪ್ಪಿಗೆಯಾಗುತ್ತದೆ. Portal ನ ಸೂಚನೆಗಳೇ ಅಂತಿಮ.</p></details>
+<details><summary>2. ಫೋಟೋ quality ಕಡಿಮೆಯಾಗುತ್ತದೆಯೇ?</summary><p>Download ಸಮಯದಲ್ಲಿ JPG quality ~92% — ಸಾಮಾನ್ಯ ವರದಿ/portal ಗೆ ಸಾಕಾಗುತ್ತದೆ.</p></details>
+<details><summary>3. ನನ್ನ ಫೋಟೋ ಸರ್ವರ್‌ಗೆ ಹೋಗುತ್ತದೆಯೇ?</summary><p>ಇಲ್ಲ — ಸಂಪೂರ್ಣ process ನಿಮ್ಮ device/browser ನಲ್ಲಿಯೇ ನಡೆಯುತ್ತದೆ.</p></details>
+<details><summary>4. HEIC ಫೋಟೋಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆಯೇ?</summary><p>ಆಧುನಿಕ browser ನಲ್ಲಿ HEIC support ಇದ್ದರೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ; ಇಲ್ಲದಿದ್ದರೆ ಫೋಟೋವನ್ನು JPG ಆಗಿ ಫೋನಿನಿಂದ convert ಮಾಡಿ ನಂತರ ಇಲ್ಲಿ GPS ಸೇರಿಸಿ.</p></details>
+
+<footer>
+<a href="/">ಮುಖಪುಟ | Home</a> · <a href="/tools.html">Tools</a> · <a href="/about.html">ನಮ್ಮ ಬಗ್ಗೆ</a> · <a href="/terms.html">ನಿಯಮಗಳು</a> · <a href="/disclaimer.html">ಹಕ್ಕು ನಿರಾಕರಣೆ</a> · <a href="/editorial-policy.html">ಸಂಪಾದಕೀಯ ನೀತಿ</a> · <a href="/privacy-policy.html">ಗೋಪ್ಯತಾ ನೀತಿ</a> · <a href="/contact.html">ಸಂಪರ್ಕ</a><br><span style="color:#84939B;font-size:12px;">ಸ್ವತಂತ್ರ ಮಾಹಿತಿ ವೆಬ್‌ಸೈಟ್ — ಇದು ಸರ್ಕಾರಿ ವೆಬ್‌ಸೈಟ್ ಅಲ್ಲ • Independent information website — not an official government website</span><br>© 2026 shaulssk.in
+</footer>
+</div>
+<script src="/piexif.min.js"></script>
+<script>
+  var drop = document.getElementById('drop');
+  var file = document.getElementById('file');
+  var previewArea = document.getElementById('previewArea');
+  var prev = document.getElementById('prev');
+  var metaStat = document.getElementById('metaStat');
+  var latIn = document.getElementById('lat');
+  var lonIn = document.getElementById('lon');
+  var status = document.getElementById('status');
+  var goBtn = document.getElementById('goBtn');
+
+  var currentFile = null;
+  var currentName = 'photo.jpg';
+
+  drop.addEventListener('click', function(){ file.click(); });
+  drop.addEventListener('dragover', function(e){ e.preventDefault(); drop.classList.add('drag'); });
+  drop.addEventListener('dragleave', function(){ drop.classList.remove('drag'); });
+  drop.addEventListener('drop', function(e){ e.preventDefault(); drop.classList.remove('drag'); if(e.dataTransfer.files.length) load(e.dataTransfer.files[0]); });
+  file.addEventListener('change', function(){ if(file.files.length) load(file.files[0]); });
+
+  function load(f){
+    if(!f.type && !/\.(jpe?g|png|webp|heic|heif)$/i.test(f.name)){ status.innerHTML = '<b class="no">⚠️ ದಯವಿಟ್ಟು image file ಆಯ್ಕೆ ಮಾಡಿ</b>'; return; }
+    currentFile = f;
+    currentName = (f.name || 'photo.jpg').replace(/\.[^.]+$/, '') + '.jpg';
+    var img = new Image();
+    img.onload = function(){
+      prev.src = img.src;
+      previewArea.style.display = 'block';
+      readExistingGPS(f);
+      status.innerHTML = '✅ ಫೋಟೋ ಸಿದ್ಧ: <b>' + (f.name||'') + '</b> — ಈಗ ಸ್ಥಳ ಹಾಕಿ Download ಒತ್ತಿ.';
+    };
+    img.onerror = function(){ status.innerHTML = '<b class="no">⚠️ ಈ ಫೋಟೋ ಓದಲು ಆಗುತ್ತಿಲ್ಲ. JPG ಆಗಿ convert ಮಾಡಿ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.</b>'; };
+    img.src = URL.createObjectURL(f);
+  }
+
+  function readExistingGPS(f){
+    var r = new FileReader();
+    r.onload = function(){
+      try{
+        var exif = piexif.load(r.result);
+        if(exif.GPS && (exif.GPS[piexif.GPSIFD.GPSLatitude] || exif.GPS[piexif.GPSIFD.GPSLatitudeRef])){
+          var la = exif.GPS[piexif.GPSIFD.GPSLatitude];
+          var lo = exif.GPS[piexif.GPSIFD.GPSLongitude];
+          var lr = exif.GPS[piexif.GPSIFD.GPSLatitudeRef];
+          var loRef = exif.GPS[piexif.GPSIFD.GPSLongitudeRef];
+          if(la && lo){
+            var lat = dmsToDec(la, (lr && String(lr).charAt(0) === 'S') ? -1 : 1);
+            var lon = dmsToDec(lo, (loRef && String(loRef).charAt(0) === 'W') ? -1 : 1);
+            latIn.value = lat.toFixed(6); lonIn.value = lon.toFixed(6);
+            metaStat.innerHTML = '<span class="ok">📍 ಫೋಟೋನಲ್ಲಿ ಈಗಾಗಲೇ GPS ಇದೆ:</span> ' + lat.toFixed(6) + ', ' + lon.toFixed(6) + ' — ನೀವು ಬದಲಾಯಿಸಬಹುದು.';
+          }
+        } else {
+          metaStat.innerHTML = '<span class="no">GPS ಇಲ್ಲ</span> — ಮೇಲೆ ಸ್ಥಳ ಹಾಕಿ.';
+        }
+      }catch(err){
+        metaStat.innerHTML = 'ಫೋಟೋ EXIF ಓದಲಾಗಲಿಲ್ಲ (ಸಾಮಾನ್ಯ). ಮೇಲೆ ಸ್ಥಳ ಹಾಕಿ Download ಮಾಡಿ.';
+      }
+    };
+    r.readAsDataURL(f);
+  }
+
+  function dmsToDec(arr, sign){
+    function rat(v){ return v[0] / v[1]; }
+    if(!arr || arr.length < 3) return 0;
+    var d = rat(arr[0]), m = rat(arr[1]), s = rat(arr[2]);
+    return sign * (d + m/60 + s/3600);
+  }
+
+  function toDMS(num){
+    num = Math.abs(num);
+    var d = Math.floor(num);
+    var mf = (num - d) * 60;
+    var m = Math.floor(mf);
+    var s = Math.round((mf - m) * 60);
+    if(s === 60){ s = 0; m += 1; }
+    if(m === 60){ m = 0; d += 1; }
+    return [[d,1],[m,1],[s,1]];
+  }
+
+  document.getElementById('locBtn').addEventListener('click', function(){
+    if(!navigator.geolocation){ status.innerHTML = '<b class="no">⚠️ ಈ browser ನಲ್ಲಿ location support ಇಲ್ಲ</b>'; return; }
+    status.innerHTML = '📍 ನಿಮ್ಮ ಸ್ಥಳ ತರಲಾಗುತ್ತಿದೆ...';
+    navigator.geolocation.getCurrentPosition(function(pos){
+      latIn.value = pos.coords.latitude.toFixed(6);
+      lonIn.value = pos.coords.longitude.toFixed(6);
+      status.innerHTML = '<span class="ok">📍 ನಿಮ್ಮ ಸ್ಥಳ ಸಿಕ್ಕಿತು</span> — ಈಗ Download ಒತ್ತಿ. (ಖಚಿತಕ್ಕೆ ಸ್ಥಳವನ್ನು verify ಮಾಡಿ.)';
+    }, function(err){
+      status.innerHTML = '<b class="no">⚠️ ಸ್ಥಳ ಸಿಗಲಿಲ್ಲ.</b> ಕೈಯಿಂದ Lat/Lon ಹಾಕಿ ಅಥವಾ Google Maps ಬಳಸಿ. (ಗೂಡಲೈಸರ್ ಲೊಕೇಶನ್ ಲೋಕೇಷನ್ ಹಂಚುವ permission ಕೊಡಬೇಕಾಗುತ್ತದೆ.)';
+    }, {enableHighAccuracy:true, timeout:15000});
+  });
+
+  goBtn.addEventListener('click', function(){
+    if(!currentFile){ status.innerHTML = '<b class="no">ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡಿ</b>'; return; }
+    var lat = parseFloat(latIn.value);
+    var lon = parseFloat(lonIn.value);
+    if(isNaN(lat) || isNaN(lon) || lat < -90 || lat > 90 || lon < -180 || lon > 180){
+      status.innerHTML = '<b class="no">⚠️ ಸರಿಯಾದ Latitude (-90..90) ಮತ್ತು Longitude (-180..180) ಹಾಕಿ</b>'; return;
+    }
+    status.innerHTML = '⚙️ GPS ಸೇರಿಸಲಾಗುತ್ತಿದೆ...';
+    var img = new Image();
+    img.onload = function(){
+      var c = document.createElement('canvas');
+      var maxW = 2400;
+      var scale = Math.min(1, maxW / img.width);
+      c.width = Math.round(img.width * scale);
+      c.height = Math.round(img.height * scale);
+      var ctx = c.getContext('2d');
+      if(!ctx){ status.innerHTML = '<b class="no">Canvas error</b>'; return; }
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+      c.toBlob(function(blob){
+        var r = new FileReader();
+        r.onload = function(){
+          var base64 = r.result;
+          try{
+            var exif = { "0th":{}, "Exif":{} };
+            exif["GPS"] = {
+              piexif.GPSIFD.GPSVersionID: [2,3,0,0],
+              piexif.GPSIFD.GPSLatitudeRef: lat >= 0 ? "N" : "S",
+              piexif.GPSIFD.GPSLatitude: toDMS(lat),
+              piexif.GPSIFD.GPSLongitudeRef: lon >= 0 ? "E" : "W",
+              piexif.GPSIFD.GPSLongitude: toDMS(lon),
+              piexif.GPSIFD.GPSAltitudeRef: 0,
+              piexif.GPSIFD.GPSAltitude: [0,1]
+            };
+            var exifBytes = piexif.dump(exif);
+            var newDataUrl = piexif.insert(exifBytes, base64);
+            var out = document.createElement('a');
+            out.href = newDataUrl;
+            out.download = currentName;
+            document.body.appendChild(out);
+            out.click();
+            document.body.removeChild(out);
+            status.innerHTML = '<span class="ok">✅ Success!</span> GPS ಸೇರಿದ JPG download ಆಗಿದೆ — ಫೋಟೋ Properties → Details ನಲ್ಲಿ GPS ನೋಡಿ. Portal Upload ಗೆ ಈ ಫೋಟೋ ಬಳಸಿ.';
+          }catch(err){
+            status.innerHTML = '<b class="no">⚠️ EXIF write ಆಗಲಿಲ್ಲ:</b> ' + err.message + ' — JPG ಹೊರತುಪಡಿಸಿ ಬೇರೆ ಫಾರ್ಮೇಟ್ ಇದ್ದರೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
+          }
+        };
+        r.readAsDataURL(blob);
+      }, 'image/jpeg', 0.92);
+    };
+    img.onerror = function(){ status.innerHTML = '<b class="no">ಫೋಟೋ ಓದಲಾಗಲಿಲ್ಲ</b>'; };
+    img.src = URL.createObjectURL(currentFile);
+  });
+</script>
+</body>
+</html>
