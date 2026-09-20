@@ -150,6 +150,11 @@
   var currentFile = null;
   var currentName = 'photo.jpg';
 
+  window.onerror = function(msg){
+    var s = document.getElementById('status');
+    if(s){ s.innerHTML = '<b class="no">⚠️ ದೋಷ / Error:</b> ' + msg; }
+  };
+
   drop.addEventListener('click', function(){ file.click(); });
   document.getElementById('chooseBtn').addEventListener('click', function(e){ e.stopPropagation(); });
 
@@ -231,6 +236,13 @@
     }, {enableHighAccuracy:true, timeout:15000});
   });
 
+function dataURLtoBlob(d){
+    var b = atob(d.split(',')[1]);
+    var u = new Uint8Array(b.length);
+    for(var i=0;i<b.length;i++){ u[i] = b.charCodeAt(i); }
+    return new Blob([u], {type:'image/jpeg'});
+  }
+
   goBtn.addEventListener('click', function(){
     if(!currentFile){ status.innerHTML = '<b class="no">ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡಿ</b>'; return; }
     var lat = parseFloat(latIn.value);
@@ -249,40 +261,62 @@
       var ctx = c.getContext('2d');
       if(!ctx){ status.innerHTML = '<b class="no">Canvas error</b>'; return; }
       ctx.drawImage(img, 0, 0, c.width, c.height);
-      c.toBlob(function(blob){
+      var finish = function(base64){
+        try{
+          var exif = { "0th":{}, "Exif":{} };
+          exif["GPS"] = {
+            piexif.GPSIFD.GPSVersionID: [2,3,0,0],
+            piexif.GPSIFD.GPSLatitudeRef: lat >= 0 ? "N" : "S",
+            piexif.GPSIFD.GPSLatitude: toDMS(lat),
+            piexif.GPSIFD.GPSLongitudeRef: lon >= 0 ? "E" : "W",
+            piexif.GPSIFD.GPSLongitude: toDMS(lon)
+          };
+          var exifBytes = piexif.dump(exif);
+          var newDataUrl = piexif.insert(exifBytes, base64);
+          var blob = dataURLtoBlob(newDataUrl);
+          var objUrl = URL.createObjectURL(blob);
+          var link = document.createElement('a');
+          link.href = objUrl;
+          link.download = currentName;
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          status.innerHTML = '<span class="ok">✅ Success!</span> GPS ಸೇರಿದ JPG download ಆಗಬೇಕು — start ಆಗದಿದ್ದರೆ ಕೆಳಗಿನ ಲಿಂಕ್ touch-hold / right-click ಮಾಡಿ "Download" ಆರಿಸಿ.';
+          addFallback(objUrl, newDataUrl);
+        }catch(err){
+          status.innerHTML = '<b class="no">⚠️ EXIF write ಆಗಲಿಲ್ಲ:</b> ' + err.message;
+        }
+      };
+      var done = function(blob){
         var r = new FileReader();
-        r.onload = function(){
-          var base64 = r.result;
-          try{
-            var exif = { "0th":{}, "Exif":{} };
-            exif["GPS"] = {
-              piexif.GPSIFD.GPSVersionID: [2,3,0,0],
-              piexif.GPSIFD.GPSLatitudeRef: lat >= 0 ? "N" : "S",
-              piexif.GPSIFD.GPSLatitude: toDMS(lat),
-              piexif.GPSIFD.GPSLongitudeRef: lon >= 0 ? "E" : "W",
-              piexif.GPSIFD.GPSLongitude: toDMS(lon),
-              piexif.GPSIFD.GPSAltitudeRef: 0,
-              piexif.GPSIFD.GPSAltitude: [0,1]
-            };
-            var exifBytes = piexif.dump(exif);
-            var newDataUrl = piexif.insert(exifBytes, base64);
-            var out = document.createElement('a');
-            out.href = newDataUrl;
-            out.download = currentName;
-            document.body.appendChild(out);
-            out.click();
-            document.body.removeChild(out);
-            status.innerHTML = '<span class="ok">✅ Success!</span> GPS ಸೇರಿದ JPG download ಆಗಿದೆ — ಫೋಟೋ Properties → Details ನಲ್ಲಿ GPS ನೋಡಿ. Portal Upload ಗೆ ಈ ಫೋಟೋ ಬಳಸಿ.';
-          }catch(err){
-            status.innerHTML = '<b class="no">⚠️ EXIF write ಆಗಲಿಲ್ಲ:</b> ' + err.message + ' — JPG ಹೊರತುಪಡಿಸಿ ಬೇರೆ ಫಾರ್ಮೇಟ್ ಇದ್ದರೆ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.';
-          }
-        };
+        r.onload = function(){ finish(r.result); };
+        r.onerror = function(){ status.innerHTML = '<b class="no">⚠️ ಫೋಟೋ convert ಆಗಲಿಲ್ಲ. ಬೇರೆ ಫೋಟೋ / browser ನಲ್ಲಿ ಪ್ರಯತ್ನಿಸಿ.</b>'; };
         r.readAsDataURL(blob);
-      }, 'image/jpeg', 0.92);
+      };
+      if(c.toBlob){
+        c.toBlob(done, 'image/jpeg', 0.92);
+      } else {
+        finish(c.toDataURL('image/jpeg', 0.92));
+      }
     };
     img.onerror = function(){ status.innerHTML = '<b class="no">ಫೋಟೋ ಓದಲಾಗಲಿಲ್ಲ</b>'; };
     img.src = URL.createObjectURL(currentFile);
   });
+
+  function addFallback(objUrl, dataUrl){
+    var old = document.getElementById('fbLink');
+    if(old){ old.remove(); }
+    var box = document.createElement('div');
+    box.id = 'fbLink';
+    box.style.marginTop = '12px';
+    box.style.padding = '12px 14px';
+    box.style.border = '1px solid rgba(80,200,120,.4)';
+    box.style.borderRadius = '12px';
+    box.style.background = 'rgba(80,200,120,.06)';
+    box.innerHTML = '<b style="color:#7BE09A;">Download start ಆಗಲಿಲ್ಲವೇ?</b> ಕೆಳಗಿನ ಲಿಂಕ್ touch-hold / right-click ಮಾಡಿ "Download / Save link" ಆರಿಸಿ:<br><a href="' + objUrl + '" download="' + currentName + '" style="display:inline-block;margin-top:8px;padding:10px 16px;border-radius:10px;background:linear-gradient(135deg,#D6A23A,#E8B84D);color:#0A1628;font-weight:700;text-decoration:none;font-size:14px;">📥 ' + currentName + ' Download</a>';
+    goBtn.parentNode.appendChild(box);
+    box.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
 </script>
 </body>
 </html>
