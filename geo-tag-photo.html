@@ -85,7 +85,7 @@
 <div id="drop">
   <div id="dropb">📂 ಫೋಟೋವನ್ನು ಇಲ್ಲಿ / ಪುಟದ ಮೇಲೆ ಎಳೆದು (Drag) ಬಿಡಿ</div>
   <div style="margin-top:14px;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;">
-    <button type="button" id="chooseBtn" class="btn btn-main">📂 Choose File / ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡಿ</button>
+    <label for="file" id="chooseBtn" class="btn btn-main">📂 Choose File / ಫೋಟೋ ಆಯ್ಕೆ ಮಾಡಿ</label>
     <span style="font-size:12.5px;color:#8A9AA3;">— ಅಥವಾ ಒಂದು ಫೋಟೋ ಎಳೆದು ಇಲ್ಲಿ ಬಿಡಿ (JPG ಬೆಸ್ಟ್)</span>
   </div>
 </div>
@@ -151,7 +151,7 @@
   var currentName = 'photo.jpg';
 
   drop.addEventListener('click', function(){ file.click(); });
-  document.getElementById('chooseBtn').addEventListener('click', function(e){ e.stopPropagation(); file.click(); });
+  document.getElementById('chooseBtn').addEventListener('click', function(e){ e.stopPropagation(); });
 
   window.addEventListener('dragover', function(e){ e.preventDefault(); e.stopPropagation(); if(e.target === drop || drop.contains(e.target)){ drop.classList.add('drag'); } });
   window.addEventListener('dragenter', function(e){ e.preventDefault(); drop.classList.add('drag'); });
