@@ -34,17 +34,18 @@ Order = priority. Do section by section; re-validate + push after each batch.
 
 ## 🔴 2. PRIORITY ORDER — WHAT TO DO FIRST
 
-| # | Task | Impact |
-|---|---|---|
-| 1 | NPEP cluster CTR fix (1,121 imp, 2 clicks) | Direct traffic gain |
-| 2 | Compress 26 over-long titles | CTR on all pages |
-| 3 | Nirantara = pillar page (top traffic) | Core rankings |
-| 4 | Full Forms enrichment (low-value risk) | AdSense safety |
-| 5 | Tools → add 500–800 words context each | AdSense safety |
-| 6 | About/Contact/trust pages | E-E-A-T + AdSense approval |
-| 7 | Internal linking hierarchy + breadcrumbs | Crawl + structure |
-| 8 | JSON-LD FAQ/HowTo on top 5 guides | Rich snippets |
-| 9 | OOSC archive stamp | Clean UX |
+| # | Task | Impact | Status (25-09-2026) |
+|---|---|---|---|
+| 1 | NPEP cluster CTR fix (1,121 imp, 2 clicks) | Direct traffic gain | ✅ done (title→69, ⚠️ 30 Sep banner, desc) |
+| 2 | Compress 26 over-long titles | CTR on all pages | ✅ done (23 compressed; all titles ≤78) |
+| 3 | Nirantara = pillar page (top traffic) | Core rankings | ✅ reviewed — already deep; no bloat added |
+| 4 | Full Forms enrichment (low-value risk) | AdSense safety | ✅ done (who/where/example + system map + FAQ) |
+| 5 | Tools → add 500–800 words context each | AdSense safety | ✅ reviewed — each tool already has Expl/Formula/Example/FAQ |
+| 6 | About/Contact/trust pages | E-E-A-T + AdSense approval | ✅ reviewed — already meet E-E-A-T bar |
+| 7 | Internal linking hierarchy + breadcrumbs | Crawl + structure | ✅ BreadcrumbList on 20 top pages; anchors descriptive |
+| 8 | JSON-LD FAQ/HowTo on top 5 guides | Rich snippets | ⏭️ SKIPPED — Google deprecated FAQ rich results (2023) & removed HOWTO; added Article (geo-tag) + BreadcrumbList instead |
+| 9 | OOSC archive stamp | Clean UX | ✅ done (deadline passed 20/24 Sep) |
+| — | Sitemap lastmod refresh | Crawl freshness | ✅ done (47 urls → 2026-09-25, XML valid) |
 
 ---
 
@@ -206,15 +207,20 @@ Add FAQPage + HowTo JSON-LD to top 5: SATS FLN, Bridge Course, UDISE GP/EP/FP, E
 ---
 
 ## 📋 30. TRACKING CHECKLIST
-- [ ] Position text started (About/Home intro)
-- [ ] NPEP title/banner + cross-links
-- [ ] 26 titles compressed (list in P1.2 of audit scan)
-- [ ] Nirantara pillar enrich
-- [ ] Full Forms enrichment
-- [ ] Tools context 500–800 words
-- [ ] About/Contact updated
-- [ ] Breadcrumbs + 8-link pattern
-- [ ] JSON-LD on 5 pages
-- [ ] OOSC archive stamp
-- [ ] Sitemap lastmod updated after each change
-- [ ] Non-Kannada-script validation + push verify after each batch
+
+- [x] Position text (About/Home intro already conveys positioning; no forced rewrite)
+- [x] NPEP title/banner + cross-links
+- [x] 23 titles compressed (all pages ≤78 chars) + og/twitter title sync on 20 pages
+- [x] Nirantara pillar review (already deep — no bloat)
+- [x] Full Forms enrichment
+- [x] Tools context (already per-tool Expl/Formula/Example/FAQ)
+- [x] About/Contact review (already E-E-A-T strong)
+- [x] BreadcrumbList JSON-LD on 20 top pages + Article schema on geo-tag-photo
+- [x] JSON-LD — replaced deprecated FAQ/HowTo with Article + BreadcrumbList
+- [x] OOSC archive stamp
+- [x] Sitemap lastmod updated (2026-09-25, 47 urls)
+- [x] Non-Kannada-script validation + push verify after each batch (4 pushed commits, remote==local)
+
+**Outstanding (optional / on-demand):** labeled Kannada screenshots (need real device captures), future notice archiving, re-check for FRESH-deprecated FAQ rich results — non-blocking.
+
+**Deploy history (25-09-2026):** `4d38679` → `590a586` → `bf2818b` → `c954f20` — all verified remote==local.
