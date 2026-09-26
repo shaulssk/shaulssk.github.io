@@ -220,7 +220,12 @@ Add FAQPage + HowTo JSON-LD to top 5: SATS FLN, Bridge Course, UDISE GP/EP/FP, E
 - [x] OOSC archive stamp
 - [x] Sitemap lastmod updated (2026-09-25, 47 urls)
 - [x] Non-Kannada-script validation + push verify after each batch (4 pushed commits, remote==local)
+- [x] **dateModified schema sweep (beyond-plan, 27-09-2026):** added `dateModified` to Article/WebPage JSON-LD on all 34 dated guide pages (24 from "Last updated" lines, 9 from "Last verified" lines, 1 geo-tag) — freshness signal; skipped undated/infra pages (no fabricated dates)
+- [x] **About page E-E-A-T (27-09-2026):** "why trust this site" box + corrections/feedback CTA + `dateModified` in AboutPage JSON-LD
+- [x] **Contact page trust (27-09-2026):** one-click pre-filled mailto CTAs (Correction/Suggestion/Technical) + `dateModified` in ContactPage JSON-LD
+- [x] **Nirantara Kannada-first title (27-09-2026):** match query language for ನಿರಂತರ app login (73 imp/0 clicks)
 
 **Outstanding (optional / on-demand):** labeled Kannada screenshots (need real device captures), future notice archiving, re-check for FRESH-deprecated FAQ rich results — non-blocking.
 
 **Deploy history (25-09-2026):** `4d38679` → `590a586` → `bf2818b` → `c954f20` — all verified remote==local.
+**Deploy history (26-09→27-09-2026):** `c3576ca` → `4bd353c` → `6691205` → `c19352c` → `4b0d1ab` → `3879146` → `2ce1ada` → `7e7cb25` → `0a77177` → `eaabeac` — all verified remote==local after this `AUDIT-ACTION-PLAN.md` update.
