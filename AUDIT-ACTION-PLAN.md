@@ -224,8 +224,10 @@ Add FAQPage + HowTo JSON-LD to top 5: SATS FLN, Bridge Course, UDISE GP/EP/FP, E
 - [x] **About page E-E-A-T (27-09-2026):** "why trust this site" box + corrections/feedback CTA + `dateModified` in AboutPage JSON-LD
 - [x] **Contact page trust (27-09-2026):** one-click pre-filled mailto CTAs (Correction/Suggestion/Technical) + `dateModified` in ContactPage JSON-LD
 - [x] **Nirantara Kannada-first title (27-09-2026):** match query language for ನಿರಂತರ app login (73 imp/0 clicks)
+- [x] **GSC-driven Kannada-first titles (27-09-2026):** `nirantara-registration.html` (1,073 imp/59 cl English title) + `nirantara-delete-guide.html` (delete cluster ~120 imp/0 cl) → Kannada-first title/og/twitter/meta, mirroring nirantara-guide — commit `30f27ee`, verified remote==local, live 200
+- [x] **Homepage today-box deadline audit (27-09-2026):** 5/6 items substantiated (SDMC 30-09 via notice "Fill+Freeze 21-30 Sep", NPEP 30-09, PRASHAST 30-09, NISHTHA 01 Oct, INSPIRE 10-10); **UDISE+ box "30 Sep–15 Oct 2026" conflicts with udise-full-guide "Reference Date 30 Sep 2026" — awaiting user confirmation of correct window before editing**
 
 **Outstanding (optional / on-demand):** labeled Kannada screenshots (need real device captures), future notice archiving, re-check for FRESH-deprecated FAQ rich results — non-blocking.
 
 **Deploy history (25-09-2026):** `4d38679` → `590a586` → `bf2818b` → `c954f20` — all verified remote==local.
-**Deploy history (26-09→27-09-2026):** `c3576ca` → `4bd353c` → `6691205` → `c19352c` → `4b0d1ab` → `3879146` → `2ce1ada` → `7e7cb25` → `0a77177` → `eaabeac` — all verified remote==local after this `AUDIT-ACTION-PLAN.md` update.
+**Deploy history (26-09→27-09-2026):** `c3576ca` → `4bd353c` → `6691205` → `c19352c` → `4b0d1ab` → `3879146` → `2ce1ada` → `7e7cb25` → `0a77177` → `eaabeac` → `30f27ee` — all verified remote==local after this `AUDIT-ACTION-PLAN.md` update.
