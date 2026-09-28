@@ -201,6 +201,9 @@
   .tool-info details p{font-size:12.5px;color:#B9C4CA;line-height:1.85;margin:8px 0 2px;}
   .tool-info details b{color:#FFD98A;}
   .tool-info code{background:rgba(214,162,58,.15);padding:2px 8px;border-radius:6px;color:#FFD98A;font-size:12px;font-family:monospace;}
+  .tool-use{margin-top:14px;padding:8px 12px;border:1px dashed rgba(214,162,58,.3);border-radius:10px;background:rgba(214,162,58,.05);font-size:12.5px;color:#9FB0B8;line-height:1.8;}
+  .tool-use a{color:#D6A23A;text-decoration:none;font-weight:600;}
+  .tool-use a:hover{text-decoration:underline;}
   
   /* Footer */
   footer{
@@ -249,6 +252,7 @@
   </div>
 
   <div style="max-width:860px;margin:0 auto 26px;padding:16px 20px;border:1px solid rgba(214,162,58,.25);border-radius:14px;background:rgba(255,255,255,.03);font-size:14px;line-height:1.8;color:#B9C4CA;">
+<b style="color:#F0D9A6;">🚀 ಇದು ಶಾಲಾ-ಲೆಕ್ಕದ ಹಬ್:</b> ಶಿಕ್ಷಕರಿಗೆ ದಿನನಿತ್ಯದ school calculation ಸಮಸ್ಯೆಗಳಿಗೆ <b>ಉಚಿತ tools</b> — ಹಾಜರಾತಿ %, ಅಂಕ/ಗ್ರೇಡ್, ವಯಸ್ಸು, ಕೆಲಸದ ದಿನ, ವಿದ್ಯಾರ್ಥಿ ಸಂಖ್ಯೆ, ಉತ್ತೀರ್ಣ %, ವೇತನ ಅಂದಾಜು, ಆದಾಯ ತೆರಿಗೆ, EL/CL, MDM. ಯಾವ tool ಯಾವಾಗ ಬೇಕು ಎಂಬ “Teacher use” ಸೂಚನೆ ಪ್ರತಿ tool ನ ಕೆಳಗೆ ಇದೆ; ಹೆಚ್ಚಿನ ವಿವರಕ್ಕೆ ಸಂಬಂಧಿತ ಮಾರ್ಗದರ್ಶಿ (guide) ಲಿಂಕ್.<br>
 <b style="color:#F0D9A6;">ಯಾರಿಗಾಗಿ? | Who is this for:</b> ಕರ್ನಾಟಕದ ಸರ್ಕಾರಿ/ಅನುದಾನಿತ/ಅನುದಾನ ರಹಿತ (unaided) ಶಾಲಾ ಶಿಕ್ಷಕರು, ಡೇಟಾ ಆಪರೇಟರ್‌ಗಳು ಮತ್ತು ಮುಖ್ಯ ಶಿಕ್ಷಕರು — ಹಾಜರಾತಿ ಶೇಕಡ, ಅಂಕ/ಗ್ರೇಡ್, ವಯಸ್ಸು, ಕೆಲಸದ ದಿನ, ವಿದ್ಯಾರ್ಥಿ ಸಂಖ್ಯೆ, ಉತ್ತೀರ್ಣ ಶೇಕಡ, ವೇತನ ಅಂದಾಜು, ಅಕ್ಷರ ದಾಸೋಹ ಪ್ರಮಾಣ ಮುಂತಾದ ದೈನಂದಿನ ಲೆಕ್ಕಗಳು ಒಂದೇ ಕಡೆ.<br>
 <b style="color:#F0D9A6;">ಹೇಗೆ ಬಳಸುವುದು:</b> ಯಾವುದೇ tool ನಲ್ಲಿ ಸಂಖ್ಯೆ ನಮೂದಿಸಿ <b>"ಲೆಕ್ಕ"</b> ಒತ್ತಿ — ಫಲಿತಾಂಶ ಕೂಡಲೇ ಗೋಚರಿಸುತ್ತದೆ. ಪ್ರತಿ tool ನಲ್ಲಿ <b>ವಿವರಣೆ, ಸೂತ್ರ, ಉದಾಹರಣೆ ಮತ್ತು FAQ</b> ಇದೆ.<br>
 <b style="color:#F0D9A6;">ಗೌಪ್ಯತೆ:</b> ನಮೂದಿಸಿದ ಮಾಹಿತಿ <b>ಸರ್ವರ್‌ಗೆ ಹೋಗುವುದಿಲ್ಲ</b> — ಲೆಕ್ಕಾಚಾರ ನಿಮ್ಮ ಫೋನ್/ಕಂಪ್ಯೂಟರ್‌ನಲ್ಲಿಯೇ (JavaScript) ನಡೆಯುತ್ತದೆ. ನಿಖರ ಅಧಿಕೃತ ಲೆಕ್ಕಕ್ಕೆ ಇಲಾಖಾ ಪೇಸ್ಲಿಪ್/ಪೋರ್ಟಲ್ ಅಂತಿಮ. (ಮೂಲ ದರಗಳ ಪರಿಶೀಲನೆ: DA 15.75% — 1-1-2026 ಮೇ 2026 ಆದೇಶ; MDM — PM-POSHAN ದರ; 09-09-2026.)
@@ -312,6 +316,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>500 ರಲ್ಲಿ 356 → <b>71.2%</b> · Grade B · ✅ Pass. (356 ÷ 500 × 100 = 71.2)</p></details>
         <details><summary>❓ FAQ</summary><p><b>35 ಸಾಕಾ?</b> ಕರ್ನಾಟಕದಲ್ಲಿ general pass ಗಡಿ ಸಾಮಾನ್ಯವಾಗಿ 35%; ಆದರೆ ತರಗತಿ/ಬೋರ್ಡ್/ಇಲಾಖೆ ನಿಯಮದಂತೆ ಬದಲಾಗಬಹುದು — ಈ ಉದಾಹರಣೆ ಸಾಮಾನ್ಯ ಮತ್ತು ಅಧಿಕೃತ ನಿಯಮ ಅಲ್ಲ.<br><b>Formula box ಏನು ಬಳಸುವುದು?</b> ಉದಾ. =500/370*100 ಹಾಕಿ — ತಕ್ಷಣ answer ಬರುತ್ತದೆ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ವಿದ್ಯಾರ್ಥಿಯ ಅಂಕ → ಶೇಕಡ; report card / UDISE+ ದತ್ತಾಂಶ ತುಂಬುವಾಗ percent check. &nbsp;·&nbsp; 📚 <a href="/teachers-excel-formulas.html">Excel ಸೂತ್ರಗಳು</a></div>
     </div>
 
     <!-- ATTENDANCE -->
@@ -344,6 +349,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>130 ಕೆಲಸದ ದಿನದಲ್ಲಿ 96 ಹಾಜರಿ → <b>73.85%</b>; 75% ಗೆ <b>6 ದಿನ</b>, 85% ಗೆ <b>97 ದಿನ</b> (ಮುಂದಿನ ದಿನಗಳೆಲ್ಲವೂ ಹಾಜರಿ ಇದ್ದರೆ).</p></details>
         <details><summary>❓ FAQ</summary><p><b>75% ಗಿಂತ ಕಡಿಮೆ ಇದ್ದರೆ?</b> ಪರೀಕ್ಷೆ/ಯೋಜನಾ ಅನರ್ಹತೆ ಜಿಲ್ಲಾ ನಿಯಮದಂತೆ; ಆದಷ್ಟು ಬೇಗ ಸರಿಪಡಿಸಿ.<br><b>ಯಾವ ದಿನಗಳ ಮೇಲೆ ಲೆಕ್ಕ?</b> ಸಾಮಾನ್ಯವಾಗಿ ತರಗತಿಯ ಕೆಲಸದ ದಿನಗಳ (working days) ಮೇಲೆ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> SATS/Nirantara ದಲ್ಲಿ ದಿನದ ಹಾಜರಾತಿ % ಪರಿಶೀಲನೆ, 75%/85% ಕಡಿಮೆ ಇದ್ದವರಿಗೆ ಎಷ್ಟು ದಿನ ಬೇಕು ಎಂಬ ಲೆಕ್ಕ. &nbsp;·&nbsp; 📚 <a href="/sats-guide.html">SATS ಮಾರ್ಗದರ್ಶಿ</a></div>
     </div>
 
     <!-- AGE -->
@@ -376,6 +382,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>DOB 1-ಜೂನ್-2014, ಇಂದು 8-ಸೆ.2026 → <b>12 ವರ್ಷ 3 ತಿಂಗಳು 7 ದಿನ</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>SATS ನಲ್ಲಿ age ಹೇಗೆ check?</b> DOB ನಮೂದಿಸಿದಾಗ age auto ಬರುತ್ತದೆ — ಇಲ್ಲಿನ ಲೆಕ್ಕ ಹೋಲಿಕೆಗೆ.<br><b>ಫೆಬ್ರವರಿ/ಅಧಿಕ ವರ್ಷ?</b> ದಿನ ಲೆಕ್ಕದಲ್ಲಿ ಒಂದರಿಂದ ಎರಡು ದಿನದ ವ್ಯತ್ಯಾಸ ಬರಬಹುದು — ಸಾಮಾನ್ಯವಾಗಿ ಅಂಗೀಕಾರ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> DOB → age cross-check (SATS/UDISE+ ನಲ್ಲಿ age auto ಬರುತ್ತದೆ — ಇಲ್ಲಿನ ಲೆಕ್ಕ ಹೋಲಿಕೆಗೆ); Class 1 ಪ್ರವೇಶ ವಯಸ್ಸು ಗಮನಿಸುವಾಗ. &nbsp;·&nbsp; 📚 <a href="/nirantara-registration.html">ವಿದ್ಯಾರ್ಥಿ ನೋಂದಣಿ</a></div>
     </div>
 
     <!-- DATE DIFF -->
@@ -408,6 +415,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>1-ಸೆ.2026 → 30-ಸೆ.2026 = <b>30 ದಿನ</b> = 4 ವಾರ + 2 ದಿನ ≈ 1.0 ತಿಂಗಳು.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಎರಡೂ ದಿನ ಸೇರ್ಪಡೆಯೇ?</b> ಹೌದು, inclusive ಎಂದು ಲೆಕ್ಕ (ಅಗತ್ಯವಿದ್ದರೆ +1/−1 ಹೊಂದಿಸಿ).<br><b>ತಿಂಗಳ ಲೆಕ್ಕ ಏನು?</b> 30.44 ದಿನ ಆಧಾರದ ಸರಾಸರಿ — ನಿಗದಿ ತಿಂಗಳು ಬೇಕಿದ್ದರೆ calendar ಲೆಕ್ಕ ಬಳಸಿ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ಸೂಚನೆ/ಕೋರ್ಸ್/ರಜೆ ಅವಧಿಯ ದಿನ-ಲೆಕ್ಕ, deadline countdown. &nbsp;·&nbsp; 📚 <a href="/school-data-management.html">ಶಾಲಾ ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ</a></div>
     </div>
 
     <!-- MARKS -->
@@ -440,6 +448,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>78, 65, 92, 81, 74 (5 ವಿಷಯ, ಪ್ರತಿ 100): ಒಟ್ಟು <b>390</b>, ಸರಾಸರಿ <b>78.0</b>, ಶೇಕಡ <b>78%</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಎಲ್ಲಾ ವಿಷಯಕ್ಕೂ max ಒಂದೇ?</b> ಇಲ್ಲಿ ಒಂದೇ max ಆಧಾರದ %; ಬೇರೆ ಬೇರೆ max ಇದ್ದರೆ ಪ್ರತಿ ವಿಷಯ % ಆಗಿ Average calculator ಬಳಸಿ.<br><b>Marks list ನಲ್ಲಿ ತಪ್ಪಿದರೆ?</b> ಸಂಖ್ಯೆ ಮಾತ್ರ (ಅಕ್ಷರ ಬೇಡ), comma/space ಬೇಧ್ಯ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> internal ಮೌಲ್ಯಮಾಪನ ಅಂಕಗಳ ಒಟ್ಟು/ಸರಾಸರಿ/% — report card ಪೂರ್ವಭಾವಿ ದಾಖಲೆ, merit list. &nbsp;·&nbsp; 📚 <a href="/report-card-guide.html">Report Card ಮಾರ್ಗದರ್ಶಿ</a></div>
     </div>
 
     <!-- GRADE POINTS -->
@@ -475,6 +484,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>86 ಅಂಕ → ಕರ್ನಾಟಕ (general ಮಾದರಿ): <b>A+, GP 10</b> · CBSE: <b>A2, GP 9</b> — ಉದಾಹರಣೆ ಮಾತ್ರ.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಯಾವ scheme ಸರಿ?</b> ಬೋರ್ಡ್/ಶಾಲಾ ಮಾದರಿಯಂತೆ ಆಯ್ಕೆ ಮಾಡಿ — ಸಹಾಯಕ ಲೆಕ್ಕ.<br><b>35 ದಾಟಿದರೆ pass ನೇ?</b> ಉತ್ತೀರ್ಣ ಗಡಿ ಶಾಲಾ/ಬೋರ್ಡ್ ನಿಯಮದಂತೆ — ಇಲ್ಲಿ ತೋರಿಸಿರುವ 35% ಕರ್ನಾಟಕದ ಸಾಮಾನ್ಯ ಅಂದಾಜು, ಅಧಿಕೃತ ನಿಯಮ ಅಲ್ಲ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ಅಂಕ → ಗ್ರೇಡ್/ಗ್ರೇಡ್ ಪಾಯಿಂಟ್ ಮ್ಯಾಪಿಂಗ್ — report card, merit/admission ಸಂದರ್ಭ. &nbsp;·&nbsp; 📚 <a href="/report-card-guide.html">Report Card ಮಾರ್ಗದರ್ಶಿ</a></div>
     </div>
 
     <!-- AVERAGE -->
@@ -503,6 +513,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>89, 72, 95, 81 → <b>84.25%</b> (ಸರಾಸರಿ), Grade A.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಎಲ್ಲಾ ವಿಷಯ ಸಮಾನ weight ನೇ?</b> ಹೌದು — weight ಬೇರೆ ಇದ್ದರೆ weighted average ಬೇಕು.<br><b>ಕೆಲವು ವಿಷಯ ಮಿಸ್ ಆಗಿದ್ದರೆ?</b> ನಮೂದಿಸಿದ ವಿಷಯಗಳ ಮೇಲೆ ಮಾತ್ರ ಸರಾಸರಿ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ವಿಷಯವಾರು %% ನ ಸರಾಸರಿ → ಒಟ್ಟಾರೆ (overall) ಪ್ರದರ್ಶನ; ವಿವಿಧ ವಿಷಯದ max ಬೇರೆ ಬೇರೆ ಇರುವಾಗ. &nbsp;·&nbsp; 📚 <a href="/report-card-guide.html">Report Card ಮಾರ್ಗದರ್ಶಿ</a></div>
     </div>
 
     <!-- WORKING DAYS -->
@@ -542,6 +553,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>1 ಸೆ. → 30 ಸೆ. 2026: ಒಟ್ಟು <b>30 ದಿನ</b>; 4 ಭಾನುವಾರ + 4 ಶನಿವಾರ → <b>22 ಕೆಲಸದ ದಿನ</b> (ಶನಿವಾರ ಹೊರತುಪಡಿಸದಿದ್ದರೆ <b>26</b>).</p></details>
         <details><summary>❓ FAQ</summary><p><b>ರಜೆ auto ಬರುವುದೇ?</b> ಇಲ್ಲ — ಇಲಾಖಾ ಪ್ರಕಟಣೆಗಳ ಪ್ರಕಾರ ನೀವೇ ಎಣಿಸಿ Holidays ಹಾಕಿ.<br><b>ಮೊದಲ ಮತ್ತು ಕಡೆಯ ದಿನ ಸೇರಿವೆಯೇ?</b> ಹೌದು — ಎರಡೂ inclusive.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> UDISE+ / MDM / ಸೂಚನೆ-ಅವಧಿಯ "ಕೆಲಸದ ದಿನ" ಲೆಕ್ಕ — ಭಾನುವಾರ/ಐಚ್ಛಿಕ ಶನಿವಾರ/ರಜೆ ಕಳೆಯಲು. &nbsp;·&nbsp; 📚 <a href="/udise-gp-ep-fp-guide.html">UDISE+ GP/EP/FP</a></div>
     </div>
 
     <!-- STRENGTH -->
@@ -578,6 +590,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>ಬಾಲಕರು 120, ಬಾಲಕಿಯರು 108 → ಒಟ್ಟು <b>228</b>; ಬಾಲಕರು <b>52.6%</b>, ಬಾಲಕಿಯರು <b>47.4%</b>; 5 ವಿಭಾಗವಿದ್ದರೆ ಒಂದಕ್ಕೆ ಸರಾಸರಿ <b>45.6</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>UDISE+ ನಲ್ಲಿ strength ಹೇಗೆ ಬರುತ್ತದೆ?</b> classwise boys/girls counts ನಮೂದಿಸಿದಾಗ auto ಒಟ್ಟು ಸೇರುತ್ತದೆ — ಇಲ್ಲಿನ % ಹೋಲಿಕೆಗೆ use ಮಾಡಿ.<br><b>Per-section ಅಷ್ಟೇ ಅಲ್ಲ, ತರಗತಿ ಸಂಖ್ಯೆಯೂ ಬೇಕೇ?</b> ತರಗತಿ ಸಂಖ್ಯೆ ಬೇರೆ, ಇಲ್ಲಿ sections ಆಧಾರದ ಸರಾಸರಿ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> class-wise boys/girls → ಒಟ್ಟು strength/% — UDISE+/SATS/ನೋಂದಣಿ ದತ್ತಾಂಶ ಹೋಲಿಕೆ, ವಿಭಾಗ ವಿಂಗಡಣೆ, ಶಿಕ್ಷಕ-ವಿದ್ಯಾರ್ಥಿ ಅನುಪಾತ. &nbsp;·&nbsp; 📚 <a href="/udise-full-guide.html">UDISE+ ಪೂರ್ಣ ಮಾರ್ಗದರ್ಶಿ</a></div>
     </div>
 
     <!-- PASS PERCENT -->
@@ -610,6 +623,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>50 ಹಾಜರಾದರಲ್ಲಿ 42 ಉತ್ತೀರ್ಣ → <b>84%</b>, ಅನುತ್ತೀರ್ಣರಾದವರು <b>8</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಪೂರಕ ಪರೀಕ್ಷೆ (supplementary) ನಂತರ?</b> ಪೂರಕದಲ್ಲಿ ಉತ್ತೀರ್ಣರಾದವರನ್ನು ಸೇರಿಸಿ ಮತ್ತೆ ಲೆಕ್ಕ ಹಾಕಬಹುದು.<br><b>ಅನುತ್ತೀರ್ಣರ but ಅನುಪಸ್ಥಿತ?</b> ಇಲ್ಲಿ appeared (ಹಾಜರಾದ) ಸಂಖ್ಯೆ ಮಾತ್ರ ಒಳಗೆ — ಅನುಪಸ್ಥಿತರನ್ನು ಬೇರೆ ನಮೂದಿಸಬೇಡಿ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ಪರೀಕ್ಷಾ ಫಲಿತಾಂಶದ pass% ವರದಿ — ತರಗತಿ/ಶಾಲಾ ಮಟ್ಟದ ಸಾಧನೆ ದಾಖಲೆ, SDMC/ಮೀಟಿಂಗ್ ಪ್ರಸ್ತುತಿ. &nbsp;·&nbsp; 📚 <a href="/report-card-guide.html">Report Card ಮಾರ್ಗದರ್ಶಿ</a></div>
     </div>
 
     <!-- PERCENTAGE CHANGE -->
@@ -642,6 +656,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>180 → 210: (210−180)÷180×100 = <b>+16.67%</b> ಹೆಚ್ಚಳ.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಹಳೇ ಮೌಲ್ಯ 0 ಇದ್ದರೆ?</b> 0 ಯಿಂದ ಭಾಗಿಸಲು ಆಗದು — ಹಳೇ ಮೌಲ್ಯ 0 ಆಗಬಾರದು.<br><b>ಋಣ ಫಲಿತ ನೋಡೋದು ಹೇಗೆ?</b> −15% = ಇಳಿಕೆ, +15% = ಹೆಚ್ಚಳ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ವರ್ಷ-ವರ್ಷ ದಾಖಲಾತಿ/ಹಾಜರಾತಿ/ಉತ್ತೀರ್ಣ % ಏರಿಳಿತ ಲೆಕ್ಕ — ಶಾಲಾ ಸಾಧನೆ ವರದಿ. &nbsp;·&nbsp; 📚 <a href="/school-data-management.html">ಶಾಲಾ ದತ್ತಾಂಶ ನಿರ್ವಹಣೆ</a></div>
     </div>
 
     <!-- TARGET MARKS -->
@@ -674,6 +689,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>85% ಗುರಿ, ಒಟ್ಟು 100 → <b>85 ಅಂಕ</b> ಬೇಕು. ಒಟ್ಟು 500 ಆದರೆ → <b>425 ಅಂಕ</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಗುರಿ 100%?</b> ಆಗ ಒಟ್ಟು ಅಂಕವೇ ಬೇಕು — practical ಅಲ್ಲ, ಆದರೆ ಲೆಕ್ಕ ತೋರಿಸುತ್ತದೆ.<br><b>ಈಗಾಗಲೇ ಪಡೆದ ಅಂಕ ಇದ್ದರೆ?</b> ಬಾಕಿ ವಿಷಯದ ಲೆಕ್ಕಕ್ಕೆ ಪಡೆದ ಅಂಕವನ್ನು ಒಟ್ಟಿನಿಂದ ಕಳೆದು ನಮೂದಿಸಿ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ಪರೀಕ್ಷೆ ಮೊದಲು ವಿದ್ಯಾರ್ಥಿಗೆ ಗುರಿ ಶೇಕಡಕ್ಕೆ ಬೇಕಾದ ಅಂಕ ಗೊತ್ತುಪಡಿಸಲು — ಶಾಲಾ ಸಾಧನೆ ಯೋಜನೆ. &nbsp;·&nbsp; 📚 <a href="/report-card-guide.html">Report Card ಮಾರ್ಗದರ್ಶಿ</a></div>
     </div>
 
     <!-- REVERSE PERCENTAGE -->
@@ -706,6 +722,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>60 = 30% → 60÷0.30 = <b>200</b> ಒಟ್ಟು.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಶೇಕಡ 0 ಇದ್ದರೆ?</b> 0 ಯಿಂದ ಭಾಗಿಸಲು ಆಗದು — ಶೇಕಡ 0 ಆಗಬಾರದು.<br><b>ಇದು ಯಾವಾಗ ಬೇಕು?</b> ಭಾಗಶಃ ದತ್ತಾಂಶದಿಂದ ಪೂರ್ಣ ಅಂದಾಜಿನ ಸಂದರ್ಭ — ವರದಿ ತಯಾರಿಯಲ್ಲಿ ಆಗಾಗ ಬರುತ್ತದೆ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> "% ನಮಗೆ ಗೊತ್ತು, ಒಟ್ಟು ಎಷ್ಟು?" ಎಂಬ ಯಾವುದೇ ಹಿಮ್ಮುಖ ಲೆಕ್ಕ — ದತ್ತಾಂಶ ಪರಿಶೀಲನೆ/ವರದಿ. &nbsp;·&nbsp; 📚 <a href="/teachers-excel-formulas.html">Excel ಸೂತ್ರಗಳು</a></div>
     </div>
 
     <!-- 7TH PAY SALARY -->
@@ -756,6 +773,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>Basic ₹43,100, HRA 16%: DA <b>₹6,788</b> · HRA <b>₹6,896</b> · Gross <b>₹56,784</b> · NPS <b>₹4,989</b> · PT ₹200 → Net ≈ <b>₹51,595</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>DA 15.75% ಯಾವಾಗಿನದು?</b> 1-1-2026ರಿಂದ (ಹಣಕಾಸು ಇಲಾಖೆ ಆದೇಶ, ಮೇ 2026). ಮುಂದಿನ ಪರಿಷ್ಕರಣೆಯಲ್ಲಿ DA % ಬಾಕ್ಸ್‌ನಲ್ಲಿ ಬದಲಿಸಿ.<br><b>HRA ವರ್ಗ?</b> A=ಬೆಂಗಳೂರು 24% · B=ಮೈಸೂರು/ಮಂಗಳೂರು/ಹುಬ್ಬಳ್ಳಿ 16% · C=ಇತರೆ 8%.<br><b>ವೃತ್ತಿ ತೆರಿಗೆ?</b> ₹200/ತಿಂಗಳು; ₹25,000+ ವೇತನದವರಿಗೆ <b>ಫೆಬ್ರವರಿಯಲ್ಲಿ ₹300</b> (2025 ತಿದ್ದುಪಡಿ).<br><b>ಇದು ನಿಖರವೇ?</b> ಇಲ್ಲ — ಅಂದಾಜು; ಪೇಸ್ಲಿಪ್/ಇಲಾಖಾ ಲೆಕ್ಕ ಅಂತಿಮ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ಮೂಲ ವೇತನ + DA (15.75%) + HRA → ನಿವ್ವಳ <b>ಅಂದಾಜು</b>; ನಿಖರಕ್ಕೆ HRMS pay slip / ಇಲಾಖಾ ಆದೇಶ ಅಂತಿಮ.</div>
     </div>
 
     <!-- AKSHTA DASOHA (MDM) -->
@@ -788,6 +806,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>ಗ್ರಾಸ್ ₹15,00,000, PF/NPS+PT ₹72,000: taxable = 15,00,000−72,000−75,000 = <b>13,53,000</b> → ಸ್ಲಾಬ್ ತೆರಿಗೆ = 5%×4L (20,000) + 10%×4L (40,000) + 15%×1.53L (22,950) = <b>₹82,950</b>. 87A ರಿಟೇಕ್ ₹12L ಮೇಲೆ ಅನ್ವಯವಾಗದು; + ಸೆಸ್ 4% (₹3,318) ≈ <b>₹86,268</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಇದು ಅಧಿಕೃತವೇ?</b> ಅಂದಾಜು ಮಾತ್ರ — ಅಧಿಕೃತಕ್ಕೆ CBDT/e-filing 2025-26 ಸ್ಲಾಬ್ ನೋಡಿ.<br><b>₹12L ವರೆಗೆ ಸೊನ್ನೆ?</b> ಹೌದು — taxable ₹12L ವರೆಗೆ 87A ರಿಟೇಕ್ (₹60K) ತೆರಿಗೆಯನ್ನು ಸಂಪೂರ್ಣ ಸರಿದೂಗಿಸುತ್ತದೆ.<br><b>ಮನೆ/80C ವಿನಾಯಿತಿ?</b> 80C ಹೊಸ ಯೋಜನೆಯಲ್ಲಿ ಇಲ್ಲ — ಹಳೆಯ ಯೋಜನೆ ಲೆಕ್ಕ ಬೇಕಿದ್ದರೆ e-filing calculator ಬಳಸಿ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ಹೊಸ ಯೋಜನೆ (2025-26) ಪ್ರಕಾರ ಸರ್ಕಾರಿ ನೌಕರನ ತೆರಿಗೆ <b>ಅಂದಾಜು</b> + 87A ರಿಟೇಕ್ ಅರ್ಹತೆ check; ನಿಖರಕ್ಕೆ pay slip/e-filing portal ಅಂತಿಮ.</div>
     </div>
 
     <div class="tool-card" id="el-card">
@@ -827,6 +846,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>EL 20 − 8 = <b>12</b> · CL 15 − 5 = <b>10</b> · ಒಟ್ಟು ಉಳಿದ = <b>22 ದಿನ</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಇದು ಅಧಿಕೃತ ದಾಖಲೆಯೇ?</b> ಇಲ್ಲ — ಲೆಕ್ಕ ಸಹಾಯಕಿ ಮಾತ್ರ; ಸರ್ಕಾರಿ ದಾಖಲೆಗೆ ಸಂಬಂಧಿಸಿದ ಇಲಾಖಾ registro (e.g., SPARSh / ತಮ್ಮ ರಜೆ ಪತ್ರಿಕೆ) ಬಳಸಿ.<br><b>EL ಅನ್ನು ಯಾವ ವರ್ಷಕ್ಕೆ ಪರಿಗಣಿಸುವುದು?</b> ತಮ್ಮ ಇಲಾಖಾ ನಿಯಮ ಪ್ರಕಾರ (ಸಾಮಾನ್ಯವಾಗಿ ಕಲೆಂಡರ್/ಶೈಕ್ಷಣಿಕ ವರ್ಷ).<br><b>ಬೇರೆ ರಜೆ?</b> Maternity, paternity, special, station leave ಇವುಗಳನ್ನು ಇಲ್ಲಿ ಸೇರಿಸುವುದಿಲ್ಲ — ಬೇರೆ ಲೆಕ್ಕ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ವರ್ಷದ EL/CL ಹಿಂದುಳಿದ ದಿನ ಟ್ರ್ಯಾಕ್ — ಸಹಾಯಕ ಲೆಕ್ಕ ಮಾತ್ರ; ಅಧಿಕೃತ ದಾಖಲೆಗೆ SPARSh / ರಜೆ ಪತ್ರಿಕೆ / ಇಲಾಖಾ ನಿಯಮ.</div>
     </div>
 
     <div class="tool-card" id="mdm-card">
@@ -862,6 +882,7 @@
         <details><summary>✏️ ಉದಾಹರಣೆ | Example</summary><p>ಪ್ರಾಥಮಿಕ 50 + ಉನ್ನತ ಪ್ರಾಥಮಿಕ 30 + ಪ್ರೌಢ 20: ಅಕ್ಕಿ (5000+4500+3000)÷1000 = <b>12.5 ಕೆಜಿ</b> · ಬೇಳೆ (1000+900+600)÷1000 = <b>2.5 ಕೆಜಿ</b> · ತರಕಾರಿ (2500+2250+1500)÷1000 = <b>6.25 ಕೆಜಿ</b>.</p></details>
         <details><summary>❓ FAQ</summary><p><b>ಅಡುಗೆ ಖರ್ಚು ಮತ್ತು ಸಿಬ್ಬಂದಿ ವೇತನ?</b> ಇದು ಸಾಮಗ್ರಿ ಅಂದಾಜು ಮಾತ್ರ — ಅಡುಗೆ ಖರ್ಚು (COC) ಮತ್ತು ಸಹಾಯಕ ವೇತನ ಪ್ರತ್ಯೇಕ.<br><b>ಯಾವ ಲೆಕ್ಕದಲ್ಲಿ?</b> ಉಪಹಾರ/ಮಧ್ಯಾಹ್ನದ ದಿನ ಹಾಜರಾದ ಮಕ್ಕಳ ಲೆಕ್ಕದಲ್ಲಿ — ಶಾಲೆಯ ದೈನಂದಿನ ಹಾಜರಾತಿ ದಾಖಲೆಯಿಂದ ತುಂಬಿಸಿ.<br><b>ರಾಜ್ಯ ದರ ಭಿನ್ನವಾದರೆ?</b> ಇಲಾಖಾ ಪರಿಚಲನೆಯ ದರಗಳನ್ನು ನೋಡಿ ಅದಕ್ಕೆ ತಕ್ಕಂತೆ ಲೆಕ್ಕ ಹೊಂದಿಸಿ.</p></details>
       </div>
+      <div class="tool-use">👩🏫 <b>Teacher use:</b> ದಿನದ ಹಾಜರಾತಿ (ಭಾಗವಹಿಸಿದ ಮಕ್ಕಳು) → ಅಕ್ಕಿ/ಬೇಳೆ/ತರಕಾರಿ <b>ಕೆಜಿ ಅಂದಾಜು</b> — ದಾಸೋಹ ಸಾಮಗ್ರಿ/ಖರೀದಿ ಲೆಕ್ಕಕ್ಕೆ; ಅಡುಗೆ ಖರ್ಚು (COC) ಮತ್ತು ಸಹಾಯಕ ವೇತನ ಪ್ರತ್ಯೇಕ.</div>
     </div>
 
     <!-- INFO -->
