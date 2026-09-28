@@ -236,6 +236,8 @@ Add FAQPage + HowTo JSON-LD to top 5: SATS FLN, Bridge Course, UDISE GP/EP/FP, E
 
 **Outstanding (optional / on-demand):** labeled Kannada screenshots (need real device captures), future notice archiving, re-check for FRESH-deprecated FAQ rich results — non-blocking.
 
+**Final audit (29-09-2026) — Full Forms & terminology:** site-wide "Student Attendance Tracking System" = 0 occurrences; all pages use "Student Achievement Tracking System"; Full Forms SATS row already correct; homepage label "SATS — Student Tracking" fixed → "SATS — Student Achievement Tracking"; `nirantara-guide.html` Last-verified box unified 26→29 Sep. AdSense verdict ~80–85%, Request Review = WAIT until Nirantara depth + Tools explanations + thin-page archive + weekly deadline maintenance done.
+
 **Deploy history (25-09-2026):** `4d38679` → `590a586` → `bf2818b` → `c954f20` — all verified remote==local.
 **Deploy history (26-09→27-09-2026):** `c3576ca` → `4bd353c` → `6691205` → `c19352c` → `4b0d1ab` → `3879146` → `2ce1ada` → `7e7cb25` → `0a77177` → `eaabeac` → `30f27ee` → `245bfd6` → `79d19ed` — all verified remote==local after this `AUDIT-ACTION-PLAN.md` update.
 **Deploy history (29-09-2026):** `2f59e33` (quick wins) → `2fca7f2` (4-guide deep-update) → `8fbcbad` (tools hub) → `4e80c6f` (internal linking) → `8a952b9` (plan log) → `5a0ffc5` (NPEP CTR rework) — all verified remote==local, working tree clean.
