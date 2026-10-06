@@ -242,4 +242,90 @@ Add FAQPage + HowTo JSON-LD to top 5: SATS FLN, Bridge Course, UDISE GP/EP/FP, E
 **Deploy history (26-09→27-09-2026):** `c3576ca` → `4bd353c` → `6691205` → `c19352c` → `4b0d1ab` → `3879146` → `2ce1ada` → `7e7cb25` → `0a77177` → `eaabeac` → `30f27ee` → `245bfd6` → `79d19ed` — all verified remote==local after this `AUDIT-ACTION-PLAN.md` update.
 **Deploy history (29-09-2026):** `2f59e33` (quick wins) → `2fca7f2` (4-guide deep-update) → `8fbcbad` (tools hub) → `4e80c6f` (internal linking) → `8a952b9` (plan log) → `5a0ffc5` (NPEP CTR rework) → `e5d3d1d` (SATS AdSense-ready H1) → `6ff46ce` (SATS title "| Kannada" + Last-verified unification + contextual links) → `d2ac33b` (homepage SATS label fix + Nirantara date box + plan log) → `b25894c` (round-3 final audit fixes) — all verified remote==local, working tree clean.
 
+## 🟢 MASTER FINAL AUDIT — 04-10-2026 (48 pages, all live)
+
+Consultant final pass + live metadata scan (title/H1/desc/dateModified/verified).
+**Result: 48/48 KEEP.** Nothing to DELETE or NOINDEX. AdSense risk: LOW on all pages.
+Cross-checked: no "ಗೌಪ್ಯ ಡ್ಯಾಶ್ಬೋರ್ಡ್ / ಪಾಸ್ವರ್ಡ್ ನಮೂದಿಸಿ" text anywhere → `nirantara-dashboard.html` is an informational reference guide (not an internal dashboard) ✅.
+
+Status legend: 🟢 KEEP · 🟡 KEEP + minor CHANGE (non-blocking, do at next edit) · 🗂️ Archived (deadline passed, kept for reference)
+
+### TRUST / INFRA (8)
+- **index.html** — 🟢 KEEP. Risk: LOW. Title/H1/Meta ✅ (audited 04-10). Links: hub to all guides ✅. Dates 04-10 ✅.
+- **about.html** — 🟢 KEEP. Risk: LOW. Title/H1 ✅, E-E-A-T box + dateModified ✅.
+- **contact.html** — 🟢 KEEP. Risk: LOW. mailto CTAs + privacy note ✅.
+- **editorial-policy.html** — 🟢 KEEP. Risk: LOW. Research/verify/correction/AI/ads policy ✅.
+- **privacy-policy.html** — 🟢 KEEP. Risk: LOW. Cookies/GA4/AdSense ✅.
+- **disclaimer.html** — 🟢 KEEP. Risk: LOW. "not government site" ✅.
+- **terms.html** — 🟢 KEEP. Risk: LOW. Usage/liability ✅.
+- **notice.html** — 🟢 KEEP. Risk: LOW. Keep archiving discipline (deadline passed → Archived block). Optional: add DIKSHA guide entry.
+
+### SATS FAMILY (6)
+- **sats-guide.html** — 🟢 KEEP. Risk: LOW. Pillar. Title/desc/H1 ✅ (29-09 reworked). Links: Data Mgmt/Dashboard/UDISE+/Nirantara ✅.
+- **sats-bridge-course-guide.html** — 🟢 KEEP. Risk: LOW. ⏳ ACTIVE to 15 Nov 2026. LBA portal source ✅.
+- **sats-fln-guide.html** — 🟢 KEEP. Risk: LOW. ⏳ ACTIVE to 15 Nov 2026. DSERT circular ref ✅.
+- **sats-vs-nirantara.html** — 🟢 KEEP. Risk: LOW. Evergreen. Related chips ✅.
+- **report-card-guide.html** — 🟢 KEEP. Risk: LOW. Fine.
+- **forgot-password-guide.html** — 🟢 KEEP. Risk: LOW. Evergreen. Fine.
+
+### NIRANTARA FAMILY (4)
+- **nirantara-guide.html** — 🟢 KEEP. Risk: LOW. Pillar (top traffic). Login/registration/errors ✅.
+- **nirantara-registration.html** — 🟢 KEEP. Risk: LOW. Differentiates from guide (registration focus). Fine.
+- **nirantara-delete-guide.html** — 🟢 KEEP. Risk: LOW. Niche, fine.
+- **nirantara-dashboard.html** — 🟢 KEEP. Risk: LOW. Informational "ಒಂದು ನೋಟದಲ್ಲಿ" + independent-tool disclosure (line 68) ✅. Consultant's internal-dashboard concern = false alarm.
+
+### UDISE+ FAMILY (4)
+- **udise-full-guide.html** — 🟢 KEEP. Risk: LOW. ⏳ entry window 30 Sep–15 Oct 2026. After 15 Oct → add archive stamp like NPEP.
+- **udise-gp-ep-fp-guide.html** — 🟢 KEEP. Risk: LOW. Same window. 🟡 tiny stamp mismatch (updated "27-09" vs dateModified "2026-09-26") — align next edit.
+- **udise-hos-mapping-guide.html** — 🟢 KEEP. Risk: LOW. Same window. Fine.
+- **gis-udise-guide.html** — 🟢 KEEP. Risk: LOW. Evergreen-ish. 🟡 refresh "verified" stamp at next genuine portal check (09-09).
+
+### CROSS / DATA (3)
+- **school-data-management.html** — 🟢 KEEP. Risk: LOW. Flow table ✅.
+- **full-forms.html** — 🟢 KEEP. Risk: LOW (low-value risk already mitigated w/ usage/audience/examples). 01-10 ✅.
+- **ssk-guide.html** — 🟢 KEEP. Risk: LOW. Evergreen umbrella page. Fine.
+
+### SCHOLARSHIP (1)
+- **ssp-guide.html** — 🟡 KEEP. Risk: LOW. 🟡 header "Last verified: 09 September 2026" older than content edit (04-10). Refresh stamp at next genuine re-check of ssp.karnataka.gov.in. Body already lists Aug/30 Sep passed + 31 Jan 2027 open ✅.
+
+### TRAINING / PORTALS (6)
+- **nishtha-fln-guide.html** — 🟢 KEEP. Risk: LOW. ⏳ Cycle 2 active 01 Oct 2026–15 Mar 2027. DIKSHA link ✅.
+- **virtual-labs-guide.html** — 🟢 KEEP. Risk: LOW. DSERT circular cited ✅ (04-10).
+- **diksha-guide.html** — 🟢 KEEP (new, 04-10). Risk: LOW. Official FAQ links "(verified 04 Oct 2026)" ✅.
+- **ncert-cpd-courses-guide.html** — 🟢 KEEP. Risk: LOW. CIET-NCERT source ✅.
+- **prashast-guide.html** — 🟢 KEEP. Risk: LOW. Phase-3 archiving handled; screening ≠ diagnosis red box ✅.
+- **vidyavahini-guide.html** — 🟢 KEEP. Risk: LOW. Caution + independent note ✅.
+
+### COMPETITIONS / ACTIVITIES (11)
+- **inspire-award-guide.html** — 🟢 KEEP. Risk: LOW. ⏳ ACTIVE until 10 Oct 2026 (extension). After 10 Oct → archive stamp.
+- **ncert-competition-guide.html** — 🟢 KEEP + 🗂️ archived (30 Sep passed) ✅ already stamped.
+- **npep-login-guide.html** — 🟢 KEEP + 🗂️ archived. Differentiated from competition page (login/registration steps vs scoring/theme) — no merge.
+- **veer-gatha-guide.html** — 🟢 KEEP. Risk: LOW. ⏳ ACTIVE: school MyGov upload 5–19 Oct 2026. Re-check after 19 Oct.
+- **eco-club-guide.html** — 🟢 KEEP. Risk: LOW. Portal/circular refs ✅.
+- **sdmc-survey-guide.html** — 🟢 KEEP + 🗂️ archived (30 Sep passed) ✅ stamped. Watch for 2026-27 next notification for content update.
+- **swachhata-pakhwada-guide.html** — 🟢 KEEP + 🗂️ archived (15 Sep passed) ✅ stamped.
+- **oosc-guide.html** — 🟢 KEEP + 🗂️ archived (20/24 Sep passed) ✅ stamped.
+- **nasha-mukt-guide.html** — 🟢 KEEP. Risk: LOW. Evergreen (NMBA ongoing).
+- **prabandha-nirantara-prayatna.html** — 🟢 KEEP. Risk: LOW. Essay template.
+- **prabandha-school-cleanliness.html** — 🟢 KEEP. Risk: LOW. Essay template.
+
+### TOOLS (4)
+- **tools.html** — 🟢 KEEP. Risk: LOW. 17 calculators, .tool-use + related guides ✅; browser-side privacy note accurate.
+- **geo-tag-photo.html** — 🟢 KEEP. Risk: LOW. Tool + how-to.
+- **teachers-excel-formulas.html** — 🟢 KEEP. Risk: LOW.
+- **ai-school-tools.html** — 🟢 KEEP. Risk: LOW. "don't send student PII to AI" ✅ (AdSense-safe).
+
+### LOCAL (1)
+- **beo-devadurga.html** — 🟢 KEEP. Risk: LOW. Local resource hub; independent note ✅.
+
+### FINAL MASTER VERDICT
+- **DELETE:** none · **NOINDEX:** none · **MERGE:** none mandatory (NPEP pair differentiated)
+- **CHANGE (🟡, do at next genuine edit, non-urgent):** ssp verified stamp · gis verified stamp · udise-gp-ep-fp stamp alignment · notice optional DIKSHA entry
+- **Calendar to watch:** 10 Oct (INSPIRE→archive) · 15 Oct (UDISE window→archive/stamp) · 19 Oct (Veer Gatha upload→verify) · 15 Nov (Bridge/FLN→verify)
+- **AdSense:** every page passes gate; no reason to pause/re-apply. Continue "Getting ready" wait.
+
+**Deploy history (04-10-2026):** `e9af04f` (DIKSHA Explore/QR links) → `161f856` (Virtual Labs DSERT circular) → `be799b8` (new DIKSHA guide + homepage/sitemap 48 URLs) → `5394c6d` (homepage date stamps 04 Oct) — all verified remote==local, sitemap 48/48 OK, working tree clean.
+
+---
+
 **Round-3 final audit (29-09-2026) — re-verification of user claims:** grep across all *.html — "Student Attendance Tracking System" = 0 and "Student Tracking System" = 0 site-wide (Full Forms + SATS Bridge already use "Student Achievement Tracking System" ×4/×3; user's claims were stale/cache view — no change); "13 calculators"/"13 tools" = 0 (tools.html consistently "17", actual tool count 17 — no change). REAL fixes in `b25894c`: (1) Notice PRASHAST entry had a FALSE "school quality rating portal — school rating determined here" claim; verified official `prashast.education.gov.in` = CwSN disability **screening** tool (RPwD 21 types, Part-1 teacher checklist + Part-2 special-ed referral) — rewrote entry to accurate description + editorial link to prashast-guide.html (screening ≠ diagnosis); (2) Notice SATS attendance absolute "ಎಲ್ಲಾ ಶಾಲೆಗಳಿಗೆ ಕಡ್ಡಾಯ" softened to "ಸಂಬಂಧಿತ ಇಲಾಖಾ ಸೂಚನೆಯಂತೆ ಸಮಯಕ್ಕೆ ಸರಿಯಾಗಿ … ಪ್ರಸ್ತುತ ನಿಯಮ/ವಿಧಾನಕ್ಕಾಗಿ ಅಧಿಕೃತ ಸೂಚನೆಯನ್ನು ಪರಿಶೀಲಿಸಿ"; (3) Tools "🔒 100% Private" tag → "🔒 Browser-ನಲ್ಲಿ ಲೆಕ್ಕ" (ga4 gtag loads, so absolute privacy claim overclaimed; in-body privacy note already accurate); (4) Tools Percentage example dropped "· Grade B · ✅ Pass" (grade/pass boundaries vary by board/school) — kept "500 ರಲ್ಲಿ 356 → 71.2% (356 ÷ 500 × 100 = 71.2)". UDISE+/PRASHAST/Report-Card "Last verified" (09/25/09 Sep) KEPT as genuine portal-check dates — no fresh 29 Sep portal re-verification was done, so dates not fabricated. Edited pages validated foreign=0 / balanced div+details / titleConsist / </html>=1 / no BOM.
